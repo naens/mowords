@@ -1,0 +1,27 @@
+v0 -> end January 2013
+*	Title main page
+*	Main page folder "buttons"
+*	Load fonts from "fonts" folder
+*	Documentation
+*	Localization
+*	Application title
+*	leave application = pause
+*	if no folder: error / message / new folder ...
+*	application icon
+*	side x from number of sides
+*	messages
+
+v1
+*	Main page: expandable list
+*	Settings:
+	- choose fonts and size for sides
+	- fonts from folder and from system
+	- choose home directory
+*	Words: swipe navigation									DONE:2012-12-15
+*	Fragments
+*	Folder activity: list with subtitles
+*	Support large images
+*	Internal storage:	- save files
+						- use when storage removed
+						- synchronize if modified
+*	Swipe multiple select

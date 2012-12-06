@@ -1,0 +1,100 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".WordsActivity"
+        android:padding="4dp"  >
+
+    <Button
+        android:id="@+id/words_pause_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="pauseClicked"
+        android:text="@string/words_pause_button_text"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/words_word_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" 
+        android:clickable="true"
+        android:onClick="wordClicked">
+
+        <TextView
+            android:id="@+id/words_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:padding="12dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/words_buttons_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/words_previous_word_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="previousWordClicked"
+            android:text="@string/words_previous_word_button_text" />
+
+        <LinearLayout
+            android:id="@+id/words_side_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/words_previous_side_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="previousSideClicked"
+                android:text="@string/words_previous_side_button_text" />
+
+            <Button
+                android:id="@+id/words_next_side_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="nextSideClicked"
+                android:text="@string/words_next_side_button_text" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/words_next_word_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="nextWordClicked"
+            android:text="@string/words_next_word_button_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/words_status_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/words_status_view_default_text" />
+
+        <TextView
+            android:id="@+id/words_time_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/words_time_view_default_text" />
+    </LinearLayout>
+
+</LinearLayout>

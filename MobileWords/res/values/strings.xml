@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MobileWords</string>
+    <string name="desc">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    
+    <string name="title_activity_folder">FolderActivity</string>
+    <string name="title_activity_words">WordsActivity</string>
+
+    <string name="folder_ok_button_text">Go</string>
+    <string name="folder_limit_spinner_header">Number of words: </string>
+    <string name="folder_inverse_checkbox_text">Study in opposite direction</string>
+    <string name="folder_one_direction_checkbox_text">Study in one direction</string>
+
+    <string name="words_pause_button_text">pause</string>
+    <string name="words_previous_word_button_text">previous word</string>
+    <string name="words_next_word_button_text">next word</string>
+    <string name="words_word_finish_button_text">finish</string>
+    <string name="words_previous_side_button_text">previous side</string>
+    <string name="words_next_side_button_text">next side</string>
+    <string name="words_status_view_default_text">lalala</string>
+    <string name="words_time_view_default_text">00:00</string>
+
+</resources>

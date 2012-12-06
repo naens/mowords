@@ -1,0 +1,73 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".FolderActivity" >
+
+        <LinearLayout
+            android:id="@+id/folder_checkbox_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#90909090" />
+
+        <CheckBox
+            android:id="@+id/folder_inverse_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/folder_inverse_checkbox_text" />
+
+        <CheckBox
+            android:id="@+id/folder_one_direction_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/folder_one_direction_checkbox_text" />
+
+        <LinearLayout
+            android:id="@+id/words_buttons_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="24dp"
+                android:layout_marginLeft="6dp"
+                android:text="@string/folder_limit_spinner_header" 
+               	android:textSize="16sp"/>
+
+            <Spinner
+                android:id="@+id/folder_limit_spinner"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:entries="@array/spiiner_items"
+                android:prompt="@string/folder_limit_spinner_header"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#90909090" />
+
+        <Button
+            android:id="@+id/folder_ok_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:onClick="buttonStart"
+            android:text="@string/folder_ok_button_text" />
+    </LinearLayout>
+
+</ScrollView>
