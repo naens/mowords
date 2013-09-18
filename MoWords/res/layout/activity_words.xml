@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/words_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    android:orientation="vertical"
+    android:padding="4dp"
+    tools:context=".WordsActivity" >
+
+    <Button
+        android:id="@+id/words_pause_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="pauseClicked"
+        android:text="@string/words_pause_button_text"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/words_word_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="wordClicked"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/words_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:gravity="center"
+            android:maxLines="1000"
+            android:scaleType="centerInside"
+            android:scrollbars="vertical"
+            android:textIsSelectable="false"
+            android:focusable="false" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/words_status_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/words_status_view_default_text" />
+
+        <TextView
+            android:id="@+id/words_time_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/words_time_view_default_text" />
+    </LinearLayout>
+
+</LinearLayout>

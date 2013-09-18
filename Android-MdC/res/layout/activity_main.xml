@@ -1,0 +1,133 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backrepeat"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <Spinner
+            android:id="@+id/spinner_rotate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true"
+            android:entries="@array/array_rotate" />
+
+        <Spinner
+            android:id="@+id/spinner_places"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true"
+            android:entries="@array/array_places" />
+
+        <CheckBox
+            android:id="@+id/checkbox_flip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/flip" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/draw_char_frame"
+        style="@style/FolderButton"
+        android:background="@drawable/folder_button"
+        android:onClick="drawCharFrame"
+        android:text="@string/draw_shape_text"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/draw_hieroglyph_button"
+        style="@style/FolderButton"
+        android:background="@drawable/folder_button"
+        android:onClick="drawHieroglyph"
+        android:text="@string/draw_hieroglyph_text" />
+
+    <CheckBox
+        android:id="@+id/checkbox_top_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/topbottom" />
+
+    <Button
+        android:id="@+id/draw_around"
+        style="@style/FolderButton"
+        android:background="@drawable/folder_button"
+        android:onClick="drawAround"
+        android:text="@string/draw_around" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/draw_shape_button"
+            style="@style/FolderButton"
+            android:background="@drawable/folder_button"
+            android:onClick="drawShape"
+            android:text="@string/draw_shape_text" />
+
+        <Button
+            android:id="@+id/draw_fontletter_button"
+            style="@style/FolderButton"
+            android:background="@drawable/folder_button"
+            android:onClick="drawFontLetter"
+            android:text="@string/draw_fontletter_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_weight="0"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/draw_image_button"
+            style="@style/FolderButton"
+            android:background="@drawable/folder_button"
+            android:onClick="drawImage"
+            android:text="@string/draw_image_text" />
+
+        <Button
+            android:id="@+id/find_folder_button"
+            style="@style/FolderButton"
+            android:background="@drawable/folder_button"
+            android:onClick="findFolder"
+            android:text="@string/find_folder_text" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textIsSelectable="false" />
+
+    <EditText
+        android:id="@+id/mdc_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/rotate_button"
+        style="@style/FolderButton"
+        android:background="@drawable/folder_button"
+        android:onClick="rotate"
+        android:text="@string/rotate_text"
+        android:visibility="gone" />
+
+</LinearLayout>

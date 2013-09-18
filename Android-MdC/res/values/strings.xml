@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Android-MdC</string>
+    <string name="draw_shape_text">Shape!</string>
+    <string name="draw_fontletter_text">Text!</string>
+    <string name="draw_image_text">Image!</string>
+    <string name="draw_hieroglyph_text">Hieroglyph!</string>
+    <string name="draw_around">Around!</string>
+    <string name="rotate_text">Rotate!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="example_text">Example!</string>
+    <string name="find_folder_text">Find Folder!</string>
+    <string name="pref_edit_default">edit def</string>
+    <string name="pref_edit">edit</string>
+    <string name="pref_p_default">p def</string>
+    <string name="pref_p">p def</string>
+    <string name="topbottom">top bottom</string>
+
+    <string-array name="array_places">
+        <item>Left Bottom</item>
+        <item>Right Bottom</item>
+        <item>Left Top</item>
+        <item>Right Top</item>
+        <item>Center</item>
+    </string-array>
+
+    <string-array name="array_rotate">
+        <item>0</item>
+        <item>90</item>
+        <item>180</item>
+        <item>270</item>
+    </string-array>
+    <string name="flip">Flip</string>
+
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <EditTextPreference 
+        android:defaultValue="@string/pref_edit_default"
+        android:key="pref_fonts_size"
+        android:title="@string/pref_edit"/>
+<!--    <Preference
+        android:defaultValue="@string/pref_p_default"
+        android:key="pref_fonts_size"
+        android:title="@string/pref_p" />
+-->
+</PreferenceScreen>
