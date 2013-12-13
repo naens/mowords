@@ -82,7 +82,7 @@ public class MdCTool {
 		Log.i("TAG", String.format("Bitmap: W=%d H=%d", bitmap.getWidth(), bitmap.getHeight()));
 
 		Canvas canvas = new Canvas(bitmap);
-		 canvas.drawColor(0xFFCAEEFF);
+//		 canvas.drawColor(0xFFCAEEFF);
 //		canvas.drawColor(Color.DKGRAY);
 
 		List<MdCLetter> letters = elementLetterList(element);

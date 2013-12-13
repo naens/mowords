@@ -9,7 +9,6 @@
         android:id="@+id/find_folder_status"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#ffcfdeed"
         android:textIsSelectable="true" />
 
     <LinearLayout

@@ -33,4 +33,9 @@
     </string-array>
     <string name="flip">Flip</string>
 
+    <string name="pref_folder_dialog_rename_folder">Rename folder</string>
+    <string name="pref_folder_dialog_new_folder">New folder</string>
+    <string name="pref_folder_dialog_ok">OK</string>
+    <string name="pref_folder_dialog_cancel">Cancel</string>
+
 </resources>

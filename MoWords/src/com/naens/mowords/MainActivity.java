@@ -11,6 +11,7 @@ import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -44,17 +45,26 @@ public class MainActivity extends Activity implements OnSharedPreferenceChangeLi
 	protected void onCreate (Bundle savedInstanceState) {
 		super.onCreate (savedInstanceState);
 		setContentView (R.layout.activity_main);
+		Log.i("TAG", "main:create");
+		File sdcard = Environment.getExternalStorageDirectory ();
 
 		SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-
-
-		File sdcard = Environment.getExternalStorageDirectory ();
+		String filesFolder = sharedPref.getString(SettingsActivity.KEY_PREF_ROOT_DIRECTORY, null);
 
 		configurationDAO = new ConfigurationAndroidPrefDAO (this);
 		sharedPref.registerOnSharedPreferenceChangeListener(this);
 		String rootFolder = configurationDAO.getRootFolder ();
+		File rootDirectory = new File(sdcard.getAbsolutePath () + "/" + rootFolder);
+		if (filesFolder == null || !rootDirectory.exists()) {
+//			Intent intent = new Intent (MainActivity.this, WelcomeActivity.class);
+//			startActivity (intent);
+////			finish ();
+		}
 //		rootFolder = null;
-//		if (rootFolder == null) {
+		wordFileDAO = new WordFileAndroidDAO ();
+    	loadTheme();
+		context = this;
+		if (rootFolder == null || !rootDirectory.exists()) {
 //    	    Intent intent = new Intent(this, WelcomeSettingsActivity.class);
 //    	    startActivity(intent);
 //			@SuppressWarnings("unused")
@@ -65,13 +75,10 @@ public class MainActivity extends Activity implements OnSharedPreferenceChangeLi
 //					
 //				}
 //			}, sdcard.getAbsolutePath(), R.id.main_view);
-//    	    return;
-//		}
-		wordFileDAO = new WordFileAndroidDAO ();
+    	    return;
+		}
 		wordFolderDAO = new WordFolderAndroidDAO (sdcard.getAbsolutePath () + "/" + rootFolder);
-    	loadTheme();
 		displayFolders();
-		context = this;
 	}
 
 	private void displayFolders() {
@@ -86,6 +93,11 @@ public class MainActivity extends Activity implements OnSharedPreferenceChangeLi
 		ViewGroup foldersLayout = ((FlowLayout) findViewById (R.id.folders_layout));
 		foldersLayout.removeAllViews();
 
+		if (wordFolderDAO == null) {
+			File sdcard = Environment.getExternalStorageDirectory ();
+			String rootFolder = configurationDAO.getRootFolder ();
+			wordFolderDAO = new WordFolderAndroidDAO (sdcard.getAbsolutePath () + "/" + rootFolder);
+		}
 		List <WordFolder> folders = wordFolderDAO.getFolders ();
 		for (WordFolder folder : folders) {
 			String folderName = folder.getName ();
@@ -108,6 +120,29 @@ public class MainActivity extends Activity implements OnSharedPreferenceChangeLi
 				foldersLayout.addView (btn, params);
 			}
 		}
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+		Log.i("TAG", "main:resume");
+		File sdcard = Environment.getExternalStorageDirectory ();
+		SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+		String filesFolder = sharedPref.getString(SettingsActivity.KEY_PREF_ROOT_DIRECTORY, null);
+		sharedPref.registerOnSharedPreferenceChangeListener(this);
+		String rootFolder = configurationDAO.getRootFolder ();
+		File rootDirectory = new File(sdcard.getAbsolutePath () + "/" + rootFolder);
+		if (filesFolder == null || !rootDirectory.exists()) {
+			Intent intent = new Intent (MainActivity.this, WelcomeActivity.class);
+			startActivity (intent);
+//			finish ();
+		}
+	}
+
+	@Override
+	protected void onStart() {
+		super.onStart();
+		Log.i("TAG", "main:start");
 	}
 
 	@Override

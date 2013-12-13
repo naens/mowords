@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="yellow">#ffff00</color>
+<color name="gold">#ff9900</color>
+<color name="orange">#ff6600</color>
+<color name="wordBorder">#9c8161</color>
+<color name="wordBackgroundColor">#f0efe9</color>
+<color name="wordBorderDk">#637e9e</color>
+<color name="wordBackgroundColorDark">#282b3b</color>
+<color name="bkg_light">#dcd5cd</color>
+<color name="bkg_dark">#47484a</color>
+</resources>

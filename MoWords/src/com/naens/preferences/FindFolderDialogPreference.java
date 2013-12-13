@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.preference.DialogPreference;
+import android.text.Html;
 import android.util.AttributeSet;
 import android.view.KeyEvent;
 import android.view.View;
@@ -43,6 +44,7 @@ public class FindFolderDialogPreference extends DialogPreference {
 	private boolean editMode = false;
 	private String pathString;
 	private TextView statusTextView;
+	private EditText currentEdit;
 
 	public FindFolderDialogPreference(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
@@ -98,6 +100,7 @@ public class FindFolderDialogPreference extends DialogPreference {
 
 		newButton = (Button) root.findViewById(R.id.find_folder_new_folder);
 		newButton.setOnClickListener(new View.OnClickListener() {
+
 			@Override
 			public void onClick(View v) {
 				EditText edit = getNewEdit ();
@@ -113,6 +116,7 @@ public class FindFolderDialogPreference extends DialogPreference {
 				layout.addView(edit);
 				selectedFolder = "";
 				scrollView.scrollTo(0, layout.getHeight());
+				currentEdit = edit;
 			}
 		});
 
@@ -133,6 +137,7 @@ public class FindFolderDialogPreference extends DialogPreference {
 					inputMethodManager.toggleSoftInputFromWindow(layout.getApplicationWindowToken(),
 							InputMethodManager.SHOW_FORCED, 0);
 					editMode = true;
+					currentEdit = edit;
 				}
 			}
 		});
@@ -227,7 +232,9 @@ public class FindFolderDialogPreference extends DialogPreference {
 			et.setSelected(true);
 		}
 
-		statusTextView.setText(getPathString());
+		String pstr = getPathString();
+		pstr = pstr.equals("") ? "/" : pstr;
+		statusTextView.setText(Html.fromHtml("Now in  <b>" + pstr + "</b>"));
 		scrollView.post(new Runnable() {
 			@Override
 			public void run() {
@@ -237,6 +244,7 @@ public class FindFolderDialogPreference extends DialogPreference {
 				okButton = ((AlertDialog) getDialog()).getButton(AlertDialog.BUTTON_POSITIVE);
 			}
 		});
+		currentEdit = null;
 	}
 
 	private EditText getNewEdit () {
@@ -244,8 +252,8 @@ public class FindFolderDialogPreference extends DialogPreference {
 		fEdit.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				EditText edit = (EditText) v;
 				if (!editMode) {
-					EditText edit = (EditText) v;
 					for (EditText t : editMap.values()) {
 						if (!edit.getText().equals(t.getText())) {
 							t.setSelected(false);
@@ -253,6 +261,24 @@ public class FindFolderDialogPreference extends DialogPreference {
 					}
 					edit.setSelected(true);
 					selectedFolder = edit.getText().toString();
+				} else {
+					if (!edit.equals(currentEdit)) {
+						editMode = false;
+						for (EditText t : editMap.values()) {
+							if (!edit.getText().equals(t.getText())) {
+								t.setSelected(false);
+								t.clearFocus();
+								t.setCursorVisible(false);
+								t.setFocusable(false);
+								t.setFocusableInTouchMode(false);
+							}
+						}
+						if (selectedFolder == "") {
+							layout.removeView(currentEdit);
+						}
+						selectedFolder = edit.getText().toString();
+						edit.setSelected(true);
+					}
 				}
 			}
 		});
@@ -297,6 +323,7 @@ public class FindFolderDialogPreference extends DialogPreference {
 							}
 						}
 					}
+					currentEdit = null;
 					InputMethodManager inputMethodManager = (InputMethodManager) getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
 					inputMethodManager.toggleSoftInputFromWindow(layout.getApplicationWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS, 0);
 					editMap.clear();

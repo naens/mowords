@@ -24,6 +24,8 @@ public class Word implements Parcelable {
 
 	private String imagePath;
 
+	private int side;
+
 	public String getImageName () {
 		return imageName;
 	}
@@ -127,6 +129,14 @@ public class Word implements Parcelable {
 		dest.writeString(imageName);
 		dest.writeString(mdcString);
 		dest.writeString(imagePath);
+	}
+
+	public void setSide(int side) {
+		this.side = side;
+	}
+
+	public int getSide() {
+		return side;
 	}
 
 }

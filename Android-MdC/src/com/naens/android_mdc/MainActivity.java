@@ -1,8 +1,11 @@
 package com.naens.android_mdc;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.DialogInterface.OnCancelListener;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -19,6 +22,7 @@ import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.Menu;
@@ -30,6 +34,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.naens.dialogs.FindFolderDialog;
 import com.naens.preferences.SettingsActivity;
 import com.naens.tools.mdctools.InvalidMdCCodeException;
 import com.naens.tools.mdctools.MdCToUnicode;
@@ -374,6 +379,19 @@ public class MainActivity extends Activity {
 
 	public void findFolder (View view) {
 
+		final FindFolderDialog findFolderDialog = new FindFolderDialog (this); 
+		findFolderDialog.setRootFolder (Environment.getExternalStorageDirectory().getAbsolutePath());
+		findFolderDialog.setPositiveButton ("Yes", new DialogInterface.OnClickListener () {
+			public void onClick (DialogInterface arg0, int arg1) {  
+				Toast.makeText(MainActivity.this, findFolderDialog.getFolderPath(), Toast.LENGTH_LONG).show();
+			}
+		});
+		findFolderDialog.setOnCancelListener (new OnCancelListener () {
+			public void onCancel (DialogInterface dialog) {
+				Toast.makeText(MainActivity.this, "cancel", Toast.LENGTH_LONG).show();
+			}
+		});
+		findFolderDialog.show ();
 	}
 
 	@Override
@@ -402,5 +420,4 @@ public class MainActivity extends Activity {
 	            return super.onOptionsItemSelected(item);
 	    }
 	}
-
 }

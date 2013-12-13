@@ -49,20 +49,23 @@
         style="@style/FolderButton"
         android:background="@drawable/folder_button"
         android:onClick="drawHieroglyph"
-        android:text="@string/draw_hieroglyph_text" />
+        android:text="@string/draw_hieroglyph_text"
+        android:visibility="gone" />
 
     <CheckBox
         android:id="@+id/checkbox_top_bottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/topbottom" />
+        android:text="@string/topbottom"
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/draw_around"
         style="@style/FolderButton"
         android:background="@drawable/folder_button"
         android:onClick="drawAround"
-        android:text="@string/draw_around" />
+        android:text="@string/draw_around"
+        android:visibility="gone" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -91,8 +94,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:layout_weight="0"
-        android:orientation="horizontal"
-        android:visibility="gone" >
+        android:orientation="horizontal" >
 
         <Button
             android:id="@+id/draw_image_button"

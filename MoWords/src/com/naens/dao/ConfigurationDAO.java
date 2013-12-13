@@ -15,7 +15,9 @@ public interface ConfigurationDAO {
 
 	public String getEncoding (String folderName, int side);
 
-	public boolean isMdcSide (String wordFolder, int side);
+	public boolean isMdCSide (String wordFolder, int side);
+
+	public boolean isMdCTranslitSide (String wordFolder, int side);
 
 	public boolean getVisible(String wordFolder);
 

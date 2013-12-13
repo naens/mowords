@@ -15,6 +15,7 @@ import java.util.regex.Pattern;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.util.Log;
 
 import com.naens.dao.ConfigurationDAO;
 import com.naens.dao.WordFileDAO;
@@ -78,27 +79,44 @@ public class WordFileAndroidDAO implements WordFileDAO {
 				if (fileLine.length() > 0) {
 					WordPair wp = new WordPair();
 					String[] words = fileLine.split("\\t");
+					Log.i("TAG", "sides: " + words.length);
 					for (int i = 0; i < words.length; i++) {
 						String word = words[i].trim();
+						if (word.length() == 0) {
+							Log.i("TAG", "word.length() == 0");
+						}
 						if (word.length() > 0) {
 							if (word.contains("[image:")) {
 								String imageName = word.split("image:")[1].split("\\]$")[0];
-								wp.addWord(new Word(imageName, wordFile, false));
-							} else if (configurationDAO.isMdcSide(folderName, i + 1)) {
+						        Word w = new Word(imageName, wordFile, false);
+								wp.addWord(w);
+								w.setSide (i + 1);
+							} else if (configurationDAO.isMdCSide(folderName, i + 1)) {
 								Word mdcWord = new Word(word, wordFile, true);
 								mdcWord.setFontName(configurationDAO.getSideFontName(folderName, i + 1));
 								mdcWord.setFontSize(Integer.parseInt(configurationDAO.getSideFontSize(folderName, i + 1)));
+								mdcWord.setSide (i + 1);
 								wp.addWord(mdcWord);
+							} else if (configurationDAO.isMdCTranslitSide(folderName, i + 1)) {
+						        Matcher matcher = pattern.matcher(word);
+						        Word w = new Word(" " + matcher.replaceAll("\\\n") + " ");
+						        w.setFontName(FontProvider.MDC_TRANSLITERATION_FONT);
+						        w.setFontSize(Integer.parseInt(configurationDAO.getSideFontSize(folderName, i + 1)));
+								w.setSide (i + 1);
+						        wp.addWord(w);
 							} else {
 						        Matcher matcher = pattern.matcher(word);
 						        Word w = new Word(matcher.replaceAll("\\\n"));
 						        w.setFontName(configurationDAO.getSideFontName(folderName, i + 1));
 						        w.setFontSize(Integer.parseInt(configurationDAO.getSideFontSize(folderName, i + 1)));
+								w.setSide (i + 1);
 						        wp.addWord(w);
 							}
 						}
 					}
-					list.add(wp);
+					if (wp.getSize() > 0) {
+						list.add(wp);
+					}
 				}
 			}
 			bufferedReader.close();

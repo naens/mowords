@@ -93,4 +93,8 @@ public class FontProvider {
 		return result;
 	}
 
+	public static Typeface getMdCTranslitTypeface() {
+		return map.get(MDC_TRANSLITERATION_FONT);
+	}
+
 }

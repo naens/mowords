@@ -1,0 +1,294 @@
+android.support.v4.app.BackStackState
+android.support.v4.app.BackStackState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.Fragment$SavedState
+android.support.v4.app.Fragment$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentManagerState
+android.support.v4.app.FragmentManagerState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentState
+android.support.v4.app.FragmentState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentTabHost: void setOnTabChangedListener(android.widget.TabHost$OnTabChangeListener)
+android.support.v4.app.FragmentTabHost$SavedState
+android.support.v4.app.FragmentTabHost$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status[] values()
+android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status valueOf(java.lang.String)
+android.support.v4.view.PagerTabStrip: void setTabIndicatorColor(int)
+android.support.v4.view.PagerTabStrip: void setTabIndicatorColorResource(int)
+android.support.v4.view.PagerTabStrip: int getTabIndicatorColor()
+android.support.v4.view.PagerTabStrip: void setTextSpacing(int)
+android.support.v4.view.PagerTabStrip: void setBackgroundDrawable(android.graphics.drawable.Drawable)
+android.support.v4.view.PagerTabStrip: void setBackgroundColor(int)
+android.support.v4.view.PagerTabStrip: void setBackgroundResource(int)
+android.support.v4.view.PagerTabStrip: void setDrawFullUnderline(boolean)
+android.support.v4.view.PagerTabStrip: boolean getDrawFullUnderline()
+android.support.v4.view.PagerTabStrip: int getMinHeight()
+android.support.v4.view.PagerTitleStrip: void setSingleLineAllCaps(android.widget.TextView)
+android.support.v4.view.PagerTitleStrip: void setTextSpacing(int)
+android.support.v4.view.PagerTitleStrip: int getTextSpacing()
+android.support.v4.view.PagerTitleStrip: void setNonPrimaryAlpha(float)
+android.support.v4.view.PagerTitleStrip: void setTextColor(int)
+android.support.v4.view.PagerTitleStrip: void setGravity(int)
+android.support.v4.view.PagerTitleStrip: int getMinHeight()
+android.support.v4.view.ViewPager: void setScrollState(int)
+android.support.v4.view.ViewPager: void setAdapter(android.support.v4.view.PagerAdapter)
+android.support.v4.view.ViewPager: android.support.v4.view.PagerAdapter getAdapter()
+android.support.v4.view.ViewPager: void setOnAdapterChangeListener(android.support.v4.view.ViewPager$OnAdapterChangeListener)
+android.support.v4.view.ViewPager: void setCurrentItem(int)
+android.support.v4.view.ViewPager: int getCurrentItem()
+android.support.v4.view.ViewPager: void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
+android.support.v4.view.ViewPager: void setChildrenDrawingOrderEnabledCompat(boolean)
+android.support.v4.view.ViewPager: int getOffscreenPageLimit()
+android.support.v4.view.ViewPager: void setOffscreenPageLimit(int)
+android.support.v4.view.ViewPager: void setPageMargin(int)
+android.support.v4.view.ViewPager: int getPageMargin()
+android.support.v4.view.ViewPager: void setPageMarginDrawable(android.graphics.drawable.Drawable)
+android.support.v4.view.ViewPager: void setPageMarginDrawable(int)
+android.support.v4.view.ViewPager: void setScrollingCacheEnabled(boolean)
+android.support.v4.view.ViewPager$SavedState
+android.support.v4.view.ViewPager$SavedState: android.os.Parcelable$Creator CREATOR
+com.naens.model.Word
+com.naens.model.WordPair
+com.naens.mowords.FlowLayout
+com.naens.mowords.FlowLayout: FlowLayout(android.content.Context)
+com.naens.mowords.FlowLayout: FlowLayout(android.content.Context,android.util.AttributeSet)
+com.naens.mowords.FolderActivity
+com.naens.mowords.FolderActivity: FolderActivity()
+com.naens.mowords.FolderActivity: void buttonStart(android.view.View)
+com.naens.mowords.FolderActivity: void selectAll(android.view.View)
+com.naens.mowords.FolderActivity: void inverseSelection(android.view.View)
+com.naens.mowords.MainActivity
+com.naens.mowords.MainActivity: MainActivity()
+com.naens.mowords.R$array: int pref_side_encoding_values
+com.naens.mowords.R$array: int pref_theme_entries
+com.naens.mowords.R$array: int spiner_items
+com.naens.mowords.R$attr: int buttonBarButtonStyle
+com.naens.mowords.R$attr: int buttonBarStyle
+com.naens.mowords.R$color: int bkg_dark
+com.naens.mowords.R$color: int bkg_light
+com.naens.mowords.R$color: int black_overlay
+com.naens.mowords.R$color: int gold
+com.naens.mowords.R$color: int orange
+com.naens.mowords.R$color: int wordBackgroundColor
+com.naens.mowords.R$color: int wordBackgroundColorDark
+com.naens.mowords.R$color: int wordBorder
+com.naens.mowords.R$color: int wordBorderDk
+com.naens.mowords.R$color: int yellow
+com.naens.mowords.R$drawable: int addm
+com.naens.mowords.R$drawable: int bback
+com.naens.mowords.R$drawable: int bback_dark
+com.naens.mowords.R$drawable: int bback_dark_pressed
+com.naens.mowords.R$drawable: int bback_pressed
+com.naens.mowords.R$drawable: int binvsel
+com.naens.mowords.R$drawable: int binvsel_dark
+com.naens.mowords.R$drawable: int binvsel_dark_pressed
+com.naens.mowords.R$drawable: int binvsel_pressed
+com.naens.mowords.R$drawable: int bkg1
+com.naens.mowords.R$drawable: int bkg1dark
+com.naens.mowords.R$drawable: int bkg2
+com.naens.mowords.R$drawable: int bkg2dark
+com.naens.mowords.R$drawable: int bkg_transparent
+com.naens.mowords.R$drawable: int bonedir
+com.naens.mowords.R$drawable: int bonedir_dark
+com.naens.mowords.R$drawable: int bonedir_dark_pressed
+com.naens.mowords.R$drawable: int bonedir_pressed
+com.naens.mowords.R$drawable: int bsall
+com.naens.mowords.R$drawable: int bsall_dark
+com.naens.mowords.R$drawable: int bsall_dark_pressed
+com.naens.mowords.R$drawable: int bsall_pressed
+com.naens.mowords.R$drawable: int btn_inverse
+com.naens.mowords.R$drawable: int btn_inverse_dark
+com.naens.mowords.R$drawable: int btn_invsel
+com.naens.mowords.R$drawable: int btn_invsel_dark
+com.naens.mowords.R$drawable: int btn_onedir
+com.naens.mowords.R$drawable: int btn_onedir_dark
+com.naens.mowords.R$drawable: int btn_selectall
+com.naens.mowords.R$drawable: int btn_selectall_dark
+com.naens.mowords.R$drawable: int bwdn
+com.naens.mowords.R$drawable: int bwhstop
+com.naens.mowords.R$drawable: int bwlt
+com.naens.mowords.R$drawable: int bwrt
+com.naens.mowords.R$drawable: int bwup
+com.naens.mowords.R$drawable: int bwvstop
+com.naens.mowords.R$drawable: int ffolder_view
+com.naens.mowords.R$drawable: int folder_button
+com.naens.mowords.R$drawable: int folder_button_dark
+com.naens.mowords.R$drawable: int folder_button_dark_layer1
+com.naens.mowords.R$drawable: int folder_button_dark_layer2
+com.naens.mowords.R$drawable: int folder_button_layer1
+com.naens.mowords.R$drawable: int folder_button_layer2
+com.naens.mowords.R$drawable: int folder_checkbox
+com.naens.mowords.R$drawable: int folder_checkbox_dark
+com.naens.mowords.R$drawable: int folderlist_background
+com.naens.mowords.R$drawable: int folderlist_background_dark
+com.naens.mowords.R$drawable: int ic_launcher
+com.naens.mowords.R$drawable: int icon_dir
+com.naens.mowords.R$drawable: int icon_parentdir
+com.naens.mowords.R$drawable: int logo2
+com.naens.mowords.R$drawable: int mw_folders
+com.naens.mowords.R$drawable: int mw_logo2
+com.naens.mowords.R$drawable: int mw_mdc
+com.naens.mowords.R$drawable: int removem
+com.naens.mowords.R$drawable: int words_word_border
+com.naens.mowords.R$drawable: int wordview_background
+com.naens.mowords.R$drawable: int wordview_background_dark
+com.naens.mowords.R$id: int find_folder_cancel_btn
+com.naens.mowords.R$id: int find_folder_new_folder
+com.naens.mowords.R$id: int find_folder_ok_btn
+com.naens.mowords.R$id: int find_folder_rename_folder
+com.naens.mowords.R$id: int find_folder_scroll
+com.naens.mowords.R$id: int find_folder_status
+com.naens.mowords.R$id: int find_folder_view
+com.naens.mowords.R$id: int folder_button
+com.naens.mowords.R$id: int folder_checkbox_layout
+com.naens.mowords.R$id: int folder_inverse_btn
+com.naens.mowords.R$id: int folder_invsel_btn
+com.naens.mowords.R$id: int folder_layout
+com.naens.mowords.R$id: int folder_limit_label
+com.naens.mowords.R$id: int folder_limit_spinner
+com.naens.mowords.R$id: int folder_ok_button
+com.naens.mowords.R$id: int folder_one_direction_btn
+com.naens.mowords.R$id: int folder_scroll_view
+com.naens.mowords.R$id: int folder_selectall_btn
+com.naens.mowords.R$id: int folders_layout
+com.naens.mowords.R$id: int fullscreen_content_controls
+com.naens.mowords.R$id: int main_folders_text
+com.naens.mowords.R$id: int main_view
+com.naens.mowords.R$id: int menu_settings
+com.naens.mowords.R$id: int multichoice_layout
+com.naens.mowords.R$id: int ok_button
+com.naens.mowords.R$id: int rowTextView
+com.naens.mowords.R$id: int textView1
+com.naens.mowords.R$id: int welcome_folder_text
+com.naens.mowords.R$id: int welcome_folder_value
+com.naens.mowords.R$id: int welcome_text
+com.naens.mowords.R$id: int welcome_title
+com.naens.mowords.R$id: int welcome_use_egyptian_text
+com.naens.mowords.R$id: int welcome_use_files_text
+com.naens.mowords.R$id: int welcome_use_fonts_text
+com.naens.mowords.R$id: int welcome_use_images_text
+com.naens.mowords.R$id: int welcome_use_navigate_text
+com.naens.mowords.R$id: int welcome_use_tab_text
+com.naens.mowords.R$id: int welcome_use_title
+com.naens.mowords.R$id: int words_buttons_layout
+com.naens.mowords.R$id: int words_layout
+com.naens.mowords.R$id: int words_pause_button
+com.naens.mowords.R$id: int words_status_view
+com.naens.mowords.R$id: int words_text_view
+com.naens.mowords.R$id: int words_time_view
+com.naens.mowords.R$id: int words_word_layout
+com.naens.mowords.R$layout: int activity_folder
+com.naens.mowords.R$layout: int activity_main
+com.naens.mowords.R$layout: int activity_welcome
+com.naens.mowords.R$layout: int activity_words
+com.naens.mowords.R$layout: int find_folder_dialog
+com.naens.mowords.R$layout: int find_folder_dialog_item
+com.naens.mowords.R$layout: int find_folder_dialog_preference
+com.naens.mowords.R$layout: int multichoice_dialog_preference
+com.naens.mowords.R$layout: int settings_message
+com.naens.mowords.R$menu: int activity_folder
+com.naens.mowords.R$menu: int activity_main
+com.naens.mowords.R$menu: int activity_words
+com.naens.mowords.R$raw: int unicode_mdc_mapping_v1
+com.naens.mowords.R$string: int app_name
+com.naens.mowords.R$string: int desc
+com.naens.mowords.R$string: int folder_inverse_checkbox_text
+com.naens.mowords.R$string: int folder_limit_spinner_header
+com.naens.mowords.R$string: int folder_ok_button_text
+com.naens.mowords.R$string: int folder_one_direction_checkbox_text
+com.naens.mowords.R$string: int initialize
+com.naens.mowords.R$string: int main_folders
+com.naens.mowords.R$string: int menu_settings
+com.naens.mowords.R$string: int ok_button
+com.naens.mowords.R$string: int pref_folder_default_limit_title
+com.naens.mowords.R$string: int pref_folder_dialog_cancel
+com.naens.mowords.R$string: int pref_folder_dialog_new_folder
+com.naens.mowords.R$string: int pref_folder_dialog_ok
+com.naens.mowords.R$string: int pref_folder_dialog_rename_folder
+com.naens.mowords.R$string: int pref_folder_limits_default
+com.naens.mowords.R$string: int pref_folder_limits_title
+com.naens.mowords.R$string: int pref_folder_limits_values
+com.naens.mowords.R$string: int pref_folder_one_direction
+com.naens.mowords.R$string: int pref_folder_one_direction_default
+com.naens.mowords.R$string: int pref_folder_sides_summary
+com.naens.mowords.R$string: int pref_folder_sides_title
+com.naens.mowords.R$string: int pref_folder_visible_default
+com.naens.mowords.R$string: int pref_folder_visible_title
+com.naens.mowords.R$string: int pref_root_directory_default
+com.naens.mowords.R$string: int pref_root_directory_title
+com.naens.mowords.R$string: int pref_root_folders
+com.naens.mowords.R$string: int pref_root_theme
+com.naens.mowords.R$string: int pref_side_encoding
+com.naens.mowords.R$string: int pref_side_encoding_default
+com.naens.mowords.R$string: int pref_side_font_size
+com.naens.mowords.R$string: int pref_side_font_size_default
+com.naens.mowords.R$string: int pref_side_typeface
+com.naens.mowords.R$string: int pref_side_typeface_default
+com.naens.mowords.R$string: int settings_text
+com.naens.mowords.R$string: int title_activity_folder
+com.naens.mowords.R$string: int title_activity_welcome
+com.naens.mowords.R$string: int title_activity_words
+com.naens.mowords.R$string: int welcome_folder_button
+com.naens.mowords.R$string: int welcome_folder_label
+com.naens.mowords.R$string: int welcome_text
+com.naens.mowords.R$string: int welcome_title
+com.naens.mowords.R$string: int welcome_use_egyptian
+com.naens.mowords.R$string: int welcome_use_files
+com.naens.mowords.R$string: int welcome_use_fonts
+com.naens.mowords.R$string: int welcome_use_images
+com.naens.mowords.R$string: int welcome_use_navigate
+com.naens.mowords.R$string: int welcome_use_tab
+com.naens.mowords.R$string: int welcome_use_title
+com.naens.mowords.R$string: int words_next_side_button_text
+com.naens.mowords.R$string: int words_next_word_button_text
+com.naens.mowords.R$string: int words_pause_button_text
+com.naens.mowords.R$string: int words_previous_side_button_text
+com.naens.mowords.R$string: int words_previous_word_button_text
+com.naens.mowords.R$string: int words_time_view_default_text
+com.naens.mowords.R$string: int words_word_finish_button_text
+com.naens.mowords.R$style: int AppBaseTheme
+com.naens.mowords.R$style: int AppTheme
+com.naens.mowords.R$style: int ButtonBar
+com.naens.mowords.R$style: int ButtonBarButton
+com.naens.mowords.R$style: int FolderButton
+com.naens.mowords.R$style: int FolderButton_dark
+com.naens.mowords.R$style: int FolderCheckbox
+com.naens.mowords.R$style: int FolderCheckbox_dark
+com.naens.mowords.R$style: int FullscreenActionBarStyle
+com.naens.mowords.R$style: int FullscreenTheme
+com.naens.mowords.R$style: int MWDarkTheme
+com.naens.mowords.R$style: int MWLightTheme
+com.naens.mowords.R$style: int Theme_Preferences
+com.naens.mowords.R$style: int lightListView
+com.naens.mowords.R$styleable: int[] ButtonBarContainerTheme
+com.naens.mowords.R$styleable: int ButtonBarContainerTheme_buttonBarButtonStyle
+com.naens.mowords.R$styleable: int ButtonBarContainerTheme_buttonBarStyle
+com.naens.mowords.R$xml: int preferences
+com.naens.mowords.R$xml: int welcomepreference
+com.naens.mowords.R$xml: int wordpreferences
+com.naens.mowords.WelcomeActivity
+com.naens.mowords.WelcomeActivity: WelcomeActivity()
+com.naens.mowords.WelcomeActivity: void changeFolder(android.view.View)
+com.naens.mowords.WelcomeActivity: void okDone(android.view.View)
+com.naens.mowords.WordsActivity
+com.naens.mowords.WordsActivity: WordsActivity()
+com.naens.mowords.WordsActivity: void wordClicked(android.view.View)
+com.naens.mowords.WordsActivity: void pauseClicked(android.view.View)
+com.naens.mowords.WordsActivity: void previousWordClicked(android.view.View)
+com.naens.mowords.WordsActivity: void nextWordClicked(android.view.View)
+com.naens.mowords.WordsActivity: void previousSideClicked(android.view.View)
+com.naens.mowords.WordsActivity: void nextSideClicked(android.view.View)
+com.naens.preferences.FindFolderDialogPreference
+com.naens.preferences.FindFolderDialogPreference: FindFolderDialogPreference(android.content.Context,android.util.AttributeSet,int)
+com.naens.preferences.FindFolderDialogPreference: FindFolderDialogPreference(android.content.Context,android.util.AttributeSet)
+com.naens.preferences.FindFolderDialogPreference: FindFolderDialogPreference(android.content.Context)
+com.naens.preferences.FindFolderDialogPreference$SavedState
+com.naens.preferences.MultiChoiceDialogPreference$SavedState
+com.naens.preferences.SettingsActivity
+com.naens.preferences.SettingsActivity: SettingsActivity()
+com.naens.preferences.WordSettingsActivity
+com.naens.preferences.WordSettingsActivity: WordSettingsActivity()
+com.naens.tools.mdctools.mdcstruct.MdCCartouche$CartoucheType: com.naens.tools.mdctools.mdcstruct.MdCCartouche$CartoucheType[] values()
+com.naens.tools.mdctools.mdcstruct.MdCCartouche$CartoucheType: com.naens.tools.mdctools.mdcstruct.MdCCartouche$CartoucheType valueOf(java.lang.String)
+com.naens.tools.mdctools.mdcstruct.MdCOperation$SubNodesDirection: com.naens.tools.mdctools.mdcstruct.MdCOperation$SubNodesDirection[] values()
+com.naens.tools.mdctools.mdcstruct.MdCOperation$SubNodesDirection: com.naens.tools.mdctools.mdcstruct.MdCOperation$SubNodesDirection valueOf(java.lang.String)
+com.naens.wordgame.WordGame
+com.naens.wordgame.WordGameAgent

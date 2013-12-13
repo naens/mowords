@@ -327,4 +327,19 @@ public class WordGame implements Parcelable {
 	public int getSide() {
 		return agent.getCurrentSide();
 	}
+
+	public static final Parcelable.Creator<WordGame> CREATOR = new Creator<WordGame>() {
+
+	    public WordGame createFromParcel(Parcel source) {
+
+	        return new WordGame(source);
+	    }
+
+	    public WordGame[] newArray(int size) {
+
+	        return new WordGame[size];
+	    }
+
+	};
+
 }

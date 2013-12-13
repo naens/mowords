@@ -1,0 +1,1695 @@
+android.support.v4.app.ActivityCompatHoneycomb -> android.support.v4.app.a:
+    void invalidateOptionsMenu(android.app.Activity) -> a
+android.support.v4.app.BackStackRecord -> android.support.v4.app.b:
+    android.support.v4.app.FragmentManagerImpl mManager -> a
+    android.support.v4.app.BackStackRecord$Op mHead -> b
+    android.support.v4.app.BackStackRecord$Op mTail -> c
+    int mNumOp -> d
+    int mEnterAnim -> e
+    int mExitAnim -> f
+    int mPopEnterAnim -> g
+    int mPopExitAnim -> h
+    int mTransition -> i
+    int mTransitionStyle -> j
+    boolean mAddToBackStack -> k
+    boolean mAllowAddToBackStack -> l
+    java.lang.String mName -> m
+    boolean mCommitted -> n
+    int mIndex -> o
+    int mBreadCrumbTitleRes -> p
+    java.lang.CharSequence mBreadCrumbTitleText -> q
+    int mBreadCrumbShortTitleRes -> r
+    java.lang.CharSequence mBreadCrumbShortTitleText -> s
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    void dump(java.lang.String,java.io.PrintWriter,boolean) -> a
+    void addOp(android.support.v4.app.BackStackRecord$Op) -> a
+    android.support.v4.app.FragmentTransaction add(int,android.support.v4.app.Fragment,java.lang.String) -> a
+    void doAddOp(int,android.support.v4.app.Fragment,java.lang.String,int) -> a
+    android.support.v4.app.FragmentTransaction detach(android.support.v4.app.Fragment) -> a
+    android.support.v4.app.FragmentTransaction attach(android.support.v4.app.Fragment) -> b
+    void bumpBackStackNesting(int) -> a
+    int commit() -> a
+    int commitInternal(boolean) -> a
+    void run() -> run
+    void popFromBackStack(boolean) -> b
+    java.lang.String getName() -> b
+android.support.v4.app.BackStackRecord$Op -> android.support.v4.app.c:
+    android.support.v4.app.BackStackRecord$Op next -> a
+    android.support.v4.app.BackStackRecord$Op prev -> b
+    int cmd -> c
+    android.support.v4.app.Fragment fragment -> d
+    int enterAnim -> e
+    int exitAnim -> f
+    int popEnterAnim -> g
+    int popExitAnim -> h
+    java.util.ArrayList removed -> i
+android.support.v4.app.BackStackState -> android.support.v4.app.BackStackState:
+    int[] mOps -> a
+    int mTransition -> b
+    int mTransitionStyle -> c
+    java.lang.String mName -> d
+    int mIndex -> e
+    int mBreadCrumbTitleRes -> f
+    java.lang.CharSequence mBreadCrumbTitleText -> g
+    int mBreadCrumbShortTitleRes -> h
+    java.lang.CharSequence mBreadCrumbShortTitleText -> i
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    android.support.v4.app.BackStackRecord instantiate(android.support.v4.app.FragmentManagerImpl) -> a
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.BackStackState$1 -> android.support.v4.app.d:
+    android.support.v4.app.BackStackState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.BackStackState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.Fragment -> android.support.v4.app.Fragment:
+    java.util.HashMap sClassMap -> P
+    int mState -> a
+    android.view.View mAnimatingAway -> b
+    int mStateAfterAnimating -> c
+    android.os.Bundle mSavedFragmentState -> d
+    android.util.SparseArray mSavedViewState -> e
+    int mIndex -> f
+    java.lang.String mWho -> g
+    android.os.Bundle mArguments -> h
+    android.support.v4.app.Fragment mTarget -> i
+    int mTargetIndex -> j
+    int mTargetRequestCode -> k
+    boolean mAdded -> l
+    boolean mRemoving -> m
+    boolean mResumed -> n
+    boolean mFromLayout -> o
+    boolean mInLayout -> p
+    boolean mRestored -> q
+    int mBackStackNesting -> r
+    android.support.v4.app.FragmentManagerImpl mFragmentManager -> s
+    android.support.v4.app.FragmentActivity mActivity -> t
+    android.support.v4.app.FragmentManagerImpl mChildFragmentManager -> u
+    android.support.v4.app.Fragment mParentFragment -> v
+    int mFragmentId -> w
+    int mContainerId -> x
+    java.lang.String mTag -> y
+    boolean mHidden -> z
+    boolean mDetached -> A
+    boolean mRetainInstance -> B
+    boolean mRetaining -> C
+    boolean mHasMenu -> D
+    boolean mMenuVisible -> E
+    boolean mCalled -> F
+    int mNextAnim -> G
+    android.view.ViewGroup mContainer -> H
+    android.view.View mView -> I
+    android.view.View mInnerView -> J
+    boolean mDeferStart -> K
+    boolean mUserVisibleHint -> L
+    android.support.v4.app.LoaderManagerImpl mLoaderManager -> M
+    boolean mLoadersStarted -> N
+    boolean mCheckedForLoaderManager -> O
+    android.support.v4.app.Fragment instantiate(android.content.Context,java.lang.String) -> a
+    android.support.v4.app.Fragment instantiate(android.content.Context,java.lang.String,android.os.Bundle) -> a
+    void restoreViewState(android.os.Bundle) -> a
+    void setIndex(int,android.support.v4.app.Fragment) -> a
+    boolean isInBackStack() -> a
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+    android.support.v4.app.FragmentActivity getActivity() -> b
+    android.content.res.Resources getResources() -> c
+    boolean isDetached() -> d
+    void onHiddenChanged(boolean) -> a
+    void onActivityResult(int,int,android.content.Intent) -> a
+    android.view.LayoutInflater getLayoutInflater(android.os.Bundle) -> b
+    void onInflate(android.app.Activity,android.util.AttributeSet,android.os.Bundle) -> a
+    void onAttach(android.app.Activity) -> a
+    android.view.animation.Animation onCreateAnimation(int,boolean,int) -> a
+    void onCreate(android.os.Bundle) -> c
+    android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> a
+    void onViewCreated(android.view.View,android.os.Bundle) -> a
+    void onActivityCreated(android.os.Bundle) -> d
+    void onViewStateRestored(android.os.Bundle) -> e
+    void onStart() -> e
+    void onResume() -> f
+    void onSaveInstanceState(android.os.Bundle) -> f
+    void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+    void onPause() -> g
+    void onStop() -> h
+    void onLowMemory() -> onLowMemory
+    void onDestroyView() -> i
+    void onDestroy() -> j
+    void initState() -> k
+    void onDetach() -> l
+    void onCreateOptionsMenu(android.view.Menu,android.view.MenuInflater) -> a
+    void onPrepareOptionsMenu(android.view.Menu) -> a
+    void onDestroyOptionsMenu() -> m
+    boolean onOptionsItemSelected(android.view.MenuItem) -> a
+    void onOptionsMenuClosed(android.view.Menu) -> b
+    void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo) -> onCreateContextMenu
+    boolean onContextItemSelected(android.view.MenuItem) -> b
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    void instantiateChildFragmentManager() -> n
+    void performCreate(android.os.Bundle) -> g
+    android.view.View performCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> b
+    void performActivityCreated(android.os.Bundle) -> h
+    void performStart() -> o
+    void performResume() -> p
+    void performConfigurationChanged(android.content.res.Configuration) -> a
+    void performLowMemory() -> q
+    boolean performCreateOptionsMenu(android.view.Menu,android.view.MenuInflater) -> b
+    boolean performPrepareOptionsMenu(android.view.Menu) -> c
+    boolean performOptionsItemSelected(android.view.MenuItem) -> c
+    boolean performContextItemSelected(android.view.MenuItem) -> d
+    void performOptionsMenuClosed(android.view.Menu) -> d
+    void performSaveInstanceState(android.os.Bundle) -> i
+    void performPause() -> r
+    void performStop() -> s
+    void performReallyStop() -> t
+    void performDestroyView() -> u
+    void performDestroy() -> v
+android.support.v4.app.Fragment$1 -> android.support.v4.app.e:
+    android.support.v4.app.Fragment this$0 -> a
+    android.view.View findViewById(int) -> a
+android.support.v4.app.Fragment$InstantiationException -> android.support.v4.app.f:
+android.support.v4.app.Fragment$SavedState -> android.support.v4.app.Fragment$SavedState:
+    android.os.Bundle mState -> a
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.Fragment$SavedState$1 -> android.support.v4.app.g:
+    android.support.v4.app.Fragment$SavedState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.Fragment$SavedState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.FragmentActivity -> android.support.v4.app.h:
+    android.os.Handler mHandler -> a
+    android.support.v4.app.FragmentManagerImpl mFragments -> b
+    android.support.v4.app.FragmentContainer mContainer -> c
+    boolean mCreated -> d
+    boolean mResumed -> e
+    boolean mStopped -> f
+    boolean mReallyStopped -> g
+    boolean mRetaining -> h
+    boolean mOptionsMenuInvalidated -> i
+    boolean mCheckedForLoaderManager -> j
+    boolean mLoadersStarted -> k
+    java.util.HashMap mAllLoaderManagers -> l
+    android.support.v4.app.LoaderManagerImpl mLoaderManager -> m
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    void onBackPressed() -> onBackPressed
+    void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean onCreatePanelMenu(int,android.view.Menu) -> onCreatePanelMenu
+    android.view.View onCreateView(java.lang.String,android.content.Context,android.util.AttributeSet) -> onCreateView
+    void onDestroy() -> onDestroy
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void onLowMemory() -> onLowMemory
+    boolean onMenuItemSelected(int,android.view.MenuItem) -> onMenuItemSelected
+    void onPanelClosed(int,android.view.Menu) -> onPanelClosed
+    void onPause() -> onPause
+    void onNewIntent(android.content.Intent) -> onNewIntent
+    void onResume() -> onResume
+    void onPostResume() -> onPostResume
+    void onResumeFragments() -> a
+    boolean onPreparePanel(int,android.view.View,android.view.Menu) -> onPreparePanel
+    java.lang.Object onRetainNonConfigurationInstance() -> onRetainNonConfigurationInstance
+    void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
+    void onStart() -> onStart
+    void onStop() -> onStop
+    java.lang.Object onRetainCustomNonConfigurationInstance() -> b
+    void supportInvalidateOptionsMenu() -> c
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> dump
+    java.lang.String viewToString(android.view.View) -> a
+    void dumpViewHierarchy(java.lang.String,java.io.PrintWriter,android.view.View) -> a
+    void doReallyStop(boolean) -> a
+    void onReallyStop() -> d
+    void onAttachFragment(android.support.v4.app.Fragment) -> a
+    void startActivityForResult(android.content.Intent,int) -> startActivityForResult
+    void invalidateSupportFragment(java.lang.String) -> a
+    android.support.v4.app.LoaderManagerImpl getLoaderManager(java.lang.String,boolean,boolean) -> a
+android.support.v4.app.FragmentActivity$FragmentTag -> android.support.v4.app.i:
+    int[] Fragment -> a
+android.support.v4.app.FragmentActivity$NonConfigurationInstances -> android.support.v4.app.j:
+    java.lang.Object activity -> a
+    java.lang.Object custom -> b
+    java.util.HashMap children -> c
+    java.util.ArrayList fragments -> d
+    java.util.HashMap loaders -> e
+android.support.v4.app.FragmentContainer -> android.support.v4.app.k:
+    android.view.View findViewById(int) -> a
+android.support.v4.app.FragmentManager -> android.support.v4.app.l:
+    android.support.v4.app.FragmentTransaction beginTransaction() -> a
+    boolean executePendingTransactions() -> b
+    android.support.v4.app.Fragment findFragmentByTag(java.lang.String) -> a
+android.support.v4.app.FragmentManager$OnBackStackChangedListener -> android.support.v4.app.m:
+    void onBackStackChanged() -> a
+android.support.v4.app.FragmentManagerImpl -> android.support.v4.app.n:
+    boolean DEBUG -> a
+    boolean HONEYCOMB -> b
+    java.util.ArrayList mPendingActions -> c
+    java.lang.Runnable[] mTmpActions -> d
+    boolean mExecutingActions -> e
+    java.util.ArrayList mActive -> f
+    java.util.ArrayList mAdded -> g
+    java.util.ArrayList mAvailIndices -> h
+    java.util.ArrayList mBackStack -> i
+    java.util.ArrayList mCreatedMenus -> j
+    java.util.ArrayList mBackStackIndices -> k
+    java.util.ArrayList mAvailBackStackIndices -> l
+    java.util.ArrayList mBackStackChangeListeners -> m
+    int mCurState -> n
+    android.support.v4.app.FragmentActivity mActivity -> o
+    android.support.v4.app.FragmentContainer mContainer -> p
+    android.support.v4.app.Fragment mParent -> q
+    boolean mNeedMenuInvalidate -> r
+    boolean mStateSaved -> s
+    boolean mDestroyed -> t
+    java.lang.String mNoTransactionsBecause -> u
+    boolean mHavePendingDeferredStart -> v
+    android.os.Bundle mStateBundle -> w
+    android.util.SparseArray mStateArray -> x
+    java.lang.Runnable mExecCommit -> y
+    android.view.animation.Interpolator DECELERATE_QUINT -> z
+    android.view.animation.Interpolator DECELERATE_CUBIC -> A
+    android.view.animation.Interpolator ACCELERATE_QUINT -> B
+    android.view.animation.Interpolator ACCELERATE_CUBIC -> C
+    void throwException(java.lang.RuntimeException) -> a
+    android.support.v4.app.FragmentTransaction beginTransaction() -> a
+    boolean executePendingTransactions() -> b
+    boolean popBackStackImmediate() -> c
+    void putFragment(android.os.Bundle,java.lang.String,android.support.v4.app.Fragment) -> a
+    android.support.v4.app.Fragment getFragment(android.os.Bundle,java.lang.String) -> a
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    android.view.animation.Animation makeOpenCloseAnimation(android.content.Context,float,float,float,float) -> a
+    android.view.animation.Animation makeFadeAnimation(android.content.Context,float,float) -> a
+    android.view.animation.Animation loadAnimation(android.support.v4.app.Fragment,int,boolean,int) -> a
+    void performPendingDeferredStart(android.support.v4.app.Fragment) -> a
+    void moveToState(android.support.v4.app.Fragment,int,int,int,boolean) -> a
+    void moveToState(android.support.v4.app.Fragment) -> b
+    void moveToState(int,boolean) -> a
+    void moveToState(int,int,int,boolean) -> a
+    void startPendingDeferredFragments() -> d
+    void makeActive(android.support.v4.app.Fragment) -> c
+    void makeInactive(android.support.v4.app.Fragment) -> d
+    void addFragment(android.support.v4.app.Fragment,boolean) -> a
+    void removeFragment(android.support.v4.app.Fragment,int,int) -> a
+    void hideFragment(android.support.v4.app.Fragment,int,int) -> b
+    void showFragment(android.support.v4.app.Fragment,int,int) -> c
+    void detachFragment(android.support.v4.app.Fragment,int,int) -> d
+    void attachFragment(android.support.v4.app.Fragment,int,int) -> e
+    android.support.v4.app.Fragment findFragmentById(int) -> a
+    android.support.v4.app.Fragment findFragmentByTag(java.lang.String) -> a
+    void checkStateLoss() -> t
+    void enqueueAction(java.lang.Runnable,boolean) -> a
+    int allocBackStackIndex(android.support.v4.app.BackStackRecord) -> a
+    void setBackStackIndex(int,android.support.v4.app.BackStackRecord) -> a
+    void freeBackStackIndex(int) -> b
+    boolean execPendingActions() -> e
+    void reportBackStackChanged() -> f
+    void addBackStackState(android.support.v4.app.BackStackRecord) -> b
+    boolean popBackStackState(android.os.Handler,java.lang.String,int,int) -> a
+    java.util.ArrayList retainNonConfig() -> g
+    void saveFragmentViewState(android.support.v4.app.Fragment) -> e
+    android.os.Bundle saveFragmentBasicState(android.support.v4.app.Fragment) -> f
+    android.os.Parcelable saveAllState() -> h
+    void restoreAllState(android.os.Parcelable,java.util.ArrayList) -> a
+    void attachActivity(android.support.v4.app.FragmentActivity,android.support.v4.app.FragmentContainer,android.support.v4.app.Fragment) -> a
+    void noteStateNotSaved() -> i
+    void dispatchCreate() -> j
+    void dispatchActivityCreated() -> k
+    void dispatchStart() -> l
+    void dispatchResume() -> m
+    void dispatchPause() -> n
+    void dispatchStop() -> o
+    void dispatchReallyStop() -> p
+    void dispatchDestroyView() -> q
+    void dispatchDestroy() -> r
+    void dispatchConfigurationChanged(android.content.res.Configuration) -> a
+    void dispatchLowMemory() -> s
+    boolean dispatchCreateOptionsMenu(android.view.Menu,android.view.MenuInflater) -> a
+    boolean dispatchPrepareOptionsMenu(android.view.Menu) -> a
+    boolean dispatchOptionsItemSelected(android.view.MenuItem) -> a
+    boolean dispatchContextItemSelected(android.view.MenuItem) -> b
+    void dispatchOptionsMenuClosed(android.view.Menu) -> b
+    int reverseTransit(int) -> c
+    int transitToStyleIndex(int,boolean) -> b
+android.support.v4.app.FragmentManagerImpl$1 -> android.support.v4.app.o:
+    android.support.v4.app.FragmentManagerImpl this$0 -> a
+    void run() -> run
+android.support.v4.app.FragmentManagerImpl$5 -> android.support.v4.app.p:
+    android.support.v4.app.Fragment val$fragment -> a
+    android.support.v4.app.FragmentManagerImpl this$0 -> b
+    void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
+    void onAnimationRepeat(android.view.animation.Animation) -> onAnimationRepeat
+    void onAnimationStart(android.view.animation.Animation) -> onAnimationStart
+android.support.v4.app.FragmentManagerState -> android.support.v4.app.FragmentManagerState:
+    android.support.v4.app.FragmentState[] mActive -> a
+    int[] mAdded -> b
+    android.support.v4.app.BackStackState[] mBackStack -> c
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.FragmentManagerState$1 -> android.support.v4.app.q:
+    android.support.v4.app.FragmentManagerState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.FragmentManagerState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.FragmentState -> android.support.v4.app.FragmentState:
+    java.lang.String mClassName -> a
+    int mIndex -> b
+    boolean mFromLayout -> c
+    int mFragmentId -> d
+    int mContainerId -> e
+    java.lang.String mTag -> f
+    boolean mRetainInstance -> g
+    boolean mDetached -> h
+    android.os.Bundle mArguments -> i
+    android.os.Bundle mSavedFragmentState -> j
+    android.support.v4.app.Fragment mInstance -> k
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    android.support.v4.app.Fragment instantiate(android.support.v4.app.FragmentActivity,android.support.v4.app.Fragment) -> a
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.FragmentState$1 -> android.support.v4.app.r:
+    android.support.v4.app.FragmentState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.FragmentState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.FragmentTabHost -> android.support.v4.app.FragmentTabHost:
+    java.util.ArrayList mTabs -> a
+    android.content.Context mContext -> b
+    android.support.v4.app.FragmentManager mFragmentManager -> c
+    int mContainerId -> d
+    android.widget.TabHost$OnTabChangeListener mOnTabChangeListener -> e
+    android.support.v4.app.FragmentTabHost$TabInfo mLastTab -> f
+    boolean mAttached -> g
+    void setup() -> setup
+    void setOnTabChangedListener(android.widget.TabHost$OnTabChangeListener) -> setOnTabChangedListener
+    void onAttachedToWindow() -> onAttachedToWindow
+    void onDetachedFromWindow() -> onDetachedFromWindow
+    android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
+    void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
+    void onTabChanged(java.lang.String) -> onTabChanged
+    android.support.v4.app.FragmentTransaction doTabChanged(java.lang.String,android.support.v4.app.FragmentTransaction) -> a
+android.support.v4.app.FragmentTabHost$1 -> android.support.v4.app.s:
+android.support.v4.app.FragmentTabHost$SavedState -> android.support.v4.app.FragmentTabHost$SavedState:
+    java.lang.String curTab -> a
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    java.lang.String toString() -> toString
+android.support.v4.app.FragmentTabHost$SavedState$1 -> android.support.v4.app.t:
+    android.support.v4.app.FragmentTabHost$SavedState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.FragmentTabHost$SavedState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.FragmentTabHost$TabInfo -> android.support.v4.app.u:
+    java.lang.String tag -> a
+    java.lang.Class clss -> b
+    android.os.Bundle args -> c
+    android.support.v4.app.Fragment fragment -> d
+    android.support.v4.app.Fragment access$102(android.support.v4.app.FragmentTabHost$TabInfo,android.support.v4.app.Fragment) -> a
+    android.support.v4.app.Fragment access$100(android.support.v4.app.FragmentTabHost$TabInfo) -> a
+    java.lang.String access$200(android.support.v4.app.FragmentTabHost$TabInfo) -> b
+    java.lang.Class access$300(android.support.v4.app.FragmentTabHost$TabInfo) -> c
+    android.os.Bundle access$400(android.support.v4.app.FragmentTabHost$TabInfo) -> d
+android.support.v4.app.FragmentTransaction -> android.support.v4.app.v:
+    android.support.v4.app.FragmentTransaction add(int,android.support.v4.app.Fragment,java.lang.String) -> a
+    android.support.v4.app.FragmentTransaction detach(android.support.v4.app.Fragment) -> a
+    android.support.v4.app.FragmentTransaction attach(android.support.v4.app.Fragment) -> b
+    int commit() -> a
+android.support.v4.app.LoaderManager -> android.support.v4.app.w:
+    boolean hasRunningLoaders() -> a
+android.support.v4.app.LoaderManager$LoaderCallbacks -> android.support.v4.app.x:
+    android.support.v4.content.Loader onCreateLoader(int,android.os.Bundle) -> a
+    void onLoadFinished(android.support.v4.content.Loader,java.lang.Object) -> a
+    void onLoaderReset(android.support.v4.content.Loader) -> a
+android.support.v4.app.LoaderManagerImpl -> android.support.v4.app.y:
+    boolean DEBUG -> a
+    android.support.v4.util.SparseArrayCompat mLoaders -> b
+    android.support.v4.util.SparseArrayCompat mInactiveLoaders -> c
+    java.lang.String mWho -> d
+    android.support.v4.app.FragmentActivity mActivity -> e
+    boolean mStarted -> f
+    boolean mRetaining -> g
+    void updateActivity(android.support.v4.app.FragmentActivity) -> a
+    void doStart() -> b
+    void doStop() -> c
+    void doRetain() -> d
+    void finishRetain() -> e
+    void doReportNextStart() -> f
+    void doReportStart() -> g
+    void doDestroy() -> h
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    boolean hasRunningLoaders() -> a
+android.support.v4.app.LoaderManagerImpl$LoaderInfo -> android.support.v4.app.z:
+    int mId -> a
+    android.os.Bundle mArgs -> b
+    android.support.v4.app.LoaderManager$LoaderCallbacks mCallbacks -> c
+    android.support.v4.content.Loader mLoader -> d
+    boolean mHaveData -> e
+    boolean mDeliveredData -> f
+    java.lang.Object mData -> g
+    boolean mStarted -> h
+    boolean mRetaining -> i
+    boolean mRetainingStarted -> j
+    boolean mReportNextStart -> k
+    boolean mDestroyed -> l
+    boolean mListenerRegistered -> m
+    android.support.v4.app.LoaderManagerImpl$LoaderInfo mPendingLoader -> n
+    android.support.v4.app.LoaderManagerImpl this$0 -> o
+    void start() -> a
+    void retain() -> b
+    void finishRetain() -> c
+    void reportStart() -> d
+    void stop() -> e
+    void destroy() -> f
+    void callOnLoadFinished(android.support.v4.content.Loader,java.lang.Object) -> a
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+android.support.v4.app.NoSaveStateFrameLayout -> android.support.v4.app.aa:
+    android.view.ViewGroup wrap(android.view.View) -> a
+    void dispatchSaveInstanceState(android.util.SparseArray) -> dispatchSaveInstanceState
+    void dispatchRestoreInstanceState(android.util.SparseArray) -> dispatchRestoreInstanceState
+android.support.v4.app.SuperNotCalledException -> android.support.v4.app.ab:
+android.support.v4.content.Loader -> android.support.v4.a.a:
+    int mId -> a
+    android.support.v4.content.Loader$OnLoadCompleteListener mListener -> b
+    boolean mStarted -> c
+    boolean mAbandoned -> d
+    boolean mReset -> e
+    boolean mContentChanged -> f
+    void registerListener(int,android.support.v4.content.Loader$OnLoadCompleteListener) -> a
+    void unregisterListener(android.support.v4.content.Loader$OnLoadCompleteListener) -> a
+    void startLoading() -> a
+    void onStartLoading() -> b
+    void stopLoading() -> c
+    void onStopLoading() -> d
+    void reset() -> e
+    void onReset() -> f
+    java.lang.String dataToString(java.lang.Object) -> a
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+android.support.v4.content.Loader$OnLoadCompleteListener -> android.support.v4.a.b:
+android.support.v4.os.ParcelableCompat -> android.support.v4.b.a:
+    android.os.Parcelable$Creator newCreator(android.support.v4.os.ParcelableCompatCreatorCallbacks) -> a
+android.support.v4.os.ParcelableCompat$CompatCreator -> android.support.v4.b.b:
+    android.support.v4.os.ParcelableCompatCreatorCallbacks mCallbacks -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+android.support.v4.os.ParcelableCompatCreatorCallbacks -> android.support.v4.b.c:
+    java.lang.Object createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> a
+    java.lang.Object[] newArray(int) -> a
+android.support.v4.os.ParcelableCompatCreatorHoneycombMR2 -> android.support.v4.b.d:
+    android.support.v4.os.ParcelableCompatCreatorCallbacks mCallbacks -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+android.support.v4.os.ParcelableCompatCreatorHoneycombMR2Stub -> android.support.v4.b.e:
+    android.os.Parcelable$Creator instantiate(android.support.v4.os.ParcelableCompatCreatorCallbacks) -> a
+android.support.v4.util.DebugUtils -> android.support.v4.c.a:
+    void buildShortClassTag(java.lang.Object,java.lang.StringBuilder) -> a
+android.support.v4.util.LogWriter -> android.support.v4.c.b:
+    java.lang.String mTag -> a
+    java.lang.StringBuilder mBuilder -> b
+    void close() -> close
+    void flush() -> flush
+    void write(char[],int,int) -> write
+    void flushBuilder() -> a
+android.support.v4.util.SparseArrayCompat -> android.support.v4.c.c:
+    java.lang.Object DELETED -> a
+    boolean mGarbage -> b
+    int[] mKeys -> c
+    java.lang.Object[] mValues -> d
+    int mSize -> e
+    void gc() -> c
+    int size() -> a
+    int keyAt(int) -> a
+    java.lang.Object valueAt(int) -> b
+    void clear() -> b
+    int idealByteArraySize(int) -> c
+    int idealIntArraySize(int) -> d
+android.support.v4.view.KeyEventCompat -> android.support.v4.view.a:
+    android.support.v4.view.KeyEventCompat$KeyEventVersionImpl IMPL -> a
+    boolean hasModifiers(android.view.KeyEvent,int) -> a
+    boolean hasNoModifiers(android.view.KeyEvent) -> a
+android.support.v4.view.KeyEventCompat$BaseKeyEventVersionImpl -> android.support.v4.view.b:
+    int metaStateFilterDirectionalModifiers(int,int,int,int,int) -> a
+    int normalizeMetaState(int) -> a
+    boolean metaStateHasModifiers(int,int) -> a
+    boolean metaStateHasNoModifiers(int) -> b
+android.support.v4.view.KeyEventCompat$HoneycombKeyEventVersionImpl -> android.support.v4.view.c:
+    boolean metaStateHasModifiers(int,int) -> a
+    boolean metaStateHasNoModifiers(int) -> b
+android.support.v4.view.KeyEventCompat$KeyEventVersionImpl -> android.support.v4.view.d:
+    boolean metaStateHasModifiers(int,int) -> a
+    boolean metaStateHasNoModifiers(int) -> b
+android.support.v4.view.KeyEventCompatHoneycomb -> android.support.v4.view.e:
+    boolean metaStateHasModifiers(int,int) -> a
+    boolean metaStateHasNoModifiers(int) -> a
+android.support.v4.view.MotionEventCompat -> android.support.v4.view.f:
+    android.support.v4.view.MotionEventCompat$MotionEventVersionImpl IMPL -> a
+    int getActionIndex(android.view.MotionEvent) -> a
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+android.support.v4.view.MotionEventCompat$BaseMotionEventVersionImpl -> android.support.v4.view.g:
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+android.support.v4.view.MotionEventCompat$EclairMotionEventVersionImpl -> android.support.v4.view.h:
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+android.support.v4.view.MotionEventCompat$MotionEventVersionImpl -> android.support.v4.view.i:
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+android.support.v4.view.MotionEventCompatEclair -> android.support.v4.view.j:
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+android.support.v4.view.PagerAdapter -> android.support.v4.view.k:
+    android.database.DataSetObservable mObservable -> a
+    int getCount() -> a
+    void startUpdate(android.view.ViewGroup) -> a
+    java.lang.Object instantiateItem(android.view.ViewGroup,int) -> a
+    void destroyItem(android.view.ViewGroup,int,java.lang.Object) -> a
+    void setPrimaryItem(android.view.ViewGroup,int,java.lang.Object) -> b
+    void finishUpdate(android.view.ViewGroup) -> b
+    void startUpdate(android.view.View) -> a
+    java.lang.Object instantiateItem(android.view.View,int) -> a
+    void destroyItem(android.view.View,int,java.lang.Object) -> a
+    void setPrimaryItem(android.view.View,int,java.lang.Object) -> b
+    void finishUpdate(android.view.View) -> b
+    boolean isViewFromObject(android.view.View,java.lang.Object) -> a
+    android.os.Parcelable saveState() -> b
+    void restoreState(android.os.Parcelable,java.lang.ClassLoader) -> a
+    int getItemPosition(java.lang.Object) -> a
+    void registerDataSetObserver(android.database.DataSetObserver) -> a
+    void unregisterDataSetObserver(android.database.DataSetObserver) -> b
+    float getPageWidth(int) -> a
+android.support.v4.view.VelocityTrackerCompat -> android.support.v4.view.l:
+    android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl IMPL -> a
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+android.support.v4.view.VelocityTrackerCompat$BaseVelocityTrackerVersionImpl -> android.support.v4.view.m:
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+android.support.v4.view.VelocityTrackerCompat$HoneycombVelocityTrackerVersionImpl -> android.support.v4.view.n:
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl -> android.support.v4.view.o:
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+android.support.v4.view.VelocityTrackerCompatHoneycomb -> android.support.v4.view.p:
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+android.support.v4.view.ViewCompat -> android.support.v4.view.q:
+    android.support.v4.view.ViewCompat$ViewCompatImpl IMPL -> a
+    boolean canScrollHorizontally(android.view.View,int) -> a
+    int getOverScrollMode(android.view.View) -> a
+    void postInvalidateOnAnimation(android.view.View) -> b
+    void postOnAnimation(android.view.View,java.lang.Runnable) -> a
+    void setLayerType(android.view.View,int,android.graphics.Paint) -> a
+android.support.v4.view.ViewCompat$BaseViewCompatImpl -> android.support.v4.view.r:
+    boolean canScrollHorizontally(android.view.View,int) -> a
+    int getOverScrollMode(android.view.View) -> a
+    void postInvalidateOnAnimation(android.view.View) -> b
+    void postOnAnimation(android.view.View,java.lang.Runnable) -> a
+    long getFrameTime() -> a
+    void setLayerType(android.view.View,int,android.graphics.Paint) -> a
+android.support.v4.view.ViewCompat$GBViewCompatImpl -> android.support.v4.view.s:
+    int getOverScrollMode(android.view.View) -> a
+android.support.v4.view.ViewCompat$HCViewCompatImpl -> android.support.v4.view.t:
+    long getFrameTime() -> a
+    void setLayerType(android.view.View,int,android.graphics.Paint) -> a
+android.support.v4.view.ViewCompat$ICSViewCompatImpl -> android.support.v4.view.u:
+    boolean canScrollHorizontally(android.view.View,int) -> a
+android.support.v4.view.ViewCompat$JBViewCompatImpl -> android.support.v4.view.v:
+    void postInvalidateOnAnimation(android.view.View) -> b
+    void postOnAnimation(android.view.View,java.lang.Runnable) -> a
+android.support.v4.view.ViewCompat$JbMr1ViewCompatImpl -> android.support.v4.view.w:
+android.support.v4.view.ViewCompat$ViewCompatImpl -> android.support.v4.view.x:
+    boolean canScrollHorizontally(android.view.View,int) -> a
+    int getOverScrollMode(android.view.View) -> a
+    void postInvalidateOnAnimation(android.view.View) -> b
+    void postOnAnimation(android.view.View,java.lang.Runnable) -> a
+    void setLayerType(android.view.View,int,android.graphics.Paint) -> a
+android.support.v4.view.ViewCompatGingerbread -> android.support.v4.view.y:
+    int getOverScrollMode(android.view.View) -> a
+android.support.v4.view.ViewCompatHC -> android.support.v4.view.z:
+    long getFrameTime() -> a
+    void setLayerType(android.view.View,int,android.graphics.Paint) -> a
+android.support.v4.view.ViewCompatICS -> android.support.v4.view.aa:
+    boolean canScrollHorizontally(android.view.View,int) -> a
+android.support.v4.view.ViewCompatJB -> android.support.v4.view.ab:
+    void postInvalidateOnAnimation(android.view.View) -> a
+    void postOnAnimation(android.view.View,java.lang.Runnable) -> a
+android.support.v4.view.ViewPager -> android.support.v4.view.ViewPager:
+    int[] LAYOUT_ATTRS -> a
+    java.util.Comparator COMPARATOR -> b
+    android.view.animation.Interpolator sInterpolator -> c
+    java.util.ArrayList mItems -> d
+    android.support.v4.view.ViewPager$ItemInfo mTempItem -> e
+    android.graphics.Rect mTempRect -> f
+    android.support.v4.view.PagerAdapter mAdapter -> g
+    int mCurItem -> h
+    int mRestoredCurItem -> i
+    android.os.Parcelable mRestoredAdapterState -> j
+    java.lang.ClassLoader mRestoredClassLoader -> k
+    android.widget.Scroller mScroller -> l
+    android.support.v4.view.ViewPager$PagerObserver mObserver -> m
+    int mPageMargin -> n
+    android.graphics.drawable.Drawable mMarginDrawable -> o
+    int mTopPageBounds -> p
+    int mBottomPageBounds -> q
+    float mFirstOffset -> r
+    float mLastOffset -> s
+    int mChildWidthMeasureSpec -> t
+    int mChildHeightMeasureSpec -> u
+    boolean mInLayout -> v
+    boolean mScrollingCacheEnabled -> w
+    boolean mPopulatePending -> x
+    int mOffscreenPageLimit -> y
+    boolean mIsBeingDragged -> z
+    boolean mIsUnableToDrag -> A
+    int mDefaultGutterSize -> B
+    int mGutterSize -> C
+    int mTouchSlop -> D
+    float mInitialMotionX -> E
+    float mLastMotionX -> F
+    float mLastMotionY -> G
+    int mActivePointerId -> H
+    android.view.VelocityTracker mVelocityTracker -> I
+    int mMinimumVelocity -> J
+    int mMaximumVelocity -> K
+    int mFlingDistance -> L
+    int mCloseEnough -> M
+    int mSeenPositionMin -> N
+    int mSeenPositionMax -> O
+    boolean mFakeDragging -> P
+    android.support.v4.widget.EdgeEffectCompat mLeftEdge -> Q
+    android.support.v4.widget.EdgeEffectCompat mRightEdge -> R
+    boolean mFirstLayout -> S
+    boolean mNeedCalculatePageOffsets -> T
+    boolean mCalledSuper -> U
+    int mDecorChildCount -> V
+    android.support.v4.view.ViewPager$OnPageChangeListener mOnPageChangeListener -> W
+    android.support.v4.view.ViewPager$OnPageChangeListener mInternalPageChangeListener -> Z
+    android.support.v4.view.ViewPager$OnAdapterChangeListener mAdapterChangeListener -> aa
+    android.support.v4.view.ViewPager$PageTransformer mPageTransformer -> ab
+    java.lang.reflect.Method mSetChildrenDrawingOrderEnabled -> ac
+    int mDrawingOrder -> ad
+    java.util.ArrayList mDrawingOrderedChildren -> ae
+    android.support.v4.view.ViewPager$ViewPositionComparator sPositionComparator -> af
+    java.lang.Runnable mEndScrollRunnable -> ag
+    int mScrollState -> ah
+    void onDetachedFromWindow() -> onDetachedFromWindow
+    void setScrollState(int) -> setScrollState
+    void setAdapter(android.support.v4.view.PagerAdapter) -> setAdapter
+    void removeNonDecorViews() -> f
+    android.support.v4.view.PagerAdapter getAdapter() -> getAdapter
+    void setOnAdapterChangeListener(android.support.v4.view.ViewPager$OnAdapterChangeListener) -> setOnAdapterChangeListener
+    void setCurrentItem(int) -> setCurrentItem
+    void setCurrentItem(int,boolean) -> a
+    int getCurrentItem() -> getCurrentItem
+    void setCurrentItemInternal(int,boolean,boolean) -> a
+    void setCurrentItemInternal(int,boolean,boolean,int) -> a
+    void scrollToItem(int,boolean,int,boolean) -> a
+    void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener) -> setOnPageChangeListener
+    void setChildrenDrawingOrderEnabledCompat(boolean) -> setChildrenDrawingOrderEnabledCompat
+    int getChildDrawingOrder(int,int) -> getChildDrawingOrder
+    int getOffscreenPageLimit() -> getOffscreenPageLimit
+    void setOffscreenPageLimit(int) -> setOffscreenPageLimit
+    void setPageMargin(int) -> setPageMargin
+    int getPageMargin() -> getPageMargin
+    void setPageMarginDrawable(android.graphics.drawable.Drawable) -> setPageMarginDrawable
+    void setPageMarginDrawable(int) -> setPageMarginDrawable
+    boolean verifyDrawable(android.graphics.drawable.Drawable) -> verifyDrawable
+    void drawableStateChanged() -> drawableStateChanged
+    float distanceInfluenceForSnapDuration(float) -> a
+    void smoothScrollTo(int,int,int) -> a
+    android.support.v4.view.ViewPager$ItemInfo addNewItem(int,int) -> a
+    void dataSetChanged() -> a
+    void populate() -> b
+    void populate(int) -> a
+    void calculatePageOffsets(android.support.v4.view.ViewPager$ItemInfo,int,android.support.v4.view.ViewPager$ItemInfo) -> a
+    android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
+    void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
+    void addView(android.view.View,int,android.view.ViewGroup$LayoutParams) -> addView
+    android.support.v4.view.ViewPager$ItemInfo infoForChild(android.view.View) -> a
+    android.support.v4.view.ViewPager$ItemInfo infoForAnyChild(android.view.View) -> b
+    android.support.v4.view.ViewPager$ItemInfo infoForPosition(int) -> b
+    void onAttachedToWindow() -> onAttachedToWindow
+    void onMeasure(int,int) -> onMeasure
+    void onSizeChanged(int,int,int,int) -> onSizeChanged
+    void recomputeScrollPosition(int,int,int,int) -> a
+    void onLayout(boolean,int,int,int,int) -> onLayout
+    void computeScroll() -> computeScroll
+    boolean pageScrolled(int) -> d
+    void onPageScrolled(int,float,int) -> a
+    void completeScroll(boolean) -> a
+    boolean isGutterDrag(float,float) -> a
+    void enableLayers(boolean) -> b
+    boolean onInterceptTouchEvent(android.view.MotionEvent) -> onInterceptTouchEvent
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    boolean performDrag(float) -> b
+    android.support.v4.view.ViewPager$ItemInfo infoForCurrentScrollPosition() -> g
+    int determineTargetPage(int,float,int,int) -> a
+    void draw(android.graphics.Canvas) -> draw
+    void onDraw(android.graphics.Canvas) -> onDraw
+    void onSecondaryPointerUp(android.view.MotionEvent) -> a
+    void endDrag() -> h
+    void setScrollingCacheEnabled(boolean) -> setScrollingCacheEnabled
+    boolean canScroll(android.view.View,boolean,int,int,int) -> a
+    boolean dispatchKeyEvent(android.view.KeyEvent) -> dispatchKeyEvent
+    boolean executeKeyEvent(android.view.KeyEvent) -> a
+    boolean arrowScroll(int) -> c
+    android.graphics.Rect getChildRectInPagerCoordinates(android.graphics.Rect,android.view.View) -> a
+    boolean pageLeft() -> c
+    boolean pageRight() -> d
+    void addFocusables(java.util.ArrayList,int,int) -> addFocusables
+    void addTouchables(java.util.ArrayList) -> addTouchables
+    boolean onRequestFocusInDescendants(int,android.graphics.Rect) -> onRequestFocusInDescendants
+    boolean dispatchPopulateAccessibilityEvent(android.view.accessibility.AccessibilityEvent) -> dispatchPopulateAccessibilityEvent
+    android.view.ViewGroup$LayoutParams generateDefaultLayoutParams() -> generateDefaultLayoutParams
+    android.view.ViewGroup$LayoutParams generateLayoutParams(android.view.ViewGroup$LayoutParams) -> generateLayoutParams
+    boolean checkLayoutParams(android.view.ViewGroup$LayoutParams) -> checkLayoutParams
+    android.view.ViewGroup$LayoutParams generateLayoutParams(android.util.AttributeSet) -> generateLayoutParams
+    int[] access$400() -> e
+android.support.v4.view.ViewPager$1 -> android.support.v4.view.ac:
+    int compare(android.support.v4.view.ViewPager$ItemInfo,android.support.v4.view.ViewPager$ItemInfo) -> a
+    int compare(java.lang.Object,java.lang.Object) -> compare
+android.support.v4.view.ViewPager$2 -> android.support.v4.view.ad:
+    float getInterpolation(float) -> getInterpolation
+android.support.v4.view.ViewPager$Decor -> android.support.v4.view.ae:
+android.support.v4.view.ViewPager$ItemInfo -> android.support.v4.view.af:
+    java.lang.Object object -> a
+    int position -> b
+    boolean scrolling -> c
+    float widthFactor -> d
+    float offset -> e
+android.support.v4.view.ViewPager$LayoutParams -> android.support.v4.view.ag:
+    boolean isDecor -> a
+    int gravity -> b
+    float widthFactor -> c
+    boolean needsMeasure -> d
+    int position -> e
+    int childIndex -> f
+android.support.v4.view.ViewPager$OnAdapterChangeListener -> android.support.v4.view.ah:
+    void onAdapterChanged(android.support.v4.view.PagerAdapter,android.support.v4.view.PagerAdapter) -> a
+android.support.v4.view.ViewPager$OnPageChangeListener -> android.support.v4.view.ai:
+    void onPageScrolled(int,float,int) -> a
+    void onPageSelected(int) -> a
+    void onPageScrollStateChanged(int) -> b
+android.support.v4.view.ViewPager$PageTransformer -> android.support.v4.view.aj:
+    void transformPage(android.view.View,float) -> a
+android.support.v4.view.ViewPager$PagerObserver -> android.support.v4.view.ak:
+    android.support.v4.view.ViewPager this$0 -> a
+    void onChanged() -> onChanged
+    void onInvalidated() -> onInvalidated
+android.support.v4.view.ViewPager$SavedState -> android.support.v4.view.ViewPager$SavedState:
+    int position -> a
+    android.os.Parcelable adapterState -> b
+    java.lang.ClassLoader loader -> c
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    java.lang.String toString() -> toString
+android.support.v4.view.ViewPager$SavedState$1 -> android.support.v4.view.al:
+    android.support.v4.view.ViewPager$SavedState createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> b
+    android.support.v4.view.ViewPager$SavedState[] newArray(int) -> b
+    java.lang.Object[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> a
+android.support.v4.view.ViewPager$ViewPositionComparator -> android.support.v4.view.am:
+    int compare(android.view.View,android.view.View) -> a
+    int compare(java.lang.Object,java.lang.Object) -> compare
+android.support.v4.widget.EdgeEffectCompat -> android.support.v4.d.a:
+    java.lang.Object mEdgeEffect -> a
+    android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl IMPL -> b
+    void setSize(int,int) -> a
+    boolean isFinished() -> a
+    void finish() -> b
+    boolean onPull(float) -> a
+    boolean onRelease() -> c
+    boolean draw(android.graphics.Canvas) -> a
+android.support.v4.widget.EdgeEffectCompat$BaseEdgeEffectImpl -> android.support.v4.d.b:
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+android.support.v4.widget.EdgeEffectCompat$EdgeEffectIcsImpl -> android.support.v4.d.c:
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl -> android.support.v4.d.d:
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+android.support.v4.widget.EdgeEffectCompatIcs -> android.support.v4.d.e:
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+com.naens.dao.ConfigurationDAO -> com.naens.a.a:
+    java.lang.String getSideFontSize(java.lang.String,int) -> a
+    java.lang.String getSideFontName(java.lang.String,int) -> b
+    boolean isOneDirection(java.lang.String) -> a
+    java.lang.String[] getLimitList(java.lang.String) -> b
+    java.lang.String getDefaultLimit(java.lang.String) -> c
+    boolean isMdCSide(java.lang.String,int) -> c
+    boolean isMdCTranslitSide(java.lang.String,int) -> d
+    boolean getVisible(java.lang.String) -> d
+    java.lang.String getRootFolder() -> a
+com.naens.dao.WordFileDAO -> com.naens.a.b:
+    java.util.List getWordFiles(com.naens.model.WordFolder) -> a
+    int getFileSize(com.naens.model.WordFile) -> a
+    void loadImage(com.naens.model.Word,int) -> a
+com.naens.dao.WordFolderDAO -> com.naens.a.c:
+    java.util.List getFolders() -> a
+    com.naens.model.WordFolder getFolderByName(java.lang.String) -> a
+com.naens.dao.androiddao.ConfigurationAndroidPrefDAO -> com.naens.a.a.a:
+    android.content.Context context -> a
+    android.content.SharedPreferences sharedPref -> b
+    boolean isOneDirection(java.lang.String) -> a
+    java.lang.String[] getLimitList(java.lang.String) -> b
+    java.lang.String getDefaultLimit(java.lang.String) -> c
+    boolean getVisible(java.lang.String) -> d
+    java.lang.String getRootFolder() -> a
+    java.lang.String getSideFontSize(java.lang.String,int) -> a
+    java.lang.String getSideFontName(java.lang.String,int) -> b
+    java.lang.String getEncoding(java.lang.String,int) -> e
+    boolean isMdCSide(java.lang.String,int) -> c
+    boolean isMdCTranslitSide(java.lang.String,int) -> d
+com.naens.dao.androiddao.FileLazyList -> com.naens.a.a.b:
+    com.naens.model.WordFile wordFile -> a
+    java.util.List load() -> a
+com.naens.dao.androiddao.FolderLazyList -> com.naens.a.a.c:
+    com.naens.model.WordFolder wordFolder -> a
+    java.util.List load() -> a
+com.naens.dao.androiddao.LazyList -> com.naens.a.a.d:
+    java.util.List list -> a
+    java.util.List load() -> a
+    boolean add(java.lang.Object) -> add
+    void add(int,java.lang.Object) -> add
+    boolean addAll(java.util.Collection) -> addAll
+    boolean addAll(int,java.util.Collection) -> addAll
+    void clear() -> clear
+    boolean contains(java.lang.Object) -> contains
+    boolean containsAll(java.util.Collection) -> containsAll
+    java.lang.Object get(int) -> get
+    int indexOf(java.lang.Object) -> indexOf
+    boolean isEmpty() -> isEmpty
+    java.util.Iterator iterator() -> iterator
+    int lastIndexOf(java.lang.Object) -> lastIndexOf
+    java.util.ListIterator listIterator() -> listIterator
+    java.util.ListIterator listIterator(int) -> listIterator
+    boolean remove(java.lang.Object) -> remove
+    java.lang.Object remove(int) -> remove
+    boolean removeAll(java.util.Collection) -> removeAll
+    boolean retainAll(java.util.Collection) -> retainAll
+    java.lang.Object set(int,java.lang.Object) -> set
+    int size() -> size
+    java.util.List subList(int,int) -> subList
+    java.lang.Object[] toArray() -> toArray
+    java.lang.Object[] toArray(java.lang.Object[]) -> toArray
+com.naens.dao.androiddao.WordFileAndroidDAO -> com.naens.a.a.e:
+    java.util.List getWordFiles(com.naens.model.WordFolder) -> a
+    java.util.List getWordPairs(com.naens.model.WordFile) -> b
+    int getFileSize(com.naens.model.WordFile) -> a
+    void loadImage(com.naens.model.Word,int) -> a
+com.naens.dao.androiddao.WordFolderAndroidDAO -> com.naens.a.a.f:
+    java.lang.String root -> a
+    java.util.List wordFolders -> b
+    java.util.List getFolders() -> a
+    com.naens.model.WordFolder getFolderByName(java.lang.String) -> a
+    java.lang.String getRoot() -> b
+com.naens.dialogs.FindFolderDialog -> com.naens.b.a:
+    java.lang.String pathString -> a
+    android.widget.Button okButton -> b
+    android.widget.Button cancelButton -> c
+    android.widget.Button newButton -> d
+    android.widget.Button renameButton -> e
+    android.widget.LinearLayout layout -> f
+    android.widget.ScrollView scrollView -> g
+    android.widget.TextView statusTextView -> h
+    java.lang.String rootFolder -> i
+    java.util.List path -> j
+    java.lang.String selectedFolder -> k
+    boolean editMode -> l
+    java.util.Map editMap -> m
+    android.content.DialogInterface$OnClickListener positiveListener -> n
+    android.widget.EditText currentEdit -> o
+    void onCreate(android.os.Bundle) -> onCreate
+    java.lang.String getPathString() -> b
+    void displayCurrentFolder() -> c
+    android.widget.EditText getNewEdit() -> d
+    void setPositiveButton(java.lang.String,android.content.DialogInterface$OnClickListener) -> a
+    java.lang.CharSequence getFolderPath() -> a
+    void setRootFolder(java.lang.String) -> a
+    void setPath(java.lang.String) -> b
+    void show() -> show
+    void scrollSelected() -> e
+    android.content.DialogInterface$OnClickListener access$0(com.naens.dialogs.FindFolderDialog) -> a
+    android.widget.EditText access$1(com.naens.dialogs.FindFolderDialog) -> b
+    void access$2(com.naens.dialogs.FindFolderDialog,android.widget.EditText) -> a
+    android.widget.EditText access$3(com.naens.dialogs.FindFolderDialog) -> c
+    android.widget.LinearLayout access$4(com.naens.dialogs.FindFolderDialog) -> d
+    void access$5(com.naens.dialogs.FindFolderDialog,boolean) -> a
+    void access$6(com.naens.dialogs.FindFolderDialog,java.lang.String) -> a
+    android.widget.ScrollView access$7(com.naens.dialogs.FindFolderDialog) -> e
+    java.util.Map access$8(com.naens.dialogs.FindFolderDialog) -> f
+    java.lang.String access$9(com.naens.dialogs.FindFolderDialog) -> g
+    void access$10(com.naens.dialogs.FindFolderDialog) -> h
+    boolean access$11(com.naens.dialogs.FindFolderDialog) -> i
+    java.util.List access$12(com.naens.dialogs.FindFolderDialog) -> j
+    void access$13(com.naens.dialogs.FindFolderDialog) -> k
+    android.widget.Button access$14(com.naens.dialogs.FindFolderDialog) -> l
+    java.lang.String access$15(com.naens.dialogs.FindFolderDialog) -> m
+    java.lang.String access$16(com.naens.dialogs.FindFolderDialog) -> n
+com.naens.dialogs.FindFolderDialog$1 -> com.naens.b.b:
+    com.naens.dialogs.FindFolderDialog this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.naens.dialogs.FindFolderDialog$2 -> com.naens.b.c:
+    com.naens.dialogs.FindFolderDialog this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.naens.dialogs.FindFolderDialog$3 -> com.naens.b.d:
+    com.naens.dialogs.FindFolderDialog this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.naens.dialogs.FindFolderDialog$4 -> com.naens.b.e:
+    com.naens.dialogs.FindFolderDialog this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.naens.dialogs.FindFolderDialog$5 -> com.naens.b.f:
+    com.naens.dialogs.FindFolderDialog this$0 -> a
+    boolean onLongClick(android.view.View) -> onLongClick
+com.naens.dialogs.FindFolderDialog$6 -> com.naens.b.g:
+    com.naens.dialogs.FindFolderDialog this$0 -> a
+    void run() -> run
+com.naens.dialogs.FindFolderDialog$7 -> com.naens.b.h:
+    com.naens.dialogs.FindFolderDialog this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.naens.dialogs.FindFolderDialog$8 -> com.naens.b.i:
+    com.naens.dialogs.FindFolderDialog this$0 -> a
+    boolean onLongClick(android.view.View) -> onLongClick
+com.naens.dialogs.FindFolderDialog$9 -> com.naens.b.j:
+    com.naens.dialogs.FindFolderDialog this$0 -> a
+    boolean onKey(android.view.View,int,android.view.KeyEvent) -> onKey
+com.naens.model.Word -> com.naens.model.Word:
+    java.lang.String text -> a
+    java.lang.String fontName -> b
+    int fontSize -> c
+    android.graphics.Bitmap image -> d
+    java.lang.String imageName -> e
+    java.lang.String mdcString -> f
+    java.lang.String imagePath -> g
+    int side -> h
+    java.lang.String getImageName() -> a
+    void setImage(android.graphics.Bitmap) -> a
+    java.lang.String getText() -> b
+    void setWord(java.lang.String) -> a
+    int getFontSize() -> c
+    void setFontSize(int) -> a
+    java.lang.String getFontName() -> d
+    void setFontName(java.lang.String) -> b
+    boolean isMdC() -> e
+    android.graphics.Bitmap getImage() -> f
+    boolean isImage() -> g
+    java.lang.String getMdCString() -> h
+    java.lang.String getImagePath() -> i
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    void setSide(int) -> b
+    int getSide() -> j
+com.naens.model.WordFile -> com.naens.model.a:
+    java.util.List wordPairs -> a
+    java.lang.String name -> b
+    com.naens.model.WordFolder folder -> c
+    java.util.List getWordPairs() -> a
+    com.naens.model.WordFolder getFolder() -> b
+    java.lang.String getName() -> c
+    void setWordPairs(java.util.List) -> a
+com.naens.model.WordFolder -> com.naens.model.b:
+    java.util.List wordFiles -> a
+    java.lang.String name -> b
+    java.lang.String getName() -> a
+    void setWordFiles(java.util.List) -> a
+com.naens.model.WordPair -> com.naens.model.WordPair:
+    android.util.SparseArray words -> a
+    com.naens.model.Word getWordBySideNumber(int) -> a
+    int getSize() -> a
+    void addWord(com.naens.model.Word) -> a
+    boolean hasSide(int) -> b
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    com.naens.model.Word getWordN(int) -> c
+com.naens.mowords.FlowLayout -> com.naens.mowords.FlowLayout:
+    int line_height -> b
+    boolean $assertionsDisabled -> a
+    void onMeasure(int,int) -> onMeasure
+    android.view.ViewGroup$LayoutParams generateDefaultLayoutParams() -> generateDefaultLayoutParams
+    boolean checkLayoutParams(android.view.ViewGroup$LayoutParams) -> checkLayoutParams
+    void onLayout(boolean,int,int,int,int) -> onLayout
+com.naens.mowords.FlowLayout$LayoutParams -> com.naens.mowords.a:
+    int horizontal_spacing -> a
+    int vertical_spacing -> b
+com.naens.mowords.FolderActivity -> com.naens.mowords.FolderActivity:
+    java.util.List boxes -> a
+    java.util.ArrayList savedBoxes -> b
+    java.util.Map files -> c
+    boolean oneDirConf -> d
+    android.widget.ScrollView scrollView -> e
+    int scrollPosition -> f
+    com.naens.model.WordFolder wordFolder -> g
+    java.lang.String theme -> h
+    void onResume() -> onResume
+    void onCreate(android.os.Bundle) -> onCreate
+    void loadTheme() -> a
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    void buttonStart(android.view.View) -> buttonStart
+    void selectAll(android.view.View) -> selectAll
+    void inverseSelection(android.view.View) -> inverseSelection
+    void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
+    void onRestoreInstanceState(android.os.Bundle) -> onRestoreInstanceState
+    boolean onPrepareOptionsMenu(android.view.Menu) -> onPrepareOptionsMenu
+    android.widget.ScrollView access$0(com.naens.mowords.FolderActivity) -> a
+    int access$1(com.naens.mowords.FolderActivity) -> b
+com.naens.mowords.FolderActivity$1 -> com.naens.mowords.b:
+    com.naens.mowords.FolderActivity this$0 -> a
+    void run() -> run
+com.naens.mowords.MainActivity -> com.naens.mowords.MainActivity:
+    com.naens.dao.WordFileDAO wordFileDAO -> b
+    com.naens.dao.WordFolderDAO wordFolderDAO -> c
+    com.naens.dao.ConfigurationDAO configurationDAO -> d
+    java.util.List chosenWords -> a
+    android.content.Context context -> e
+    java.lang.String theme -> f
+    void onCreate(android.os.Bundle) -> onCreate
+    void displayFolders() -> e
+    void onResume() -> onResume
+    void onStart() -> onStart
+    void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String) -> onSharedPreferenceChanged
+    void loadTheme() -> f
+    com.naens.dao.WordFileDAO getWordFileDAO() -> a
+    com.naens.dao.WordFolderDAO getWordFolderDAO() -> b
+    com.naens.dao.ConfigurationDAO getConfigurationDAO() -> c
+    android.content.Context getContext() -> d
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+com.naens.mowords.MainActivity$TextClickListener -> com.naens.mowords.c:
+    java.lang.String name -> b
+    com.naens.mowords.MainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.naens.mowords.WelcomeActivity -> com.naens.mowords.WelcomeActivity:
+    java.lang.String filesFolder -> a
+    java.lang.String root -> b
+    void onCreate(android.os.Bundle) -> onCreate
+    void changeFolder(android.view.View) -> changeFolder
+    void okDone(android.view.View) -> okDone
+    void copyFromAssets(android.content.res.AssetManager,java.lang.String,java.lang.String,java.lang.String) -> a
+    void copyFile(android.content.res.AssetManager,java.lang.String,java.lang.String,java.lang.String) -> b
+    void onBackPressed() -> onBackPressed
+    void access$0(com.naens.mowords.WelcomeActivity,java.lang.String) -> a
+    java.lang.String access$1(com.naens.mowords.WelcomeActivity) -> a
+com.naens.mowords.WelcomeActivity$1 -> com.naens.mowords.d:
+    com.naens.mowords.WelcomeActivity this$0 -> a
+    com.naens.dialogs.FindFolderDialog val$findFolderDialog -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.naens.mowords.WelcomeActivity$2 -> com.naens.mowords.e:
+    com.naens.mowords.WelcomeActivity this$0 -> a
+    void onCancel(android.content.DialogInterface) -> onCancel
+com.naens.mowords.WordGui -> com.naens.mowords.f:
+    void displayWord(com.naens.model.Word,boolean) -> a
+    void setGameController(com.naens.wordgame.WordGame) -> a
+    void displayTime(int) -> a
+    void displayPause() -> a
+    void displayBlank() -> b
+    void askSecondSide(java.util.List,java.util.List) -> a
+    void askContinueGame(int) -> b
+    void displayStats(java.util.List,java.util.List,java.util.List,java.util.List,int) -> a
+    void displayCorrect(boolean) -> a
+    void displayStatus(int,int) -> a
+com.naens.mowords.WordsActivity -> com.naens.mowords.WordsActivity:
+    com.naens.wordgame.WordGame wg -> a
+    android.widget.LinearLayout layout -> b
+    android.widget.TextView wordView -> c
+    int layoutWidth -> d
+    int layoutHeight -> e
+    com.naens.model.Word wordToDisplay -> f
+    android.graphics.Typeface defaultItalic -> g
+    boolean correct -> h
+    java.lang.String folderName -> i
+    java.lang.String theme -> j
+    void onCreate(android.os.Bundle) -> onCreate
+    void loadTheme() -> d
+    void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
+    void onRestoreInstanceState(android.os.Bundle) -> onRestoreInstanceState
+    void wordClicked(android.view.View) -> wordClicked
+    void pauseClicked(android.view.View) -> pauseClicked
+    void previousWordClicked(android.view.View) -> previousWordClicked
+    void nextWordClicked(android.view.View) -> nextWordClicked
+    void previousSideClicked(android.view.View) -> previousSideClicked
+    void nextSideClicked(android.view.View) -> nextSideClicked
+    void displayWord(com.naens.model.Word,boolean) -> a
+    void displayImage(android.graphics.Bitmap) -> a
+    void displayText(java.lang.String,int,android.graphics.Typeface) -> a
+    void setGameController(com.naens.wordgame.WordGame) -> a
+    void displayTime(int) -> a
+    void displayPause() -> a
+    void displayBlank() -> b
+    void askSecondSide(java.util.List,java.util.List) -> a
+    void askContinueGame(int) -> b
+    void displayStats(java.util.List,java.util.List,java.util.List,java.util.List,int) -> a
+    void displayCorrect(boolean) -> a
+    void displayStatus(int,int) -> a
+    void onLongClick() -> c
+    boolean dispatchTouchEvent(android.view.MotionEvent) -> dispatchTouchEvent
+    void onPause() -> onPause
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String) -> onSharedPreferenceChanged
+    void onBackPressed() -> onBackPressed
+    com.naens.wordgame.WordGame access$0(com.naens.mowords.WordsActivity) -> a
+    android.widget.LinearLayout access$1(com.naens.mowords.WordsActivity) -> b
+    int access$2(com.naens.mowords.WordsActivity) -> c
+    int access$3(com.naens.mowords.WordsActivity) -> d
+    void access$4(com.naens.mowords.WordsActivity,int) -> a
+    void access$5(com.naens.mowords.WordsActivity,int) -> b
+    com.naens.model.Word access$6(com.naens.mowords.WordsActivity) -> e
+    boolean access$7(com.naens.mowords.WordsActivity) -> f
+    void access$8(com.naens.mowords.WordsActivity) -> g
+com.naens.mowords.WordsActivity$1 -> com.naens.mowords.g:
+    com.naens.mowords.WordsActivity this$0 -> a
+    void onGlobalLayout() -> onGlobalLayout
+com.naens.mowords.WordsActivity$10 -> com.naens.mowords.h:
+    com.naens.mowords.WordsActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.naens.mowords.WordsActivity$11 -> com.naens.mowords.i:
+    com.naens.mowords.WordsActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.naens.mowords.WordsActivity$12 -> com.naens.mowords.j:
+    com.naens.mowords.WordsActivity this$0 -> a
+    void onCancel(android.content.DialogInterface) -> onCancel
+com.naens.mowords.WordsActivity$2 -> com.naens.mowords.k:
+    com.naens.mowords.WordsActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.naens.mowords.WordsActivity$3 -> com.naens.mowords.l:
+    com.naens.mowords.WordsActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.naens.mowords.WordsActivity$4 -> com.naens.mowords.m:
+    com.naens.mowords.WordsActivity this$0 -> a
+    void onCancel(android.content.DialogInterface) -> onCancel
+com.naens.mowords.WordsActivity$5 -> com.naens.mowords.n:
+    com.naens.mowords.WordsActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.naens.mowords.WordsActivity$6 -> com.naens.mowords.o:
+    com.naens.mowords.WordsActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.naens.mowords.WordsActivity$7 -> com.naens.mowords.p:
+    com.naens.mowords.WordsActivity this$0 -> a
+    void onCancel(android.content.DialogInterface) -> onCancel
+com.naens.mowords.WordsActivity$8 -> com.naens.mowords.q:
+    com.naens.mowords.WordsActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.naens.mowords.WordsActivity$9 -> com.naens.mowords.r:
+    com.naens.mowords.WordsActivity this$0 -> a
+    void onCancel(android.content.DialogInterface) -> onCancel
+com.naens.mowords.WordsActivity$ActivitySwipeDetector -> com.naens.mowords.s:
+    android.app.Activity activity -> b
+    float downX -> c
+    float downY -> d
+    float upX -> e
+    float upY -> f
+    long begin -> g
+    com.naens.mowords.WordsActivity this$0 -> a
+    void onRightToLeftSwipe() -> a
+    void onLeftToRightSwipe() -> b
+    void onTopToBottomSwipe() -> c
+    void onBottomToTopSwipe() -> d
+    void onLongClick() -> e
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+com.naens.preferences.AddDelPreference -> com.naens.preferences.a:
+    android.content.Context context -> a
+    com.naens.preferences.AddDelPreference$AddDelListener addDelListener -> b
+    void onBindView(android.view.View) -> onBindView
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+    void setAddDelListner(com.naens.preferences.AddDelPreference$AddDelListener) -> a
+    android.view.View onCreateView(android.view.ViewGroup) -> onCreateView
+    com.naens.preferences.AddDelPreference$AddDelListener access$0(com.naens.preferences.AddDelPreference) -> a
+com.naens.preferences.AddDelPreference$1 -> com.naens.preferences.b:
+    com.naens.preferences.AddDelPreference this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.naens.preferences.AddDelPreference$2 -> com.naens.preferences.c:
+    com.naens.preferences.AddDelPreference this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.naens.preferences.AddDelPreference$AddDelListener -> com.naens.preferences.d:
+    void onAddClick() -> a
+    void onDelClick() -> b
+com.naens.preferences.FindFolderDialogPreference -> com.naens.preferences.FindFolderDialogPreference:
+    java.lang.String rootFolder -> a
+    java.util.List path -> b
+    android.widget.LinearLayout layout -> c
+    android.widget.ScrollView scrollView -> d
+    java.lang.String selectedFolder -> e
+    java.util.Map editMap -> f
+    android.widget.Button okButton -> g
+    android.widget.Button newButton -> h
+    android.widget.Button renameButton -> i
+    boolean editMode -> j
+    java.lang.String pathString -> k
+    android.widget.TextView statusTextView -> l
+    android.widget.EditText currentEdit -> m
+    void showDialog(android.os.Bundle) -> showDialog
+    void onSetInitialValue(boolean,java.lang.Object) -> onSetInitialValue
+    android.view.View onCreateDialogView() -> onCreateDialogView
+    void onDialogClosed(boolean) -> onDialogClosed
+    void onBindDialogView(android.view.View) -> onBindDialogView
+    java.lang.String getPathString() -> a
+    void displayCurrentFolder() -> b
+    android.widget.EditText getNewEdit() -> c
+    void scrollSelected() -> d
+    void onPrepareDialogBuilder(android.app.AlertDialog$Builder) -> onPrepareDialogBuilder
+    java.lang.Object onGetDefaultValue(android.content.res.TypedArray,int) -> onGetDefaultValue
+    android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
+    void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
+    void setRootFolder(java.lang.String) -> a
+    android.widget.EditText access$0(com.naens.preferences.FindFolderDialogPreference) -> a
+    android.widget.LinearLayout access$1(com.naens.preferences.FindFolderDialogPreference) -> b
+    void access$2(com.naens.preferences.FindFolderDialogPreference,boolean) -> a
+    void access$3(com.naens.preferences.FindFolderDialogPreference,java.lang.String) -> a
+    android.widget.ScrollView access$4(com.naens.preferences.FindFolderDialogPreference) -> c
+    void access$5(com.naens.preferences.FindFolderDialogPreference,android.widget.EditText) -> a
+    java.util.Map access$6(com.naens.preferences.FindFolderDialogPreference) -> d
+    java.lang.String access$7(com.naens.preferences.FindFolderDialogPreference) -> e
+    void access$8(com.naens.preferences.FindFolderDialogPreference) -> f
+    boolean access$9(com.naens.preferences.FindFolderDialogPreference) -> g
+    java.util.List access$10(com.naens.preferences.FindFolderDialogPreference) -> h
+    void access$11(com.naens.preferences.FindFolderDialogPreference) -> i
+    void access$12(com.naens.preferences.FindFolderDialogPreference,android.widget.Button) -> a
+    android.widget.EditText access$13(com.naens.preferences.FindFolderDialogPreference) -> j
+    java.lang.String access$14(com.naens.preferences.FindFolderDialogPreference) -> k
+    java.lang.String access$15(com.naens.preferences.FindFolderDialogPreference) -> l
+com.naens.preferences.FindFolderDialogPreference$1 -> com.naens.preferences.e:
+    com.naens.preferences.FindFolderDialogPreference this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.naens.preferences.FindFolderDialogPreference$2 -> com.naens.preferences.f:
+    com.naens.preferences.FindFolderDialogPreference this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.naens.preferences.FindFolderDialogPreference$3 -> com.naens.preferences.g:
+    com.naens.preferences.FindFolderDialogPreference this$0 -> a
+    boolean onLongClick(android.view.View) -> onLongClick
+com.naens.preferences.FindFolderDialogPreference$4 -> com.naens.preferences.h:
+    com.naens.preferences.FindFolderDialogPreference this$0 -> a
+    void run() -> run
+com.naens.preferences.FindFolderDialogPreference$5 -> com.naens.preferences.i:
+    com.naens.preferences.FindFolderDialogPreference this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.naens.preferences.FindFolderDialogPreference$6 -> com.naens.preferences.j:
+    com.naens.preferences.FindFolderDialogPreference this$0 -> a
+    boolean onLongClick(android.view.View) -> onLongClick
+com.naens.preferences.FindFolderDialogPreference$7 -> com.naens.preferences.k:
+    com.naens.preferences.FindFolderDialogPreference this$0 -> a
+    boolean onKey(android.view.View,int,android.view.KeyEvent) -> onKey
+com.naens.preferences.FindFolderDialogPreference$SavedState -> com.naens.preferences.FindFolderDialogPreference$SavedState:
+    java.lang.String rf -> a
+    java.util.List p -> b
+    java.lang.String sf -> c
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    void access$0(com.naens.preferences.FindFolderDialogPreference$SavedState,java.lang.String) -> a
+    void access$1(com.naens.preferences.FindFolderDialogPreference$SavedState,java.util.List) -> a
+    void access$2(com.naens.preferences.FindFolderDialogPreference$SavedState,java.lang.String) -> b
+    java.lang.String access$3(com.naens.preferences.FindFolderDialogPreference$SavedState) -> a
+    java.util.List access$4(com.naens.preferences.FindFolderDialogPreference$SavedState) -> b
+    java.lang.String access$5(com.naens.preferences.FindFolderDialogPreference$SavedState) -> c
+com.naens.preferences.MultiChoiceDialogPreference -> com.naens.preferences.MultiChoiceDialogPreference:
+    java.lang.String[] entryValues -> a
+    android.widget.LinearLayout layout -> b
+    java.util.Set checkedValues -> c
+    java.util.Map checkBoxMap -> d
+    void onSetInitialValue(boolean,java.lang.Object) -> onSetInitialValue
+    android.view.View onCreateDialogView() -> onCreateDialogView
+    void onDialogClosed(boolean) -> onDialogClosed
+    void onBindDialogView(android.view.View) -> onBindDialogView
+    void onPrepareDialogBuilder(android.app.AlertDialog$Builder) -> onPrepareDialogBuilder
+    java.lang.Object onGetDefaultValue(android.content.res.TypedArray,int) -> onGetDefaultValue
+    android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
+    void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
+    void setEntryValues(java.lang.String[]) -> a
+    java.util.Set access$0(com.naens.preferences.MultiChoiceDialogPreference) -> a
+com.naens.preferences.MultiChoiceDialogPreference$1 -> com.naens.preferences.l:
+    com.naens.preferences.MultiChoiceDialogPreference this$0 -> a
+    void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
+com.naens.preferences.MultiChoiceDialogPreference$SavedState -> com.naens.preferences.MultiChoiceDialogPreference$SavedState:
+    java.lang.String[] ev -> a
+    boolean[] checked -> b
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    void access$0(com.naens.preferences.MultiChoiceDialogPreference$SavedState,java.lang.String[]) -> a
+    boolean[] access$1(com.naens.preferences.MultiChoiceDialogPreference$SavedState) -> a
+    void access$2(com.naens.preferences.MultiChoiceDialogPreference$SavedState,boolean[]) -> a
+    java.lang.String[] access$3(com.naens.preferences.MultiChoiceDialogPreference$SavedState) -> b
+com.naens.preferences.SettingsActivity -> com.naens.preferences.SettingsActivity:
+    android.content.SharedPreferences sp -> a
+    java.lang.String[] typeFaceStrings -> b
+    java.lang.String getVisibleKey(java.lang.String) -> a
+    java.lang.String getOneDirKey(java.lang.String) -> b
+    java.lang.String getLimitsKey(java.lang.String) -> c
+    java.lang.String getDefLimitKey(java.lang.String) -> d
+    java.lang.String getSidesKey(java.lang.String) -> e
+    java.lang.String getFontSizeKey(java.lang.String,int) -> a
+    java.lang.String getFontNameKey(java.lang.String,int) -> b
+    java.lang.String getEncodingKey(java.lang.String,int) -> c
+    void onCreate(android.os.Bundle) -> onCreate
+    void fillSidePreference(android.content.Context,android.preference.PreferenceGroup,int,java.lang.String) -> a
+    void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String) -> onSharedPreferenceChanged
+    void onResume() -> onResume
+    void onPause() -> onPause
+    boolean onPreferenceTreeClick(android.preference.PreferenceScreen,android.preference.Preference) -> onPreferenceTreeClick
+    java.lang.CharSequence[] getTypeFaceStrings(android.content.Context) -> a
+com.naens.preferences.SettingsActivity$1 -> com.naens.preferences.m:
+    com.naens.preferences.SettingsActivity this$0 -> a
+    boolean onItemLongClick(android.widget.AdapterView,android.view.View,int,long) -> onItemLongClick
+com.naens.preferences.SideAddDelClickListener -> com.naens.preferences.n:
+    android.content.SharedPreferences sp -> a
+    android.preference.PreferenceScreen parentScreen -> b
+    android.preference.PreferenceActivity pa -> c
+    int sides -> d
+    java.lang.String folderName -> e
+    void onAddClick() -> a
+    void onDelClick() -> b
+com.naens.preferences.WordSettingsActivity -> com.naens.preferences.WordSettingsActivity:
+    java.lang.Integer sides -> a
+    java.lang.String folderName -> b
+    int side -> c
+    android.content.SharedPreferences sp -> d
+    void onCreate(android.os.Bundle) -> onCreate
+    void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String) -> onSharedPreferenceChanged
+    void onResume() -> onResume
+    void onPause() -> onPause
+com.naens.tools.CaseUnsensitiveComparator -> com.naens.c.a:
+    int compare(java.lang.String,java.lang.String) -> a
+    int compare(java.lang.Object,java.lang.Object) -> compare
+com.naens.tools.FontProvider -> com.naens.c.b:
+    java.util.Map map -> a
+    android.graphics.Typeface defaultFont -> b
+    android.graphics.Typeface defaultItalic -> c
+    void loadFontsFromFiles() -> a
+    android.graphics.Typeface getFont(java.lang.String) -> a
+    int getDefaultSize() -> b
+    java.util.Set getFontSet() -> c
+com.naens.tools.ToolUtilities -> com.naens.c.c:
+    java.util.List randomizeList(java.util.List) -> a
+    java.util.List randomizeList(java.util.List,int) -> a
+    java.lang.String timeListToString(java.util.List) -> b
+    java.lang.Integer sumList(java.util.List) -> c
+    android.graphics.Bitmap updateSize(android.graphics.Bitmap,int,int) -> a
+    android.graphics.Bitmap getRoundedCornerBitmap(android.graphics.Bitmap,int,float,float,android.content.Context) -> a
+com.naens.tools.mdctools.InvalidMdCCodeException -> com.naens.c.a.a:
+    java.lang.String wrongChar -> a
+com.naens.tools.mdctools.MdCToUnicode -> com.naens.c.a.b:
+    java.util.Map map -> a
+    com.naens.tools.mdctools.MdCToUnicode unicodeCharsRetriever -> b
+    int getCode(java.lang.String) -> a
+com.naens.tools.mdctools.MdCTool -> com.naens.c.a.c:
+    android.graphics.Bitmap mdcToBitmap(android.graphics.Typeface,java.lang.String,int,int) -> a
+    void rotateAllLetters90LeftAndFlipOperations(com.naens.tools.mdctools.mdcstruct.MdCElement) -> a
+    java.util.List elementCartoucheList(com.naens.tools.mdctools.mdcstruct.MdCElement) -> b
+    java.util.List elementLetterList(com.naens.tools.mdctools.mdcstruct.MdCElement) -> c
+    com.naens.tools.mdctools.mdcstruct.MdCElement convertMdCToNodes(java.lang.String) -> a
+    com.naens.tools.mdctools.mdcstruct.MdCElement parseMdCString(java.lang.String) -> b
+    java.util.List findIndexes(java.util.List,java.lang.Object) -> a
+    int convertMdCToCodePoint(java.lang.String) -> c
+    void removeMdCRepeatOperations(com.naens.tools.mdctools.mdcstruct.MdCElement) -> d
+    android.graphics.Rect findInsideRect(android.graphics.Bitmap,int,int,int) -> a
+com.naens.tools.mdctools.mdcgraphics.LetterAroundInformation -> com.naens.c.a.a.a:
+    android.util.SparseArray aboveRight -> a
+    android.util.SparseArray aboveLeft -> b
+    android.util.SparseArray aboveLeftRight -> c
+    android.util.SparseArray belowRight -> d
+    android.util.SparseArray belowLeft -> e
+    android.util.SparseArray belowLeftRight -> f
+    android.util.SparseArray beforeTop -> g
+    android.util.SparseArray beforeBottom -> h
+    android.util.SparseArray beforeTopBottom -> i
+    android.util.SparseArray afterTop -> j
+    android.util.SparseArray afterBottom -> k
+    android.util.SparseArray afterTopBottom -> l
+    boolean above -> m
+    boolean below -> n
+    boolean before -> o
+    boolean after -> p
+    boolean left -> q
+    boolean right -> r
+    boolean top -> s
+    boolean bottom -> t
+    com.naens.tools.mdctools.mdcstruct.MdCLetter letter -> u
+    android.graphics.RectF inRect -> v
+    java.util.List aroundElements -> w
+    boolean aroundFull -> x
+    com.naens.tools.mdctools.mdcgraphics.LetterAroundInformation$AroundLetter aroundLetter -> y
+    com.naens.tools.mdctools.mdcgraphics.LetterAroundInformation$AroundLetter initAround(int,int,boolean) -> a
+    float getAroundLetterPartHeight() -> a
+    float getAroundLetterPartWidth() -> b
+    float getAroundVerticalShiftX() -> c
+    float getAroundVerticalLetterShiftX() -> d
+    void addAroundElement(com.naens.tools.mdctools.mdcstruct.MdCElement) -> a
+    float getInsideElementsWidth() -> e
+    float getAroundInsideWidth() -> f
+    float getAroundLeftInsideWidth() -> g
+    float getAroundInsideHeight() -> h
+    void setAroundFull(boolean) -> a
+    boolean isAroundFull() -> i
+    boolean isAroundEmpty() -> j
+    boolean isAroundVertical() -> k
+    boolean isAroundHorizontal() -> l
+    boolean isAroundYBefore() -> m
+    boolean isAroundXBefore() -> n
+    boolean isAroundTopBottom() -> o
+    boolean isAroundLeftRight() -> p
+    boolean isAroundYAfter() -> q
+    boolean isAroundXAfter() -> r
+    float getAroundVGap() -> s
+    float getAroundHGap() -> t
+    void scale(float) -> a
+    boolean isLeft() -> u
+    boolean isRight() -> v
+    boolean isTop() -> w
+    void addAroundLetter(android.util.SparseArray,java.lang.String) -> a
+    void addAroundLetter(android.util.SparseArray,java.lang.String,double) -> a
+    int getNumberOfElements() -> x
+    float getTop() -> y
+com.naens.tools.mdctools.mdcgraphics.LetterAroundInformation$AroundLetter -> com.naens.c.a.a.b:
+    int codepoint -> a
+    java.lang.Double aroundHint -> b
+    java.lang.Double getAroundHint() -> a
+    boolean equals(java.lang.Object) -> equals
+com.naens.tools.mdctools.mdcgraphics.MdCFontLetters -> com.naens.c.a.a.c:
+    int fontSize -> a
+    android.graphics.Typeface typeface -> b
+    android.util.SparseArray letterInfos -> c
+    int color -> d
+    android.graphics.Bitmap getBitmap(java.lang.Integer,float,int,boolean) -> a
+    com.naens.tools.mdctools.mdcgraphics.MdCFontLetters$LetterInfo getInfo(int) -> b
+    android.graphics.Bitmap createBitmap(com.naens.tools.mdctools.mdcgraphics.MdCFontLetters$LetterInfo,float,int,boolean) -> a
+    int getCharacterWidth(int,int) -> a
+    int getCharacterHeight(int,int) -> b
+    android.graphics.Rect getBitmapRect(android.graphics.Bitmap,int) -> a
+    android.graphics.Rect getInnerRect(int) -> a
+    int access$0(com.naens.tools.mdctools.mdcgraphics.MdCFontLetters) -> a
+    android.graphics.Typeface access$1(com.naens.tools.mdctools.mdcgraphics.MdCFontLetters) -> b
+    android.graphics.Rect access$2(com.naens.tools.mdctools.mdcgraphics.MdCFontLetters,android.graphics.Bitmap,int) -> a
+com.naens.tools.mdctools.mdcgraphics.MdCFontLetters$LetterInfo -> com.naens.c.a.a.d:
+    int height -> b
+    int width -> c
+    java.lang.String symbol -> d
+    com.naens.tools.mdctools.mdcgraphics.MdCFontLetters this$0 -> a
+    int access$1(com.naens.tools.mdctools.mdcgraphics.MdCFontLetters$LetterInfo) -> a
+    int access$2(com.naens.tools.mdctools.mdcgraphics.MdCFontLetters$LetterInfo) -> b
+    java.lang.String access$3(com.naens.tools.mdctools.mdcgraphics.MdCFontLetters$LetterInfo) -> c
+com.naens.tools.mdctools.mdcgraphics.MdCGraphicConverter -> com.naens.c.a.a.e:
+    void fillGraphicSizes(com.naens.tools.mdctools.mdcstruct.MdCElement,float) -> a
+    void fillGraphicPlaces(com.naens.tools.mdctools.mdcstruct.MdCElement,float,float) -> a
+com.naens.tools.mdctools.mdcstruct.MdCCartouche -> com.naens.c.a.b.a:
+    com.naens.tools.mdctools.mdcstruct.MdCElement element -> b
+    com.naens.tools.mdctools.mdcgraphics.MdCFontLetters mdcFontLetters -> c
+    android.graphics.Rect inRect -> d
+    android.graphics.Rect outRect -> e
+    float y -> f
+    float x -> g
+    com.naens.tools.mdctools.mdcstruct.MdCCartouche$CartoucheType cartoucheType -> h
+    int rotate -> i
+    float k -> j
+    com.naens.tools.mdctools.mdcstruct.MdCElement getElement() -> a
+    void setElement(com.naens.tools.mdctools.mdcstruct.MdCElement) -> a
+    float getWidth() -> b
+    float getHeight() -> c
+    void setGraphics(com.naens.tools.mdctools.mdcgraphics.MdCFontLetters) -> a
+    void setX(float) -> a
+    float getX() -> d
+    void setY(float) -> b
+    float getY() -> e
+    float getInHeight() -> f
+    float getInWidth() -> g
+    android.graphics.Bitmap getBitmap() -> h
+    java.lang.String toString() -> toString
+    float getLeftBorder() -> i
+    float getTopBorder() -> j
+    void scale(float) -> c
+com.naens.tools.mdctools.mdcstruct.MdCCartouche$CartoucheType -> com.naens.c.a.b.b:
+    com.naens.tools.mdctools.mdcstruct.MdCCartouche$CartoucheType CARTOUCHE -> a
+    com.naens.tools.mdctools.mdcstruct.MdCCartouche$CartoucheType HWT -> b
+    com.naens.tools.mdctools.mdcstruct.MdCCartouche$CartoucheType SEREKH -> c
+    com.naens.tools.mdctools.mdcstruct.MdCCartouche$CartoucheType ENCLOSURE -> d
+    int codepoint -> e
+    int codepoint2 -> f
+    com.naens.tools.mdctools.mdcstruct.MdCCartouche$CartoucheType[] ENUM$VALUES -> g
+    com.naens.tools.mdctools.mdcstruct.MdCCartouche$CartoucheType[] values() -> values
+    com.naens.tools.mdctools.mdcstruct.MdCCartouche$CartoucheType valueOf(java.lang.String) -> valueOf
+com.naens.tools.mdctools.mdcstruct.MdCElement -> com.naens.c.a.b.c:
+    boolean root -> b
+    float scale -> a
+    com.naens.tools.mdctools.mdcstruct.MdCLetter aroundLetter -> c
+    int aroundOrder -> d
+    void setGraphics(com.naens.tools.mdctools.mdcgraphics.MdCFontLetters) -> a
+    boolean isRoot() -> k
+    void setRoot() -> l
+    void scale(float) -> c
+    float getWidth() -> b
+    float getHeight() -> c
+    float getScale() -> m
+    com.naens.tools.mdctools.mdcstruct.MdCLetter getAroundLetter() -> n
+    void setAroundLetter(com.naens.tools.mdctools.mdcstruct.MdCLetter) -> a
+    void setAroundOrder(int) -> a
+    int getAroundOrder() -> o
+com.naens.tools.mdctools.mdcstruct.MdCLetter -> com.naens.c.a.b.d:
+    int codePoint -> b
+    int rotate -> c
+    com.naens.tools.mdctools.mdcgraphics.MdCFontLetters mdcFontLetters -> d
+    float x -> e
+    float y -> f
+    boolean flip -> g
+    com.naens.tools.mdctools.mdcgraphics.LetterAroundInformation aroundInformation -> h
+    int getRotate() -> a
+    int getCodePoint() -> d
+    void setGraphics(com.naens.tools.mdctools.mdcgraphics.MdCFontLetters) -> a
+    float getWidth() -> b
+    float getHeight() -> c
+    float getX() -> e
+    float getY() -> f
+    void setX(float) -> a
+    void setY(float) -> b
+    java.lang.String toString() -> toString
+    android.graphics.Bitmap getBitmap() -> g
+    void setFlip(boolean) -> a
+    boolean isFlip() -> h
+    void setRotate(int) -> b
+    com.naens.tools.mdctools.mdcgraphics.LetterAroundInformation aroundInfo() -> i
+    void scale(float) -> c
+com.naens.tools.mdctools.mdcstruct.MdCOperation -> com.naens.c.a.b.e:
+    com.naens.tools.mdctools.mdcstruct.MdCOperation$SubNodesDirection direction -> b
+    java.util.List subNodes -> c
+    java.lang.Float maxWidth -> d
+    java.lang.Float maxHeight -> e
+    com.naens.tools.mdctools.mdcstruct.MdCOperation$SubNodesDirection getDirection() -> a
+    void setDirection(com.naens.tools.mdctools.mdcstruct.MdCOperation$SubNodesDirection) -> a
+    java.util.List getSubNodes() -> d
+    void addSubNode(com.naens.tools.mdctools.mdcstruct.MdCElement) -> a
+    java.lang.String toString() -> toString
+    float getWidth() -> b
+    float getHeight() -> c
+    float getSumVElHeight() -> i
+    float getMaxHElHeight() -> j
+    float getSumHElWidth() -> e
+    float getMaxVElWidth() -> f
+    void setMaxWidth(java.lang.Float) -> a
+    void setMaxHeight(float) -> a
+    float getElHeight() -> g
+    void setGraphics(com.naens.tools.mdctools.mdcgraphics.MdCFontLetters) -> a
+    void scale(float) -> c
+    int getEffectiveNumberOfElements() -> h
+com.naens.tools.mdctools.mdcstruct.MdCOperation$SubNodesDirection -> com.naens.c.a.b.f:
+    com.naens.tools.mdctools.mdcstruct.MdCOperation$SubNodesDirection HORIZONTAL -> a
+    com.naens.tools.mdctools.mdcstruct.MdCOperation$SubNodesDirection VERTICAL -> b
+    com.naens.tools.mdctools.mdcstruct.MdCOperation$SubNodesDirection[] ENUM$VALUES -> c
+    com.naens.tools.mdctools.mdcstruct.MdCOperation$SubNodesDirection[] values() -> values
+    com.naens.tools.mdctools.mdcstruct.MdCOperation$SubNodesDirection valueOf(java.lang.String) -> valueOf
+com.naens.wordgame.WordGame -> com.naens.wordgame.WordGame:
+    com.naens.mowords.WordGui gui -> b
+    com.naens.wordgame.WordGameAgent agent -> c
+    java.util.Timer timer -> d
+    boolean timerRunning -> e
+    int timeValue -> a
+    boolean isFisrtSide -> f
+    java.util.List firstSideTimes -> g
+    java.util.List secondSideTimes -> h
+    java.util.List firstSideCorrects -> i
+    java.util.List secondSideCorrects -> j
+    boolean oneDirection -> k
+    boolean doSecondSide -> l
+    int total -> m
+    void startWordGame(java.util.List,int,boolean,boolean) -> a
+    void pause() -> a
+    void nextWord() -> b
+    void previousWord() -> c
+    void nextSide() -> d
+    void previousSide() -> e
+    void endParty() -> f
+    void askSecondSideYes() -> g
+    void askSecondSideNo() -> h
+    void askContinueGameYes() -> i
+    void askContinueGameNo() -> j
+    void finishGame() -> o
+    void flipCorrect() -> k
+    void setGui(com.naens.mowords.WordGui) -> a
+    void timerStop() -> p
+    void startTimer() -> q
+    boolean isPaused() -> l
+    void recreate(boolean) -> a
+    boolean isLastGame() -> m
+    void resume() -> n
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    com.naens.mowords.WordGui access$0(com.naens.wordgame.WordGame) -> a
+    boolean access$1(com.naens.wordgame.WordGame) -> b
+com.naens.wordgame.WordGame$GameTimerTask -> com.naens.wordgame.a:
+    android.os.Handler h -> b
+    com.naens.wordgame.WordGame this$0 -> a
+    void run() -> run
+    com.naens.wordgame.WordGame access$1(com.naens.wordgame.WordGame$GameTimerTask) -> a
+com.naens.wordgame.WordGame$GameTimerTask$1 -> com.naens.wordgame.b:
+    com.naens.wordgame.WordGame$GameTimerTask this$1 -> a
+    boolean handleMessage(android.os.Message) -> handleMessage
+com.naens.wordgame.WordGameAgent -> com.naens.wordgame.WordGameAgent:
+    int currentWord -> a
+    int currentSide -> b
+    java.util.List originalPairs -> c
+    java.util.List wordPairs -> d
+    java.util.SortedSet incorrectList -> e
+    boolean inverse -> f
+    void setCorrect(boolean) -> a
+    void endParty() -> a
+    boolean isCorrect() -> b
+    void flipGame() -> c
+    com.naens.model.WordPair firstWord() -> o
+    com.naens.model.WordPair nextWord() -> d
+    com.naens.model.WordPair previousWord() -> e
+    com.naens.model.Word setSide(int) -> a
+    com.naens.model.Word nextSide() -> f
+    com.naens.model.Word getSide() -> g
+    com.naens.model.Word previousSide() -> h
+    boolean isLastWord() -> i
+    boolean isAllCorrect() -> j
+    int getCorrects() -> k
+    int getCurrent() -> l
+    int getCurrentGameWords() -> m
+    int getIncorrects() -> n
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel

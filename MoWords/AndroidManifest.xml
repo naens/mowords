@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="10"
+        android:minSdkVersion="7"
         android:targetSdkVersion="17" />
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -26,7 +26,7 @@
         </activity>
         <activity
             android:name="com.naens.mowords.FolderActivity"
-            android:label="@string/title_activity_folder">
+            android:label="@string/title_activity_folder" >
         </activity>
         <activity
             android:name="com.naens.mowords.WordsActivity"
@@ -39,9 +39,11 @@
         <activity
             android:name="com.naens.preferences.WordSettingsActivity"
             android:configChanges="orientation|screenSize" />
-<!--         <activity -->
-<!--             android:name="com.naens.preferences.WelcomeSettingsActivity" -->
-<!--             android:configChanges="orientation|screenSize" /> -->
+        <activity
+            android:name="com.naens.mowords.WelcomeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_welcome" >
+        </activity>
     </application>
 
 </manifest>

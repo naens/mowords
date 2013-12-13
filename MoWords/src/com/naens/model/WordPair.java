@@ -1,29 +1,33 @@
 package com.naens.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.util.SparseArray;
 
+@SuppressWarnings("rawtypes")
 public class WordPair implements Parcelable {
 
-	private List <Word> words;
+	private SparseArray words;
 
-	public Word getWord (int side) {
-		return words.get (side);
+	public Word getWordBySideNumber (int side) {
+		//returns word with the side 'side'
+		return (Word) words.get (side);
 	}
 
 	public int getSize () {
 		return words.size ();
 	}
 
+	@SuppressWarnings("unchecked")
 	public void addWord (Word w) {
-		words.add (w);
+		if (words.get(w.getSide()) != null) {
+			throw new IllegalStateException("word with side " + w.getSide() + "already exists!");
+		}
+		words.put (w.getSide(), w);
 	}
 
 	public WordPair () {
-		words = new ArrayList <Word> ();
+		words = new SparseArray<Word> ();
 	}
 
 	public boolean hasSide (int side) {
@@ -41,12 +45,17 @@ public class WordPair implements Parcelable {
 	}
 
 	private void readFromParcel(Parcel in) {
-		in.readList(words, Word.class.getClassLoader());
+		words = in.readSparseArray(Word.class.getClassLoader());
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public void writeToParcel(Parcel dest, int flags) {
-		dest.writeList(words);
+		dest.writeSparseArray(words);
+	}
+
+	public Word getWordN(int i) {
+		return (Word) words.valueAt(i);
 	}
 
 }

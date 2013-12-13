@@ -94,7 +94,7 @@ public class WordGameAgent implements Parcelable {
 
 	private Word setSide (int side) {
 		currentSide = wordPairs.get (currentWord).hasSide (side) ? side : currentSide;
-		return wordPairs.get (currentWord).getWord (currentSide);
+		return wordPairs.get (currentWord).getWordN (currentSide);
 	}
 
 	public Word nextSide () {
@@ -103,7 +103,7 @@ public class WordGameAgent implements Parcelable {
 	}
 
 	public Word getSide () {
-		return wordPairs.get (currentWord).getWord (currentSide);
+		return wordPairs.get (currentWord).getWordN (currentSide);
 	}
 
 	public Word previousSide () {

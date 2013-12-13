@@ -66,9 +66,15 @@ public class ConfigurationAndroidPrefDAO implements ConfigurationDAO {
 	}
 
 	@Override
-	public boolean isMdcSide(String wordFolder, int side) {
+	public boolean isMdCSide(String wordFolder, int side) {
 		String encoding = getEncoding(wordFolder, side);
 		return MainActivity.getContext().getResources().getStringArray(R.array.pref_side_encoding_values)[1].equals(encoding);
+	}
+
+	@Override
+	public boolean isMdCTranslitSide(String wordFolder, int side) {
+		String encoding = getEncoding(wordFolder, side);
+		return MainActivity.getContext().getResources().getStringArray(R.array.pref_side_encoding_values)[2].equals(encoding);
 	}
 
 }
