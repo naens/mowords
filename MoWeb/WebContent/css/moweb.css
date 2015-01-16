@@ -1,0 +1,185 @@
+@import url(http://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic|Arimo:400,400italic,700,700italic);
+ body {
+    font-family:'Lora', serif;
+    font-size: 20px;
+}
+
+h1, .folder-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.folder-title-hover {
+   /* text-shadow: 0px 0px 16px #434344;*/
+    border: 2px solid grey;
+}
+
+.file {
+    font-style: italic;
+    font-size: 18px;
+}
+
+.left-panel {
+    float: left;
+    margin-left: 80px;
+}
+
+.topics-panel {
+    /*border: 2px solid grey;*/
+    padding: 8px;
+}
+
+.current-topic {
+    font-weight: bold;
+}
+
+.styles-panel {
+    padding: 8px;
+}
+
+.styles-buttons {
+    text-align: center;
+}
+
+.center-panel {
+    display: table;
+    margin: auto;
+}
+
+.pair-type {
+    display: table-row;
+}
+
+.folders-panel {
+   /* border: 2px solid green;*/
+    padding: 8px;
+    display: table-cell;
+    border-bottom: 2px solid;
+}
+
+.files-panel {
+    background-color: #e3e3e3;
+    padding-top: 6px;
+    padding-left: 24px;
+    margin-bottom: 8px;
+    display:none;
+}
+
+.side-styles {
+    /*   border: 2px solid blue;*/
+    padding-left: 80px;
+    display: table-cell;
+    border-bottom: 2px solid;
+    vertical-align: top;
+    margin-top: 8px;            /*needed for drag and drop*/
+}
+
+.style, .side-style {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.side-style, .style {
+    /*  border: 2px solid grey;*/
+    padding: 8px;
+    font-family:'Arimo', sans-serif;
+    font-size: 20px;
+    border-radius: 2px;
+    background-color: #e3e3e3;
+    text-align: center;
+}
+
+.files-list {
+    vertical-align: middle; 
+    display: table;  
+    width:100%;
+}
+
+.file {
+  /*  border: 2px solid grey;*/
+    display: table-row;  
+    vertical-align: middle; 
+}
+
+.file-name {
+    float: none;
+    display: table-cell;
+    margin:4px;
+    width: auto;
+    background-repeat: no-repeat;
+}
+
+.delete-file-ih {
+    float: none;
+    display: table-cell;
+}
+
+.add-topic-button, .add-style-button, .add-folder-button, .add-file-button,
+.rename-topic-button, .rename-style-button, .rename-folder-button, .rename-file-button,
+.delete-topic-button, .delete-style-button, .delete-folder-button {
+    float: none;
+    display: inline-block;
+    margin:4px;
+    background-repeat: no-repeat;
+}
+
+.add-topic-button, .add-style-button, .add-folder-button,
+.rename-topic-button, .rename-style-button, .rename-folder-button,
+.delete-topic-button, .delete-style-button, .delete-folder-button {
+    height: 15px;
+    width: 15px;
+    background-size: 15px 15px;
+}
+
+.add-file-button, .rename-file-button, .delete-file-button {
+    height: 12px;
+    width: 12px;
+    background-size: 12px 12px;
+}
+
+.add-topic-button, .add-style-button, .add-folder-button {
+    background-image: url("http://mowords.com/images/add.png");
+}
+
+.delete-topic-button, .delete-style-button, .delete-folder-button {
+    background-image: url("http://mowords.com/images/delete.png");
+}
+
+.add-file-button {
+    background-image: url("http://mowords.com/images/add12.png");
+}
+
+.delete-file-button {
+    background-image: url("http://mowords.com/images/delete12.png");
+}
+
+.folder-files-number {
+    /*  float:right;*/
+    padding: 0px;
+    display: inline;
+    font-size: 16px;
+}
+
+.folder-title {
+    display: inline;
+    margin-right:24px;
+}
+
+.side-style {
+    display: block;
+}
+
+.footer {
+    clear:both;
+    background-color: #e3e3e3;
+    padding: 8px;
+    position: absolute;
+    bottom: 0px;
+    height: 16px;
+    left: 0px;
+    right: 0px;
+}
+
+.ui-widget input {
+	width: 260px;
+}

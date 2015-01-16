@@ -1,0 +1,140 @@
+body {
+	font: 62.5% "Trebuchet MS", sans-serif;
+}
+
+h1 {
+	color: navy;
+	margin-left: 20px;
+}
+
+div#w {
+	border: 1px solid;
+	height: 440px;
+	width: 400px;
+	overflow: hidden;
+	left: 320px;
+	position: absolute;
+	font-size: 12px;
+	font-family: Verdana, Arial, sans-serif;
+}
+
+div#g {
+	width: 800px;
+	height: 100px;
+	position: absolute;
+	bottom: 0px;
+	background-color: darkgreen;
+}
+
+div#ct {
+	background-color: lightblue;
+	height: inherit;
+	position: absolute;
+	overflow: hidden;
+}
+
+div.house {
+	background-color: gray;
+	width: 320px;
+	position: absolute;
+	bottom: 100px;
+	min-height: 80px;
+	display: table;
+	border-collapse: collapse;
+}
+
+div.topictitle {
+	padding: 8px;
+	border: 1px solid cyan;
+	display: table-cell;
+}
+
+div.topicaddfolder {
+	padding: 8px;
+	display: table-cell;
+}
+
+div.pairtype {
+	border: 1px solid blue;
+	display: table-row;
+	width: 100%
+}
+
+div.ptfolders {
+	display: table-cell;
+	border: 1px solid red;
+}
+
+div.folder {
+	margin: 12px;
+}
+
+div.foldername, div.foldernumber, div.renamefolder, div.deletefolder {
+	padding: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
+	display: inline-block;
+}
+
+div.folderstyles {
+	border: 1px solid green;
+	display: table-cell;
+	vertical-align: top;	/*needed for drag and drop*/
+}
+
+div.folderstyle {
+	border: 1px solid black;
+	border-radius: 16px;
+	margin: 6px;
+	padding: 6px;
+}
+
+div.foldername {
+	font-weight: bold;
+}
+
+div.styles {
+	border: 1px solid hotpink;
+	display: table-row-group;
+}
+
+div.style {
+	display: table-row;
+	border: 1px solid black;
+}
+
+div.stylename, div.renamestyle, div.deletestyle {
+	padding: 6px;
+	display: inline-block;
+	margin: 6px;
+}
+
+div.stylename {
+	border: 1px solid black;
+	border-radius: 16px;
+}
+
+div.topicaddstyle {
+	padding: 8px;
+	display: table-cell;
+}
+
+div#ls {
+	left: 20px;
+	position: absolute;
+}
+
+div.topicitem {
+	height: 16px;
+}
+
+div#listpointer {
+	position: absolute;
+	left: 4px;
+	top: 2px;
+	width: 0;
+	height: 0;
+	border-top: 6px solid transparent;
+	border-bottom: 8px solid transparent;
+	border-left: 12px solid green;
+}

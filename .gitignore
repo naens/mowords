@@ -3,3 +3,8 @@ bin
 gen
 *.cache
 *.jar
+*.db
+jquery-*.js
+jquery-*.css
+Thumb.db
+ext

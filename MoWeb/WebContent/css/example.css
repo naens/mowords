@@ -1,0 +1,99 @@
+body {
+	
+}
+
+h1 {
+	color: navy;
+	margin-left: 20px;
+}
+
+div#w {
+	border: 1px solid;
+	height: 500px;
+	width: 400px;
+	overflow: hidden;
+	left: 320px;
+	position: absolute;
+}
+
+div#ct {
+	background-color: lightblue;
+	height: inherit;
+	position: absolute;
+	overflow: hidden;
+	/*     animation: ffwk 1.5s; */
+	/*     animation-fill-mode: forwards; */
+	/*     animation-timing-function: linear; */
+}
+
+div.house {
+	background-color: gray;
+	width: 80px;
+	position: absolute;
+	bottom: 120px;
+	display: block;
+}
+
+div#g {
+	width: 800px;
+	height: 120px;
+	position: absolute;
+	bottom: 0px;
+	background-color: darkgreen;
+}
+
+div#ls {
+	left: 20px;
+	position: absolute;
+}
+
+div#listpointer {
+	position: absolute;
+	left: 4px;
+	top: 4px;
+	width: 0; 
+	height: 0; 
+	border-top: 6px solid transparent;
+	border-bottom: 8px solid transparent;
+	border-left: 12px solid green;
+}
+
+div#btns {
+	border: 2px solid navy;
+	width: 240px;
+	height: 80px;
+	position: absolute;
+	left: 80px;
+	bottom: 20px;
+	border-radius: 40px;
+}
+
+div.hbtn {
+	background-color: aqua;
+/* 	width: 40px; */
+	height: 22px;
+	position: absolute;
+	bottom: 20px;
+	display: block;
+	border-radius: 20px;
+	text-align: center;
+	vertical-align: middle;
+	display: inline-block;
+	padding: 9px;
+}
+
+div#selection {
+	background-color: green;
+	border: 2px solid;
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	left: 8px;
+	bottom: 8px;
+	border-radius: 30px;
+}
+
+/* @keyframes ffwk {
+    from {left: 0px;}
+    to {left: -160px;}
+ } */

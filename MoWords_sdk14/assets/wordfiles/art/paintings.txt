@@ -1,0 +1,10 @@
+[image:the_starry_night.jpg]	The Starry Night, Vincent van Gogh, 1889
+[image:the_scream.jpg]	The Scream, Edvard Munch, 1893
+[image:night_watch.jpg]	The Night Watch, Rembrandt van Rijn, 1642
+[image:birth_of_venus.jpg]	The Birth of Venus, Sandro Botticelli, 1486
+[image:the_kiss.jpg]	The Kiss, Gustav Klimt, 1908
+[image:persistence_of_memory.jpg]	The Persistence of Memory, Salvador Dalí, 1931
+[image:american_gothic.jpg]	American Gothic, Grant Wood, 1930
+[image:demoiselles_davignon.jpg]	Les Demoiselles d'Avignon, Pablo Picasso, 1907
+[image:virgin_of_ivers.jpg]	The Virgin of Ivers, Jan Van Eyck, 1435 
+[image:census_at_bethlehem.jpg]	The Census at Bethlehem, Pieter Bruegel, 1566
