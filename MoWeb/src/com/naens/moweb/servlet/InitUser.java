@@ -9,8 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.zip.GZIPInputStream;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityTransaction;
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,15 +20,17 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.naens.moweb.dao.ResultsDao;
+import com.naens.moweb.dao.TopicDao;
+import com.naens.moweb.dao.UserDao;
 import com.naens.moweb.model.GoogleProfile;
 import com.naens.moweb.model.Results;
 import com.naens.moweb.model.Topic;
 import com.naens.moweb.model.User;
-import com.naens.moweb.model.WordFolder;
 import com.naens.moweb.model.WordFile;
+import com.naens.moweb.model.WordFolder;
 import com.naens.moweb.model.WordPair;
 import com.naens.moweb.model.WordSide;
-import com.naens.moweb.service.EMF;
 import com.naens.tools.Tools;
 
 @WebServlet (name="InitUser", urlPatterns={"/inituser"})
@@ -37,7 +38,6 @@ public class InitUser extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
-	private static EntityManager em = EMF.get().createEntityManager();
 	public static final String GAMELOG_COLUMN_FOLDER = "folder";
 	public static final String GAMELOG_COLUMN_DATE = "date";
 	public static final String GAMELOG_COLUMN_FILES = "files";
@@ -47,6 +47,14 @@ public class InitUser extends HttpServlet {
 	public static final String GAMELOG_COLUMN_SIDE = "side";
 	public static final String GAMELOG_COLUMN_SIDES = "sides";
 	public static final String GAMELOG_COLUMN_INVERSE = "inverse";
+
+	@EJB
+	private UserDao userDao;
+	@EJB
+	private TopicDao topicDao;
+
+	@EJB
+	private ResultsDao resultsDao;
 
 	@SuppressWarnings("unchecked")
 	@Override
@@ -62,10 +70,10 @@ public class InitUser extends HttpServlet {
 			System.out.println("user=" + jsonUser.toString(4));
 			String email = jsonUser.getString("email");
 
-			User user = new User();
 			GoogleProfile googleProfile = new GoogleProfile();
+			//TODO -> no id ...
 			googleProfile.setEmail(email);
-			user.setGoogleProfile(googleProfile);
+			User user = new User(googleProfile);
 
 			//data:folder.file.pair.side
 			JSONObject jsonData = json.getJSONObject("data");
@@ -116,6 +124,7 @@ public class InitUser extends HttpServlet {
 						while(sideIterator.hasNext()){
 							String side = (String)sideIterator.next();
 							JSONObject sideJson = (JSONObject) wordPairJson.get(side);
+							@SuppressWarnings("unused")
 							String type = sideJson.getString("type");
 							String text = sideJson.getString("text");
 							WordSide wordSide = new WordSide();
@@ -133,8 +142,6 @@ public class InitUser extends HttpServlet {
 			System.out.print("getting entity manager... ... ...");
 //			EntityManager em = EMF.get().createEntityManager();
 			System.out.println("ok!");
-			EntityTransaction et = em.getTransaction();
-			et.begin();
 
 			//TODO:get results
 
@@ -169,33 +176,29 @@ public class InitUser extends HttpServlet {
 					int gameTime = rec1.getInt(GAMELOG_COLUMN_GAME_TIME);
 					int total = rec1.getInt(GAMELOG_COLUMN_TOTAL);
 					if (!recs.has("rec2")) {
-						em.persist(new Results(user, date, files, done, total, inverse, gameTime));
+						resultsDao.persist(new Results(user, date, files, done, total, inverse, gameTime));
 					} else {
 						JSONObject rec2 = recs.getJSONObject("rec2");
 						int done2 = rec2.getInt(GAMELOG_COLUMN_DONE);
 						int gameTime2 = rec2.getInt(GAMELOG_COLUMN_GAME_TIME);
-						em.persist(new Results(user, date, files, done, done2, total, inverse, gameTime, gameTime2));
+						resultsDao.persist(new Results(user, date, files, done, done2, total, inverse, gameTime, gameTime2));
 					}
 				}
 			}
 
-			try {
-				em.persist(user);
-			// save
-				for (String topicName: topicFolderMap.keySet()) {
-					Topic topic = new Topic();
-					topic.setName(topicName);
-					topic.setOwner(user);
-					for (WordFolder wordFolder : topicFolderMap.get(topicName)) {
-						wordFolder.setTopic(topic);
-					}
-					em.persist(topic);
+			userDao.persist(user);
+		// save
+			for (String topicName: topicFolderMap.keySet()) {
+				Topic topic = new Topic();
+				topic.setName(topicName);
+				topic.setOwner(user);
+				for (WordFolder wordFolder : topicFolderMap.get(topicName)) {
+					wordFolder.setTopic(topic);
 				}
-				//TODO: save results
-			} finally {
-				et.commit();
-//				em.close();
+				topicDao.persist(topic);
 			}
+			//TODO: save results
+		
 		} catch (JSONException e) {
 			System.out.println("init-user->exception");
 			e.printStackTrace();
@@ -208,19 +211,9 @@ public class InitUser extends HttpServlet {
 		PrintWriter out = resp.getWriter();
 		out.println("InitUser servlet");
 
-		User user = new User();
 		GoogleProfile googleProfile = new GoogleProfile();
 		googleProfile.setEmail("em@em.em");
-		user.setGoogleProfile(googleProfile);
-
-		EntityManager em = EMF.get().createEntityManager();
-		EntityTransaction et = em.getTransaction();
-		et.begin();
-		try {
-			em.persist(user);
-		}  finally {
-			et.commit();
-			em.close();
-		}
+		User user = new User(googleProfile);
+		userDao.persist(user);
 	}
 }

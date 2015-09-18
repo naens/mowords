@@ -2,8 +2,10 @@ package com.naens.moweb.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.LinkedList;
 import java.util.List;
 
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,12 +17,9 @@ import org.json.JSONObject;
 
 import com.naens.moweb.dao.FolderDao;
 import com.naens.moweb.dao.TopicDao;
-import com.naens.moweb.dao.UserDao;
-import com.naens.moweb.dao.WordPairTypeDao;
 import com.naens.moweb.model.Topic;
 import com.naens.moweb.model.User;
 import com.naens.moweb.model.WordFolder;
-import com.naens.moweb.model.WordPairType;
 import com.naens.moweb.model.WordSideType;
 import com.naens.moweb.service.TopicService;
 
@@ -29,11 +28,17 @@ public class TopicServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 154588212301086099L;
 
-	private TopicService topicService = new TopicService();
+	@EJB
+	private TopicService topicService;
 
-	private TopicDao topicDao = new TopicDao();
+	@EJB
+	private TopicDao topicDao;
+
+	@EJB
+	private FolderDao folderDao;
 
 	private User user;
+
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -75,7 +80,6 @@ public class TopicServlet extends HttpServlet {
 	}
 
 	private JSONObject addTopic (String topicName) throws JSONException {
-
 		JSONObject json = new JSONObject();
 		Topic topic = topicService.getByName(topicName, user);
 		if (topic == null) {
@@ -92,18 +96,18 @@ public class TopicServlet extends HttpServlet {
 			style2.setName("style2");
 			style2.setTopic (topic);
 	
-			WordPairType wp = new WordPairType();
-			wp.addWordSideType (style1, 0);
-			wp.addWordSideType (style2, 1);
-			new WordPairTypeDao().persist(wp);
+//			WordPairType wp = new WordPairType();
+//			wp.addWordSideType (style1, 0);
+//			wp.addWordSideType (style2, 1);
+//			wordPairTypeDao.persist(wp);
 
 			WordFolder folder = new WordFolder();
 			folder.setName("folder1");
 			folder.setTopic(topic);
 			folder.setOrderNumber(0);
-			folder.setPairType(wp);
+//			folder.setPairType(wp);
 			folder.setTopic(topic);
-			new FolderDao().persist(folder);
+			folderDao.persist(folder);
 //			topicDao.persist(folder.getTopic());
 			System.out.println ("TopicServlet.add: id=" + topic.getId() + " name=" + topicName);
 			json.put("state", "added");
@@ -125,7 +129,7 @@ public class TopicServlet extends HttpServlet {
 				System.out.println("Topic already exists: " + topicName);
 			} else {
 				topic.setName(topicName);
-				topicDao.merge(topic);
+				topicDao.persist(topic);
 				json.put("state", "renamed");
 			}
 		} else {
@@ -147,7 +151,7 @@ public class TopicServlet extends HttpServlet {
 				for (int i = topic.getPosition() + 1; i < topics.size(); ++ i) {
 					Topic t = topics.get(i);
 					t.setPosition(i - 1);
-					topicDao.merge(t);
+					topicDao.persist(t);
 				}
 				topicDao.remove(topic, topic.getId());
 				json.put("state", "deleted");
@@ -162,11 +166,12 @@ public class TopicServlet extends HttpServlet {
 		JSONObject json = new JSONObject();
 		System.out.println("TopicServlet.positionTopic: " + startPosition + " to " + endPosition);
 		List <Topic> topics = topicService.getTopicsSortedByPosition(user);
-		topics.add(endPosition, topics.remove(startPosition));
+		List <Topic> topics2 = new LinkedList<Topic>(topics);
+		topics2.add(endPosition, topics2.remove(startPosition));
 		for (int i = Math.min(startPosition, endPosition); i <= Math.max(startPosition, endPosition); ++ i) {
-			Topic t = topics.get(i);
+			Topic t = topics2.get(i);
 			t.setPosition(i);
-			topicDao.merge(t);
+			topicDao.persist(t);
 			System.out.println("TopicServlet.positionTopic ["+t.getPosition()+"]=" + t.getId());
 		}
 		json.put("state", "positioned");

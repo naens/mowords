@@ -1,0 +1,81 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/game_log_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".GameLogActivity" >
+
+    <TableRow
+        android:id="@+id/game_log_tableRow1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/game_log_header_view1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@drawable/game_log_header_view1"
+            android:gravity="center_vertical"
+            android:padding="@dimen/game_log_table_margin"
+            android:text="@string/game_log_header_datetime"
+            android:textStyle="bold" />
+
+        <com.naens.mowords.MoWordsHorizontalScrollView
+            android:id="@+id/game_log_header_horizontal_scroll_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scrollbars="none" >
+
+            <TableLayout
+                android:id="@+id/game_log_header_table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:keepScreenOn="true"
+                android:textSize="50sp"
+                android:textStyle="bold" >
+            </TableLayout>
+        </com.naens.mowords.MoWordsHorizontalScrollView>
+    </TableRow>
+
+    <ScrollView
+        android:id="@+id/game_table_scroll_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TableRow
+            android:id="@+id/game_log_tableRow2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TableLayout
+                android:id="@+id/game_log_first_column"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:keepScreenOn="true"
+                android:textSize="50sp"
+                android:textStyle="bold" >
+            </TableLayout>
+
+            <com.naens.mowords.MoWordsHorizontalScrollView
+                android:id="@+id/game_log_table_horizontal_scroll_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TableLayout
+                    android:id="@+id/game_log_table"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:keepScreenOn="true"
+                    android:textSize="50sp"
+                    android:textStyle="bold" >
+                </TableLayout>
+            </com.naens.mowords.MoWordsHorizontalScrollView>
+        </TableRow>
+    </ScrollView>
+
+</TableLayout>

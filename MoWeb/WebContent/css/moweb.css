@@ -138,19 +138,19 @@ h1, .folder-title {
 }
 
 .add-topic-button, .add-style-button, .add-folder-button {
-    background-image: url("http://mowords.com/images/add.png");
+    background-image: url("../images/add.png");
 }
 
 .delete-topic-button, .delete-style-button, .delete-folder-button {
-    background-image: url("http://mowords.com/images/delete.png");
+    background-image: url("../images/delete.png");
 }
 
 .add-file-button {
-    background-image: url("http://mowords.com/images/add12.png");
+    background-image: url("../images/add12.png");
 }
 
 .delete-file-button {
-    background-image: url("http://mowords.com/images/delete12.png");
+    background-image: url("../images/delete12.png");
 }
 
 .folder-files-number {

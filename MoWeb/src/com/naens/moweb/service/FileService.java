@@ -2,15 +2,19 @@ package com.naens.moweb.service;
 
 import java.util.List;
 
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
 import com.naens.moweb.model.WordFile;
 import com.naens.moweb.model.WordFolder;
 
+@Stateless
 public class FileService {
 
-	private EntityManager em = EMF.get().createEntityManager();
+    @PersistenceContext(unitName = "db-validate")
+    private EntityManager em;
 
 	@SuppressWarnings("unchecked")
 	public WordFile getByName(WordFolder folder, String fileName) {

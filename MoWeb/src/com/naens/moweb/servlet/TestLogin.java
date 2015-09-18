@@ -1,7 +1,9 @@
 package com.naens.moweb.servlet;
 
 import java.io.IOException;
+import java.util.List;
 
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,19 +13,26 @@ import javax.servlet.http.HttpServletResponse;
 import com.google.gson.Gson;
 import com.naens.moweb.dao.UserDao;
 import com.naens.moweb.model.GoogleProfile;
+import com.naens.moweb.model.Topic;
 import com.naens.moweb.model.User;
+import com.naens.moweb.service.TopicService;
 
 @WebServlet (value="/testlogin")
 public class TestLogin extends HttpServlet{
 
 	private static final long serialVersionUID = 2445846213616605681L;
 
+	@EJB
+	private UserDao userDao;
+
+	@EJB
+	private TopicService topicService;
+
 	@Override 
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		Long id = (long) 1;
-		User user = new UserDao ().getById(id);
+		User user = userDao.getById(id);
 		if (user == null) {
-			user = new User();		
 			String json2 = "{ \"kind\": \"plus#person\", \"displayName\": \"Andrei Nesterov\", \"name\": {\"givenName\": \"Andrei\", \"familyName\": \"Nesterov\" }, "
 					+ "\"language\": \"en\", \"isPlusUser\": true, \"url\": \"https://plus.google.com/116061730272696151765\", \"gender\": \"male\", "
 					+ "\"image\": {\"url\": \"https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg?sz=50\", \"isDefault\": true}, "
@@ -31,13 +40,13 @@ public class TestLogin extends HttpServlet{
 					+ "\"ageRange\": {\"min\": 21}, \"verified\": false, \"circledByCount\": 1, \"id\": \"116061730272696151765\", \"objectType\": \"person\" }";
 			Gson gson = new Gson();
 			GoogleProfile person = gson.fromJson(json2, GoogleProfile.class);
-			user.setGoogleProfile(person);
-
-			user.setFirstname(person.getName().getGivenName());
-			user.setLastname(person.getName().getFamilyName());
+			user = new User(person);
 	
-			new UserDao().persist(user);
+			userDao.persist(user);
 		}
+
+		List <Topic> topics = topicService.getTopicsSortedByPosition (user);
+		System.out.println("Found Topics: " + topics.size());
 
 		System.out.println("TestLogin:set user " + user);
 		req.getSession().setAttribute("user", user);

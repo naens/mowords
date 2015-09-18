@@ -2,7 +2,9 @@ package com.naens.moweb.service;
 
 import java.util.List;
 
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
 import com.naens.moweb.model.PairTypeSideType;
@@ -10,9 +12,11 @@ import com.naens.moweb.model.Topic;
 import com.naens.moweb.model.WordPairType;
 import com.naens.moweb.model.WordSideType;
 
+@Stateless
 public class StylesService {
 
-	private EntityManager entityManager = EMF.get().createEntityManager();
+    @PersistenceContext(unitName = "db-validate")
+    private EntityManager entityManager;
 
 	public WordSideType getSideTypeByName(String sideTypeName, Topic topic) {
 		String queryString = "SELECT st FROM WordSideType st WHERE st.name=:name AND st.topic=:topic";
@@ -63,9 +67,9 @@ public class StylesService {
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<PairTypeSideType> getPtstsSortedByNumber(EntityManager entityManager2, WordPairType pairType) {
+	public List<PairTypeSideType> getPtstsSortedByNumber(WordPairType pairType) {
 		String queryString = "FROM PairTypeSideType ptst WHERE ptst.pairType=:pt ORDER BY ptst.number";
-		Query query = entityManager2.createQuery(queryString);
+		Query query = entityManager.createQuery(queryString);
 		query.setParameter("pt", pairType);
 		List<PairTypeSideType> result = query.getResultList();
 		return result;

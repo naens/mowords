@@ -9,6 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
 
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -27,15 +28,14 @@ import com.google.gson.Gson;
 import com.naens.moweb.dao.UserDao;
 import com.naens.moweb.model.GoogleProfile;
 import com.naens.moweb.model.User;
-import com.naens.moweb.service.UserService;
 
 @WebServlet (value="/oauth2callback")
 public class CallbackServlet extends AbstractAuthorizationCodeCallbackServlet {
 
 	private static final long serialVersionUID = -7676018911767398277L;
 
-	private UserService userService = new UserService ();
-	private UserDao userDao = new UserDao ();
+	@EJB
+	private UserDao userDao;
 //	private EntityManager em = EMF.get().createEntityManager();
 
 	@Override
@@ -54,18 +54,17 @@ public class CallbackServlet extends AbstractAuthorizationCodeCallbackServlet {
 		InputStream input = url.openStream();
 		GoogleProfile googleProfile = new Gson().fromJson(new InputStreamReader(input, "UTF-8"), GoogleProfile.class); 
 
-		User user = userService.getByGoogleEmail(googleProfile.getEmail());
+		User user = userDao.getByEmail(googleProfile.getEmail());
 
 		if (user == null) {//new user
-			user = new User();
-			user.setGoogleProfile(googleProfile);
+			user = new User(googleProfile);
 			System.out.println("CallbackServlet.success: saving user...");
 			userDao.persist(user);
 			System.out.println("CallbackServlet.success: user saved: id=" + user.getId()
-					+ " email:" + user.getGoogleProfile().getEmail());
+					+ " email:" + user.getEmail());
 		} else {
 			System.out.println("CallbackServlet.success: user exists: id=" + user.getId()
-					+ " email:" + user.getGoogleProfile().getEmail());
+					+ " email:" + user.getEmail());
 		}
 
 		String gid = googleProfile.getId();

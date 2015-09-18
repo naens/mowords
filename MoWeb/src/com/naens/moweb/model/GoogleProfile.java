@@ -4,25 +4,8 @@ package com.naens.moweb.model;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.annotation.Generated;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Embeddable;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
-
-@Generated("org.jsonschema2pojo")
-@Entity
-@Table (name="googleprofile")
 public class GoogleProfile {
 
-	@Id @GeneratedValue
 	private int pk;
 	private String kind;
 	private String etag;
@@ -31,9 +14,7 @@ public class GoogleProfile {
 	private String skills;
 	private String birthday;
 	private String gender;
-	@OneToMany (cascade = CascadeType.ALL) @JoinColumn(name="profile")
 	private List<Email> emails = new ArrayList<Email>();
-	@OneToMany (mappedBy="profile")
 	private List<URL> urls = new ArrayList<URL>();
 	private String objectType;
 	private String id;
@@ -45,9 +26,7 @@ public class GoogleProfile {
 	private String relationshipStatus;
 	private String url;
 	private Image image;
-	@OneToMany (mappedBy="profile")
 	private List<Organization> organizations = new ArrayList<Organization>();
-	@OneToMany (mappedBy="profile")
 	private List<PlaceLived> placesLived = new ArrayList<PlaceLived>();
 	private boolean isPlusUser;
 	private String language;
@@ -55,19 +34,14 @@ public class GoogleProfile {
 	private String plusOneCount;
 	private String circledByCount;
 	private boolean verified;
-	@OneToOne
 	private Cover cover;
 	private String domain;
 
-	@Entity
-	@Table (name="googleprofile$email")
 	public static class Email {
-		@Id @GeneratedValue
 	    public Integer id;
 		private String value;
 		private String type;
 
-		@ManyToOne @JoinColumn(name="profile")
 		private GoogleProfile profile;
 
 		public Email() {
@@ -108,10 +82,7 @@ public class GoogleProfile {
 
 	}
 
-	@Entity
-	@Table (name="googleprofile$url")
 	public static class URL {
-		@Id @GeneratedValue
 	    public Integer id;
 		private String value;
 		private String type;
@@ -155,8 +126,6 @@ public class GoogleProfile {
 			return "URL [value=" + value + ", type=" + type + ", label=" + label + "]";
 		}
 
-		@ManyToOne
-		@JoinColumn(name="profile")
 		private GoogleProfile profile;
 		public GoogleProfile getProfile() {
 			return profile;
@@ -168,7 +137,6 @@ public class GoogleProfile {
 		
 	}
 
-	@Embeddable
 	public static class Name {
 
 		private String formatted;
@@ -249,10 +217,8 @@ public class GoogleProfile {
 
 	}
 
-	@Embeddable
 	public static class Image {
 
-		@Column (name="image_url")
 		public String url;
 
 		public Image() {
@@ -270,10 +236,7 @@ public class GoogleProfile {
 
 	}
 
-	@Entity
-	@Table (name="googleprofile$organization")
 	public static class Organization {
-		@Id @GeneratedValue
 	    public Integer id;
 
 		private String name;
@@ -284,7 +247,6 @@ public class GoogleProfile {
 		private String endDate;
 		private String location;
 		private String description;
-		@Column(name="\"primary\"")
 		private boolean primary;
 
 		public Organization() {
@@ -376,8 +338,6 @@ public class GoogleProfile {
 			this.primary = primary;
 		}
 
-		@ManyToOne
-		@JoinColumn(name="profile")
 		private GoogleProfile profile;
 		public GoogleProfile getProfile() {
 			return profile;
@@ -389,13 +349,9 @@ public class GoogleProfile {
 		
 	}
 
-	@Entity
-	@Table (name="googleprofile$placelived")
 	public static class PlaceLived {
-		@Id @GeneratedValue
 	    public Integer id;
 		private String value;
-		@Column(name="\"primary\"")
 		private boolean primary;
 
 		public PlaceLived() {
@@ -422,8 +378,6 @@ public class GoogleProfile {
 			this.primary = primary;
 		}
 
-		@ManyToOne
-		@JoinColumn(name="profile")
 		private GoogleProfile profile;
 		public GoogleProfile getProfile() {
 			return profile;
@@ -435,11 +389,8 @@ public class GoogleProfile {
 
 	}
 
-	@Embeddable
 	public static class AgeRange {
-		@Column (name="age_min")
 		private int min;
-		@Column (name="age_max")
 		private int max;
 
 		public AgeRange() {
@@ -468,11 +419,8 @@ public class GoogleProfile {
 
 	}
 
-	@Entity
 	public static class Cover {
-		@Id @GeneratedValue
 	    public Integer id;
-		@Column (name="coverlayout")
 		private String layout;
 		private CoverPhoto coverPhoto;
 		private CoverInfo coverInfo;
@@ -513,13 +461,9 @@ public class GoogleProfile {
 
 	}
 
-	@Embeddable
 	public static class CoverPhoto {
-		@Column (name="CoverPhoto_url")
 		private String url;
-		@Column (name="CoverPhoto_height")
 		private int height;
-		@Column (name="CoverPhoto_width")
 		private int width;
 
 		public CoverPhoto() {
@@ -558,7 +502,6 @@ public class GoogleProfile {
 
 	}
 
-	@Embeddable
 	public static class CoverInfo {
 		private int topImageOffset;
 	    private int leftImageOffset;

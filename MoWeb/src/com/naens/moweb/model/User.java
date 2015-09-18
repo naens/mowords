@@ -1,13 +1,9 @@
 package com.naens.moweb.model;
 
 
-import java.sql.Date;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -22,17 +18,16 @@ public class User {
 
 	private String lastname;
 
-	@OneToOne (cascade = CascadeType.ALL)
-	private GoogleProfile googleProfile;
+	private String email;
 
-	public User() {
+	private String gId;
 
-	}
+	public User(GoogleProfile googleProfile) {
+		this.firstname = googleProfile.getName().getGivenName();
+		this.lastname = googleProfile.getName().getFamilyName();
+		this.email = googleProfile.getEmail();
+		this.gId = googleProfile.getId();
 
-	public User(String firstname, String lastname, Date birthdate, GoogleProfile googleProfile) {
-		this.firstname = firstname;
-		this.lastname = lastname;
-		this.googleProfile = googleProfile;
 	}
 
 	public Long getId() {
@@ -59,16 +54,24 @@ public class User {
 		this.lastname = lastname;
 	}
 
-	public GoogleProfile getGoogleProfile() {
-		return googleProfile;
-	}
-
-	public void setGoogleProfile(GoogleProfile googleProfile) {
-		this.googleProfile = googleProfile;
-	}
-
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", firstname=" + firstname + ", lastname=" + lastname + "]";
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getgId() {
+		return gId;
+	}
+
+	public void setgId(String gId) {
+		this.gId = gId;
 	}
 }

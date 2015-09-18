@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,7 +16,6 @@ import org.json.JSONObject;
 
 import com.naens.moweb.dao.FileDao;
 import com.naens.moweb.dao.FolderDao;
-import com.naens.moweb.dao.UserDao;
 import com.naens.moweb.model.User;
 import com.naens.moweb.model.WordFile;
 import com.naens.moweb.model.WordFolder;
@@ -26,11 +26,14 @@ public class FileServlet extends HttpServlet {
 
 	private static final long serialVersionUID = -6582132157445939196L;
 
-	private FolderDao folderDao = new FolderDao();
+	@EJB
+	private FolderDao folderDao;
 
-	private FileDao fileDao = new FileDao();
+	@EJB
+	private FileDao fileDao;
 
-	private FileService fileService = new FileService();;
+	@EJB
+	private FileService fileService;
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -113,7 +116,7 @@ public class FileServlet extends HttpServlet {
 			WordFile file2 = fileService .getByName(folder, fileName);
 			if (file2 == null) {
 				file.setName(fileName);
-				fileDao.merge(file);
+				fileDao.persist(file);
 				json.put("state", "renamed");
 			} else {
 				json.put("state", "alreadyexists");
@@ -134,9 +137,9 @@ public class FileServlet extends HttpServlet {
 			for (int i = position + 1; i < files.size(); ++ i) {
 				WordFile f = files.get(i);
 				f.setOrderNumber(i - 1);
-				fileDao.merge(f);
+				fileDao.persist(f);
 			}
-			fileDao.remove(file, fileId);
+			fileDao.remove(file);
 			json.put("state", "deleted");
 		} else {
 			json.put("state", "notfound");
@@ -153,7 +156,7 @@ public class FileServlet extends HttpServlet {
 		for (int i = Math.min(startPosition, endPosition); i <= Math.max(startPosition, endPosition); ++ i) {
 			WordFile file = files.get(i);
 			file.setOrderNumber(i);
-			fileDao.merge(file);
+			fileDao.persist(file);
 		}
 		json.put("state", "positioned");
 		return json;
@@ -170,13 +173,13 @@ public class FileServlet extends HttpServlet {
 			for (int i = oldPosition + 1; i < oldFolderfiles.size(); ++ i) {
 				WordFile f = oldFolderfiles.get(i);
 				f.setOrderNumber(i - 1);
-				fileDao.merge(f);
+				fileDao.persist(f);
 			}
 			System.out.println("FileServlet: move file: " + file.getName() + " to folder " + folder.getName());
 			file.setFolder(folder);
 			int orderNumber = fileService.countFilesInFolder (folder);
 			file.setOrderNumber(orderNumber);
-			fileDao.merge(file);
+			fileDao.persist(file);
 			json.put("state", "moved");
 		} else {
 			json.put("state", "notfound");

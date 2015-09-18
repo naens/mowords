@@ -6,38 +6,7 @@ var renFileId = -1;
 var renFileFolderId = -1;
 $(document).ready(function() {
 
-	$('.topic').each(function() {
-		topics[$(this).data("id")] = $(this).data('name');
-		//console.log("topics: " + $(this).data("id") + "->" + $(this).data('name'));
-	});
-
-	//topics
-	//sortable: topics
-	var topicPosition = -1;
-	$(".topic-list").sortable({
-		start: function(event, ui) {
-			topicPosition=ui.item.index();
-			$(this).addClass('noclick');
-		},
-		stop: function(event, ui) {
-			var position=ui.item.index();
-			if (topicPosition != position) {
-				positionTopic(topicPosition, position);
-			}
-		}
-	});
-
-	$(".topic").click(function() {
-		var $topicsList = $(this).closest(".topic-list");
-		if ($topicsList.hasClass('noclick')) {
-			$topicsList.removeClass('noclick');
-		} else if (!$(this).hasClass("current-topic")) {
-			var id = $(this).data("id");
-			requestTopic (id);
-			topicId = id;
-			console.log('current topic: ' + topicId);
-		}
-	});
+	requestTopic ();
 
 	//topic dialog buttons
 	$(function() {
@@ -100,10 +69,6 @@ $(document).ready(function() {
 			});
 		}
 	});
-
-	var firstId = $('.topic').data('id');
-	requestTopic (firstId);
-	topicId = firstId;
 
 	//styles
 	//sortable: styles
@@ -398,6 +363,43 @@ function _file_delete_click ($files) {
 
 function initTopic () {
 
+	if (!$(".topics-panel").hasClass(".topic-list")){
+
+		$('.topic').each(function() {
+			topics[$(this).data("id")] = $(this).data('name');
+			//console.log("topics: " + $(this).data("id") + "->" + $(this).data('name'));
+		});
+	
+		//topics
+		//sortable: topics
+		var topicPosition = -1;
+		$(".topic-list").sortable({
+			start: function(event, ui) {
+				topicPosition=ui.item.index();
+				$(this).addClass('noclick');
+			},
+			stop: function(event, ui) {
+				var position=ui.item.index();
+				if (topicPosition != position) {
+					positionTopic(topicPosition, position);
+				}
+			}
+		});
+	
+		$(".topic").click(function() {
+			var $topicsList = $(this).closest(".topic-list");
+			if ($topicsList.hasClass('noclick')) {
+				$topicsList.removeClass('noclick');
+			} else if (!$(this).hasClass("current-topic")) {
+				var id = $(this).data("id");
+				requestTopic (id);
+				console.log('current topic [click]: ' + topicId);
+				topicId = id;
+			}
+		});
+
+	}
+
 	//style rename function
 	$(function() {
 		$("#rename-style-dialog").dialog({autoOpen: false, modal: true});
@@ -516,7 +518,9 @@ function initTopic () {
 
 //database request functions (post)
 function requestTopic (id) {
+	console.log('request topic');
 	$.post("topic.html", {'topicId': id}, function (data, status, xhr) {
+		$(".topics-panel").html($(data).children(".topics-panel").html());
 		$(".center-panel").html($(data).children(".center-panel").html());
 		$(".styles-list").html($(data).children(".styles-list").html());
 		$(".current-topic").removeClass("current-topic");
@@ -525,6 +529,8 @@ function requestTopic (id) {
 				$(this).addClass("current-topic");
 			}
 		});
+		topicId = $(data).children(".topic-id").html()
+		console.log('found topicId: ' + topicId);
 		initTopic();
 	});
 }

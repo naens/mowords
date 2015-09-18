@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+	<com.naens.preferences.FindFolderDialogPreference
+		android:defaultValue="@string/pref_root_directory_default"
+		android:key="pref_root_dir"
+		android:title="@string/pref_root_directory_title" >
+	</com.naens.preferences.FindFolderDialogPreference>
+<!--
+	<ListPreference
+		android:entries="@array/pref_theme_entries"
+		android:entryValues="@array/pref_theme_entries"
+		android:key="pref_theme"
+		android:persistent="true"
+		android:title="@string/pref_root_theme" /> 
+-->
+	<SwitchPreference
+	    android:title="@string/pref_enable_synchronize" 
+	    android:key="pref_enable_synchronize"/>
+
+</PreferenceScreen>

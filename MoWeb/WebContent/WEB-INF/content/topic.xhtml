@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"	>
+<div>
+	<div class="topic-id">#{topicsBean.topic.id}</div>
+	<div class="topics-panel">
+		<h1>Topics</h1>
+		<div class="topic-list">
+			<ui:repeat value="#{topicsBean.topics}" var="topic">
+				<div class="topic"	data-id   = "#{topic.id}"
+									data-name = "#{topic.name}"	>
+					<h:outputText value="#{topic.name}" />
+				</div>
+			</ui:repeat>
+		</div>
+		<div class="topics-buttons">
+			<div class="add-topic-button"></div>
+			<div class="delete-topic-button"></div>
+		</div>
+	</div>
+	<div class="styles-list">
+		<ui:repeat value='#{topicsBean.getSideTypes()}' var="topic">
+			<div class="style" data-id="#{id}">#{topic.name}</div>
+		</ui:repeat>
+	</div>
+	<div class="center-panel">
+		<ui:repeat value="#{topicsBean.getPairTypes()}" var="pairType">
+			<div class="pair-type" data-id="#{pairType.id}">
+				<div class="folders-panel">
+					<div class="folders-list">
+						<ui:repeat value="#{topicsBean.getFoldersByPairTypeSortedByNumber(top)}" var="folder">
+							<div class="folder" data-id="#{folder.id}">
+								<div class="folder-title">#{folder.name}</div>
+<!-- 								<div class="folder-files-number">(#{folder.files.size} files)</div>
+								<div class="delete-folder-button"></div>
+								<div class="files-panel">
+									<div class="files-list">
+										<ui:repeat value="#{files}" var="file">
+                              	       		<div class="file" data-id="#{file.id}">
+                                        		<div class="file-name">#{file.name}</div>
+                                        		<div class="file-ih"><div class="delete-file-button"></div></div>
+                                    		</div>
+                                    	</ui:repeat>
+									</div>
+                                	<div class="add-file-button"></div>
+								</div> -->
+							</div>
+						</ui:repeat>
+					</div>
+				</div>
+				<div class="side-styles">
+					<ui:repeat value="#{sideTypes}" var="sideType">
+						<div class="side-style" data-id="#{id}">#{sideType.name}</div>
+					</ui:repeat>
+				</div>
+			</div>
+		</ui:repeat>
+		<c:set var="noptFolders" value="#{topicsBean.getFoldersByPairTypeSortedByNumber()}"/>
+		<c:if test="#noptFolders.size > 0">
+			<div class="pair-type">
+				<div class="folders-panel">
+					<div class="folders-list nopt-folders-list">
+						<ui:repeat value="#{noptFolders}" var="folder">
+							<div class="folder" data-id="#{folder.id}">
+								<div class="folder-title">#{folder.name}</div>
+								<div class="delete-folder-button"></div>
+							</div>
+						</ui:repeat>
+					</div>
+				</div>
+				<div class="side-styles">
+					<ui:repeat value="#{topic.sideTypes}" var="sideType">
+						<div class="side-style" data-id="#{id}">#{sideType.name}</div>
+					</ui:repeat>
+				</div>
+			</div>
+		</c:if>
+		<div class="add-folder-button"></div>
+	</div>
+	</div>
+</html>

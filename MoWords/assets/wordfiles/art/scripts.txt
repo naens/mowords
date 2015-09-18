@@ -1,0 +1,10 @@
+[image:blackletter_script.jpg]	Blackletter script
+[image:carolingian_minuscule.jpg]	Carolingian minuscule
+[image:half-uncial_script.jpg]	Half-uncial script
+[image:humanist_minuscule.jpg]	Humanist minuscule
+[image:insular_script.jpg]	Insular script
+[image:merovingian_script.jpg]	Merovingian script
+[image:rustic_script.jpg]	Rustic script
+[image:square_capitals.jpg]	Square capitals
+[image:uncial_script.jpg]	Uncial script
+[image:visigothic_script.jpg]	Visigothic script

@@ -1,0 +1,34 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/words_menu_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/menu_settings"/>
+    <item
+        android:id="@+id/words_action_clear"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel"
+        android:showAsAction="always"
+        android:visible="false"/>
+    <item
+        android:id="@+id/words_action_back"
+        android:icon="@drawable/undo"
+        android:showAsAction="always"
+        android:visible="false"/>
+    <item
+        android:id="@+id/words_action_forward"
+        android:icon="@drawable/redo"
+        android:showAsAction="always"
+        android:visible="false"/>
+    <item
+        android:id="@+id/words_action_erase"
+        android:icon="@drawable/erase"
+        android:showAsAction="always"
+        android:visible="false"/>
+    <item
+        android:id="@+id/words_action_draw"
+        android:icon="@android:drawable/ic_menu_gallery"
+        android:showAsAction="always"
+        android:title="@android:string/search_go"/>
+
+</menu>

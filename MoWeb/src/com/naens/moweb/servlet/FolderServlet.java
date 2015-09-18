@@ -5,7 +5,7 @@ import java.io.PrintWriter;
 import java.util.LinkedList;
 import java.util.List;
 
-import javax.persistence.EntityManager;
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,13 +17,11 @@ import org.json.JSONObject;
 
 import com.naens.moweb.dao.FolderDao;
 import com.naens.moweb.dao.TopicDao;
-import com.naens.moweb.dao.UserDao;
 import com.naens.moweb.dao.WordPairTypeDao;
 import com.naens.moweb.model.Topic;
 import com.naens.moweb.model.User;
 import com.naens.moweb.model.WordFolder;
 import com.naens.moweb.model.WordPairType;
-import com.naens.moweb.service.EMF;
 import com.naens.moweb.service.FolderService;
 
 @WebServlet(value = "/folders-servlet")
@@ -31,15 +29,19 @@ public class FolderServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 154588212301086099L;
 
-	private FolderService folderService = new FolderService();
+	@EJB
+	private FolderService folderService;
 
-	private FolderDao folderDao = new FolderDao();
+	@EJB
+	private WordPairTypeDao pairTypeDao;
 
-	private WordPairTypeDao pairTypeDao = new WordPairTypeDao();
-
-	private TopicDao topicDao = new TopicDao();
+	@EJB
+	private TopicDao topicDao;
 
 	private User user;
+
+	@EJB
+	private FolderDao folderDao;
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -107,15 +109,12 @@ public class FolderServlet extends HttpServlet {
 		Topic topic = topicDao.getById(topicId);
 		json.put("message", "Added Folder: " + folderName);
 		if (folderService.getByName(folderName, topic) == null) {	//new
-			EntityManager em = EMF.get().createEntityManager();
-			em.getTransaction().begin();
 			WordFolder folder = new WordFolder();
 			folder.setName(folderName);
 			folder.setTopic(topic);
 			folder.setOrderNumber(folderService.countFoldersByPairType(topic, null));
 			folder.setPairType(null);
-			em.persist(folder);
-			em.getTransaction().commit();
+			folderDao.persist(folder);
 			json.put("state", "added");
 			json.put("folderId", folder.getId());
 		} else {	//not new
@@ -155,10 +154,8 @@ public class FolderServlet extends HttpServlet {
 		System.out.println(String.format("FolderServlet.delete: folder[%d] '%s'", folderId, folder != null ? folder.getName() : "NULL"));
 
 		if (folder != null) {
-			EntityManager entityManager = EMF.get().createEntityManager();
-			entityManager.getTransaction().begin();
 	
-			folder = entityManager.merge(folder);
+			folder = folderDao.merge(folder);
 	
 			WordPairType pairType = folder.getPairType();
 			List <WordFolder> folders = folderService.getByPairTypeSortedByNumber(pairType);
@@ -174,20 +171,12 @@ public class FolderServlet extends HttpServlet {
 				System.out.println("FolderServlet.delete.toMerge["+i+"]: folder["+f.getOrderNumber()+"]=" + f.getName());
 			}
 	
+			folderDao.remove(folder);
 			if (pairType != null && pairType.getFolders().size() == 1) {
-				entityManager.remove(folder);
-				entityManager.remove(pairType);
-			} else {
-				entityManager.remove(folder);
+				pairTypeDao.remove(pairType);
 			}
-	
-			for (WordFolder wf : toMerge) {
-				entityManager.merge(wf);
-				System.out.println("FolderServlet.delete: merging folder " + wf.getName());
-			}
-	
-			entityManager.getTransaction().commit();
-	
+
+			folderDao.persist(toMerge);
 	
 			json.put("state", "deleted");
 		} else {

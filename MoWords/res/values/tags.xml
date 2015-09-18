@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="game_log_id1" type="tag"/>
+    <item name="game_log_id2" type="tag"/>
+    <item name="game_log_row1" type="tag"/>
+    <item name="game_log_row2" type="tag"/>
+</resources>

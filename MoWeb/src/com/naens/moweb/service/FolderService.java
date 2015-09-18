@@ -2,16 +2,20 @@ package com.naens.moweb.service;
 
 import java.util.List;
 
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
 import com.naens.moweb.model.Topic;
 import com.naens.moweb.model.WordFolder;
 import com.naens.moweb.model.WordPairType;
 
+@Stateless
 public class FolderService {
 
-	private EntityManager em = EMF.get().createEntityManager();
+    @PersistenceContext(unitName = "db-validate")
+    private EntityManager em;
 
 	@SuppressWarnings("unchecked")
 	public WordFolder getByName(String folderName, Topic topic) {
@@ -58,12 +62,12 @@ public class FolderService {
 
 	public int countFoldersByPairType(Topic topic, WordPairType pairType) {
 		if (pairType == null) {
-			String queryString = "SELECT count(*) FROM WordFolder f WHERE f.topic=:topic AND f.pairType IS NULL";
+			String queryString = "SELECT count(f) FROM WordFolder f WHERE f.topic=:topic AND f.pairType IS NULL";
 			Query query = em.createQuery(queryString);
 			query.setParameter("topic", topic);
 			return ((Long) query.getSingleResult()).intValue();
 		}
-		String queryString = "SELECT count(*) FROM WordFolder f WHERE f.topic=:topic AND f.pairType=:pt";
+		String queryString = "SELECT count(f) FROM WordFolder f WHERE f.topic=:topic AND f.pairType=:pt";
 		Query query = em.createQuery(queryString);
 		query.setParameter("topic", topic);
 		query.setParameter("pt", pairType);

@@ -23,7 +23,7 @@ public class Topic {
 
 	private int position;
 
-	@ManyToOne @JoinColumn (name="owner")
+	@ManyToOne (cascade=CascadeType.PERSIST) @JoinColumn (name="owner")
 	private User owner;
 
 	@OneToMany (mappedBy="topic",  cascade = CascadeType.ALL)

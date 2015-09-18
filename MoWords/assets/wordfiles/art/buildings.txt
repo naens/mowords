@@ -1,0 +1,10 @@
+[image:tajmahal.jpg]	Taj Mahal, India, 1632 – 1653
+[image:imam_mosque.jpg]	Imam Mosque, Iran, 1611 - 1629
+[image:borobudur.jpg]	Borobudur, Indonesia, 825
+[image:angkor-wat.jpg]	Angkor Wat, Cambodia, 12th century
+[image:el_castillo.jpg]	El Catillo, Mexico, 9th - 12th centuries
+[image:harmandir_sahib.jpg]	Harmandir Sahib, India, 1585 - 1604
+[image:kizhi_pogost.jpg]	Kizhi Pogost, Russia, 1714	
+[image:paro_taktsang.jpg]	Paro Taktsang, Bhutan, 1692
+[image:shwedagon_pagoda.jpg]	Shwedagon Pagoda, Myanmar, 6th - 10th centuries
+[image:petra.jpg]	City of Petra, Jordan, 1st century

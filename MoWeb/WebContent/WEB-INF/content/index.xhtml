@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"	>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+		<title>MoWords</title>
+	</head>
+	<body>
+		<p>MoWords Login page</p>
+		<c:if test="${empty indexBean.user}">
+			<p><a href="login">Login</a></p>
+			<p><a href="testlogin">Test login</a></p>
+		</c:if>
+		<c:if test="${not empty indexBean.user}">
+		<p>#{indexBean.user}</p>
+			<p><a href="topics.html">topics</a></p>
+			<p><a href="logout">logout</a></p>
+		</c:if>
+		<p><a href="initialize_database">initialize database</a></p>
+	</body>
+</html>

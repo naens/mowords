@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-import javax.persistence.EntityManager;
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,12 +15,13 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.naens.moweb.dao.FolderDao;
+import com.naens.moweb.dao.PtstDao;
 import com.naens.moweb.dao.WordPairTypeDao;
+import com.naens.moweb.dao.WordSideTypeDao;
 import com.naens.moweb.model.PairTypeSideType;
 import com.naens.moweb.model.WordFolder;
 import com.naens.moweb.model.WordPairType;
 import com.naens.moweb.model.WordSideType;
-import com.naens.moweb.service.EMF;
 import com.naens.moweb.service.FolderService;
 import com.naens.moweb.service.StylesService;
 
@@ -29,22 +30,28 @@ public class PairTypeServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 186232176118538949L;
 
-	private WordPairTypeDao pairTypeDao = new WordPairTypeDao();
+	@EJB
+	private WordPairTypeDao pairTypeDao;
 
-	private FolderDao folderDao = new FolderDao();
+	@EJB
+	private WordSideTypeDao sideTypeDao;
 
-	private FolderService folderService = new FolderService();
+	@EJB
+	private FolderDao folderDao;
 
-	private StylesService stylesService = new StylesService();
+	@EJB
+	private PtstDao ptstDao;
 
-	private EntityManager entityManager = EMF.get().createEntityManager();
+	@EJB
+	private FolderService folderService;
+
+	@EJB
+	private StylesService stylesService;
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String method = req.getParameter("method");
 		System.out.println("PairTypeServlet: method\t" + method);
-
-		entityManager.getTransaction().begin();
 
 //		WordSideType sideType = entityManager.find(WordSideType.class, Long.parseLong(req.getParameter("sidetype")));
 
@@ -107,8 +114,6 @@ public class PairTypeServlet extends HttpServlet {
 		} catch (Throwable e) {
 			e.printStackTrace();
 		}
-		entityManager.getTransaction().commit();
-
 		printout.flush();
 	}
 
@@ -123,22 +128,22 @@ public class PairTypeServlet extends HttpServlet {
 		JSONObject json = new JSONObject();
 		System.out.println ("PairTypeServlet.add: " + styleId + " to pairtype " + pairTypeId + ", position: " + position);
 
-		WordPairType pairType = entityManager.find(WordPairType.class, pairTypeId);
-		WordSideType sideType = entityManager.find(WordSideType.class, styleId);
+		WordPairType pairType = pairTypeDao.getById(pairTypeId);
+		WordSideType sideType = sideTypeDao.getById(styleId);
 		System.out.println("PairTypeServlet.add: PairTypeServlet: index\t\t" + position);
-		List <PairTypeSideType> ptsts = stylesService.getPtstsSortedByNumber(entityManager, pairType);
+		List <PairTypeSideType> ptsts = stylesService.getPtstsSortedByNumber(pairType);
 		PairTypeSideType ptst = new PairTypeSideType();
 		ptst.setNumber(position);
 		ptst.setSideType(sideType);
 		ptst.setPairType(pairType);
-		entityManager.persist(ptst);
+		ptstDao.persist(ptst);
 
 		for (int i = position; i < ptsts.size(); ++ i) {
 			PairTypeSideType p = ptsts.get(i);
 			System.out.println(String.format("PairTypeServlet.add: st:%d\tpt:%d\tn:%d->%d", p.getSideType().getId(), p.getPairType().getId(), p.getNumber(), 
 					p.getNumber() + 1));
 			p.setNumber(p.getNumber() + 1);
-			entityManager.merge(p);
+			ptstDao.persist(p);
 		}
 		json.put("state", "inserted");
 		return json;
@@ -174,7 +179,7 @@ public class PairTypeServlet extends HttpServlet {
 
 		WordPairType pairType = pairTypeDao.getById(pairTypeId);
 		System.out.println("PairTypeServlet: index\t\t" + position);
-		List <PairTypeSideType> ptsts = stylesService.getPtstsSortedByNumber(entityManager, pairType );
+		List <PairTypeSideType> ptsts = stylesService.getPtstsSortedByNumber(pairType);
 		System.out.println("PairTypeServlet.delete: ptsts-------------");
 		for (PairTypeSideType pp : ptsts) {
 			System.out.println(String.format("PairTypeServlet.delete: st:%d\tpt:%d\tn:%d", pp.getSideType().getId(), pp.getPairType().getId(), pp.getNumber()));
@@ -187,9 +192,9 @@ public class PairTypeServlet extends HttpServlet {
 			System.out.println(String.format("PairTypeServlet.delete: st:%d\tpt:%d\tn:%d->%d", p.getSideType().getId(), p.getPairType().getId(), p.getNumber(), 
 					p.getNumber() - 1));
 			p.setNumber(p.getNumber() - 1);
-			entityManager.merge(p);
+			ptstDao.persist(p);
 		}
-		entityManager.remove(entityManager.contains(ptst) ? ptst : entityManager.merge(ptst));
+		ptstDao.remove(ptst);
 		System.out.println("PairTypeServlet.delete: -------------------");
 		json.put("state", "deleted");
 		return json;
@@ -200,12 +205,12 @@ public class PairTypeServlet extends HttpServlet {
 		System.out.println ("PairTypeServlet.position: " + startPosition + " to " + endPosition + " in pairtype " + pairTypeId);
 
 		WordPairType pairType = pairTypeDao.getById(pairTypeId);
-		List <PairTypeSideType> ptsts = stylesService.getPtstsSortedByNumber(entityManager, pairType);
+		List <PairTypeSideType> ptsts = stylesService.getPtstsSortedByNumber(pairType);
 		ptsts.add(endPosition, ptsts.remove(startPosition));
 		for (int i = Math.min(startPosition, endPosition); i <= Math.max(startPosition, endPosition); ++ i) {
 			PairTypeSideType ptst = ptsts.get(i);
 			ptst.setNumber(i);
-			entityManager.merge(ptst);
+			ptstDao.persist(ptst);
 		}
 
 		json.put("state", "positioned");

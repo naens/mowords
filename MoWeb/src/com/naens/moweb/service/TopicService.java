@@ -3,18 +3,24 @@ package com.naens.moweb.service;
 import java.util.LinkedList;
 import java.util.List;
 
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
 import com.naens.moweb.dao.TopicDao;
 import com.naens.moweb.model.Topic;
 import com.naens.moweb.model.User;
 
+@Stateless
 public class TopicService {
 
-	private TopicDao topicDao = new TopicDao();
+    @PersistenceContext(unitName = "db-validate")
+    private EntityManager entityManager;
 
-	private EntityManager entityManager = EMF.get().createEntityManager();
+	@EJB
+	private TopicDao topicDao;
 
 	@SuppressWarnings("unchecked")
 	public Topic getByName(String topicName, User user) {
@@ -38,7 +44,7 @@ public class TopicService {
 	}
 
 	public int countByUser(User user) {
-		String queryString = "SELECT count(*) FROM Topic t WHERE t.owner=:user";
+		String queryString = "SELECT COUNT (t) FROM Topic t WHERE t.owner=:user";
 		Query query = entityManager.createQuery(queryString);
 		query.setParameter("user", user);
 		Long result = (Long) query.getSingleResult();
@@ -46,16 +52,12 @@ public class TopicService {
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<Topic> getTopicsSortedByPosition(EntityManager em, User user) {
+	public List<Topic> getTopicsSortedByPosition(User user) {
 		String queryString = "SELECT t FROM Topic t WHERE t.owner=:user ORDER BY t.position";
-		Query query = em.createQuery(queryString);
+		Query query = entityManager.createQuery(queryString);
 		query.setParameter("user", user);
 		List<Topic> result = query.getResultList();
 		return result;
-	}
-
-	public List<Topic> getTopicsSortedByPosition(User user) {
-		return getTopicsSortedByPosition(entityManager, user);
 	}
 
 }

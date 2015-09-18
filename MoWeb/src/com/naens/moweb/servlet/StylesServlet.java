@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-import javax.persistence.EntityManager;
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,13 +14,11 @@ import javax.servlet.http.HttpServletResponse;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.naens.moweb.dao.SideTypeDao;
 import com.naens.moweb.dao.TopicDao;
-import com.naens.moweb.dao.UserDao;
+import com.naens.moweb.dao.WordSideTypeDao;
 import com.naens.moweb.model.Topic;
 import com.naens.moweb.model.User;
 import com.naens.moweb.model.WordSideType;
-import com.naens.moweb.service.EMF;
 import com.naens.moweb.service.StylesService;
 
 @WebServlet(value = "/styles-servlet")
@@ -28,11 +26,14 @@ public class StylesServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 154588212301086099L;
 
-	private StylesService stylesService = new StylesService();
+	@EJB
+	private StylesService stylesService;
 
-	private SideTypeDao sideTypeDao = new SideTypeDao ();
+	@EJB
+	private WordSideTypeDao sideTypeDao;
 
-	private TopicDao topicDao = new TopicDao ();
+	@EJB
+	private TopicDao topicDao;
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -84,10 +85,7 @@ public class StylesServlet extends HttpServlet {
 		System.out.println("add style:" + styleName + " in " + topic.getName());
 
 		if (sideType == null) {	//new
-			EntityManager entityManager = EMF.get().createEntityManager();
-			entityManager.getTransaction().begin();
-
-			topic = entityManager.merge(topic);
+//			topic = topicDao.merge(topic);
 
 			sideType = new WordSideType();
 			sideType.setTopic(topic);
@@ -96,9 +94,8 @@ public class StylesServlet extends HttpServlet {
 			sideType.setListPosition(listPosition);
 			json.put("message", "Added Style: " + styleName);
 			System.out.println("Added Style: " + styleName);
-			entityManager.persist(sideType);
+			sideTypeDao.persist(sideType);
 
-			entityManager.getTransaction().commit();
 			json.put("state", "added");
 		} else {	//not new
 			json.put("state", "alreadyexists");
@@ -121,7 +118,7 @@ public class StylesServlet extends HttpServlet {
 			} else {
 				sideType.setName(styleName);
 				System.out.println("Renamed Style: " + sideType.getName() + " to: " + styleName);
-				sideTypeDao.merge(sideType);
+				sideTypeDao.persist(sideType);
 				json.put("state", "renamed");
 			}
 		} else {
@@ -146,9 +143,9 @@ public class StylesServlet extends HttpServlet {
 				for (int i = sideType.getListPosition() + 1; i < styles.size(); ++ i) {
 					WordSideType st = styles.get(i);
 					st.setListPosition(i - 1);
-					sideTypeDao.merge(st);
+					sideTypeDao.persist(st);
 				}
-				sideTypeDao.remove(sideType, sideType.getId());
+				sideTypeDao.remove(sideType);
 				json.put("state", "deleted");
 			}
 		} else {
@@ -168,7 +165,7 @@ public class StylesServlet extends HttpServlet {
 		for (int i = Math.min(startPosition, endPosition); i <= Math.max(startPosition, endPosition); ++ i) {
 			WordSideType style = styles.get(i);
 			style.setListPosition(i);
-			sideTypeDao.merge(style);
+			sideTypeDao.persist(style);
 			System.out.printf("StylesServlet.positionStyle: style[%d]=%s\n", i, styles.get(i));
 		}
 		json.put("state", "positioned");

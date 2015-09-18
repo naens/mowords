@@ -1,0 +1,10 @@
+[image:Baskerville_Monotype.jpg]	Baskerville
+[image:NeueHelvetica.jpg]	Neue Helvetica
+[image:Verdana.jpg]	Verdana
+[image:New_Century_Schoolbook_Linotype.jpg]	New Century Schoolbook
+[image:Palatino Linotype.jpg]	Palatino Linotype
+[image:FuturaND.jpg]	Futura ND
+[image:Didot_Adobe.jpg]	Didot
+[image:GaramondPremier.jpg]	Garamond Premier
+[image:Georgia.jpg]	Georgia
+[image:Univers.jpg]	Univers
