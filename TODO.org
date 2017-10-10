@@ -1,0 +1,3 @@
+* Things to add/improve
+ * improve structure (add tags or subjects...)
+ * import data through the server
