@@ -1,0 +1,2 @@
+# mowords
+Android Flashcard Application
