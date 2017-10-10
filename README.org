@@ -1,2 +1,89 @@
-* mowords
+#+TITLE: MoWords Description
 Android Flashcard Application
+
+/TODO: this file is an automatic translation: improve to make it readable/
+
+/TODO: add screenshots and examples of usage/
+
+* General information description
+Not always just when flashcard is becoming a lot of and then for them
+difficult find place.  therefore there is meaning keep their at electronic
+as for of which and necessary attachment for To from them work.  One of of
+such applications is an MoWords.
+
+** Multiple face flashcard
+Sometimes even paper flashcard does not coping with their appointment.  what
+do when We need to the one cards It was three hand, that highly It was would
+by the way for study writing, where no direct conformity writing and
+pronunciations, as in, e.g.  English or Japanese.  Have virtual flashcard
+such aconstraints no.  Availability capabilities multilateral flashcard is
+an one of advantages programs MoWords.
+
+** Selection directions
+So same It has meaning, for example, learning language learning the words at
+two directions, for example, first from Russian in English and later from
+English on Russian.  it implemented and at this application.
+
+
+* Independent creature files
+When any learning is important deliberate an approach to himself study, it
+is necessary that human could himself to choose what kind the words he will
+be teach.  AT the program MoWords user himself downloads files with words
+that later can teach.
+
+* How to use the program
+** Organization: files and directory
+So as people often learn simultaneously several subjects or languages, the
+lists words at the program are by subjects that may fit or studied subjects
+or languages.  Each subject contains several lists.  On disk same subjects
+correspond to directory at main section program skiskam samecorrespond to
+textbook files from extension.  " txt ".  Each flashcard corresponds to line
+file that divided tabulation on words.
+
+** Creature flashcard user
+User can yourself create subjects and lists k.  it is done as follows way. 
+To create subject, it is necessary create directory at root directory
+program.  This root directory indicates at the beginning use of program or
+at settings.  To create files necessary to manually create files from
+extension.  " txt ",where hand flashcard must be separated spaces or same
+copy the words of tabular Processor (as e.g., MW Excel or OO Calc) in file
+from extension.  " txt ".  This file must be placed at directory subject.
+
+** Main screen
+Now about how enjoy program.  On main the screen located the available
+items.  By clicking on subject ourselves on screen subject.
+
+** Subject screen
+On which located lists words.  On this the screen need choose one or several
+lists.  Of these lists will be selected random manner the words for session. 
+By default session occurs at both directions: first, at one, then at another
+side.  there is opportunity learn only at one direction or start off
+fromreverse side.  AT settings can indicate that always for of this subject
+matter study occurred only at one side.  there is special field that would
+establish quantity of the words.  Having established options session can go
+over on screen session.
+
+** Session screen
+On the screen session occurs the very study.  Here is displayed side cards,
+etc.  need reply and check correct whether answer by looking on others hand
+card.  Navigation occurs as follows way: actions down and up controlled side
+cards right and left - go by cards.  By clicking on card can changecorrectly
+whether you responded or no.  If card answered correctly, she is It has
+green frame.  There is also opportunity show field virtual pens and then
+compare answer.
+
+At the end session is displayed result.  Later program passes on screen
+subject.
+ 
+** Journal of the results
+On the screen subject matter there is opportunity look Journal sessions.  On
+him displayed date and time session, the content, duration and result
+session.
+
+** Font settings
+On the screen subject matter there is also link on setting up fonts.  There
+can choose font and the size letters.  On him can also hit from the screen
+session.
+
+For people working from Egyptian hieroglyphs surely budut useful option MdC,
+allowing transliterate code MdC at hieroglyphs.
