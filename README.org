@@ -2,6 +2,8 @@
 
 Android Flashcard Application
 
+[[https://play.google.com/store/apps/details?id=com.naens.mowords][Play store link]]
+
 /TODO: this file is an automatic translation: improve to make it readable/
 
 /TODO: add screenshots and examples of usage/
