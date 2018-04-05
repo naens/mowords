@@ -1,0 +1,126 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:2:1-63:12
+MERGED from [:MdCTools] /home/andrei/gproj/mowords/MdCTools/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-11:12
+INJECTED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:2:1-63:12
+	package
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:3:2-29
+		INJECTED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml
+		INJECTED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:5:2-29
+		INJECTED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml
+		INJECTED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:4:2-25
+		INJECTED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml
+		INJECTED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml
+uses-sdk
+ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:7:2-9:41
+INJECTED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:7:2-9:41
+INJECTED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:7:2-9:41
+MERGED from [:MdCTools] /home/andrei/gproj/mowords/MdCTools/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:MdCTools] /home/andrei/gproj/mowords/MdCTools/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+INJECTED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:7:2-9:41
+INJECTED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:7:2-9:41
+	android:targetSdkVersion
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:9:9-38
+		INJECTED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml
+		INJECTED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:8:9-35
+		INJECTED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml
+		INJECTED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:11:5-67
+	android:name
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:11:22-64
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:12:2-78
+	android:name
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:12:19-75
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:13:5-71
+	android:name
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:13:22-68
+application
+ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:15:2-61:16
+	android:label
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:19:3-35
+	android:icon
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:18:3-33
+	android:allowBackup
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:17:3-29
+	android:theme
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:20:3-50
+	android:name
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:16:9-57
+activity#com.naens.mowords.MainActivity
+ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:21:3-29:14
+	android:label
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:23:4-36
+	android:name
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:22:4-49
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:24:4-28:20
+action#android.intent.action.MAIN
+ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:25:5-57
+	android:name
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:25:13-54
+category#android.intent.category.LAUNCHER
+ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:27:5-65
+	android:name
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:27:15-62
+activity#com.naens.mowords.WordsActivity
+ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:30:3-35:14
+	android:label
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:34:4-48
+	android:configChanges
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:32:4-50
+	android:theme
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:33:4-42
+	android:name
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:31:4-50
+activity#com.naens.mowords.WelcomeActivity
+ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:37:3-40:14
+	android:label
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:39:4-50
+	android:name
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:38:4-52
+activity#com.naens.preferences.MainPreferenceActivity
+ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:41:3-44:14
+	android:label
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:43:4-36
+	android:name
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:42:4-63
+activity#com.naens.preferences.FolderPreferenceActivity
+ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:45:3-48:14
+	android:label
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:47:4-36
+	android:name
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:46:4-65
+activity#com.naens.preferences.WordPreferenceActivity
+ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:49:3-52:14
+	android:label
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:51:4-36
+	android:name
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:50:4-63
+activity#com.naens.mowords.FolderActivity
+ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:53:3-56:14
+	android:label
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:55:4-49
+	android:name
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:54:4-51
+activity#com.naens.mowords.GameLogActivity
+ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:57:3-60:14
+	android:label
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:59:4-51
+	android:name
+		ADDED from /home/andrei/gproj/mowords/MoWords/src/main/AndroidManifest.xml:58:4-52

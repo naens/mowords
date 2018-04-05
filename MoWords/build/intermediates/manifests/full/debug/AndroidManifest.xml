@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.naens.mowords"
+    android:versionCode="2"
+    android:versionName="1.1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="13"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <application
+        android:name="com.naens.mowords.InitApplication"
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@drawable/logo2"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.Light" >
+        <activity
+            android:name="com.naens.mowords.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.naens.mowords.WordsActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_words"
+            android:theme="@style/wordsOverlayBar" >
+        </activity>
+        <activity
+            android:name="com.naens.mowords.WelcomeActivity"
+            android:label="@string/welcome_title_activity" >
+        </activity>
+        <activity
+            android:name="com.naens.preferences.MainPreferenceActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.naens.preferences.FolderPreferenceActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.naens.preferences.WordPreferenceActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.naens.mowords.FolderActivity"
+            android:label="@string/title_activity_folder" >
+        </activity>
+        <activity
+            android:name="com.naens.mowords.GameLogActivity"
+            android:label="@string/title_activity_game_log" >
+        </activity>
+    </application>
+
+</manifest>

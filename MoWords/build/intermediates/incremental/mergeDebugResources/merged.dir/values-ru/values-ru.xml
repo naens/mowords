@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="pref_side_mdc_default" type="bool">false</item>
+    <string name="app_name">MoWords</string>
+    <string name="find_folder_dialog_btn_cancel">Отмена</string>
+    <string name="find_folder_dialog_btn_new_folder">Новая директория</string>
+    <string name="find_folder_dialog_btn_ok">OK</string>
+    <string name="find_folder_dialog_btn_rename_folder">Переименовать директорию</string>
+    <string name="find_folder_folder_already_exists">Файл или директория с названием "%1$s" уже существует</string>
+    <string name="find_folder_folder_name_empty">Название директории не может быть пустым</string>
+    <string name="find_folder_folder_not_created">Директория не была создана</string>
+    <string name="find_folder_new_directory_alert_box">Создать новую директорию</string>
+    <string name="find_folder_new_directory_cancel_button">Отменить</string>
+    <string name="find_folder_new_directory_ok_button">OK</string>
+    <string name="find_folder_rename_cancel_button">Отменить</string>
+    <string name="find_folder_rename_directory_alert_box">Переименовать директорию</string>
+    <string name="find_folder_rename_directory_ok_button">OK</string>
+    <string name="find_folder_rename_failed">Переименование не удалось</string>
+    <string name="find_folder_status_current_folder">Сейчас в <b>%1$s</b></string>
+    <string name="find_folder_title">Выбор директории:</string>
+    <string name="folder_configure_fonts">Настройка шрифтов</string>
+    <string name="folder_game_logs">Журнал сеансов</string>
+    <string name="folder_limit_spinner_header">Количество слов: </string>
+    <string name="folder_ok_button_text">Начало</string>
+    <string name="game_log_delete_game_log">Удалить данную запись?</string>
+    <string name="game_log_delete_game_log_negative">Нет</string>
+    <string name="game_log_delete_game_log_positive">Да</string>
+    <string name="game_log_header_datetime">дата и время</string>
+    <string name="game_log_header_direction">направление</string>
+    <string name="game_log_header_done">сделано</string>
+    <string name="game_log_header_files">списки</string>
+    <string name="game_log_header_side_time">продолжительность</string>
+    <string name="game_log_header_total_time">общая продолжительность</string>
+    <string name="initialize">Инициализация MoWords</string>
+    <string name="main_folders">Доступные папки:</string>
+    <string name="menu_settings">Установки</string>
+    <string name="pref_folder_default_limit_title">Ограничение по умолчанию</string>
+    <string name="pref_folder_limits_default">20, 25, 30, 35, 40</string>
+    <string name="pref_folder_limits_title">Возможные ограничения количества слов в игре</string>
+    <string name="pref_folder_limits_values">5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100</string>
+    <string name="pref_folder_one_direction_default">false</string>
+    <string name="pref_folder_one_direction_title">В одну сторону</string>
+    <string name="pref_root_directory_default">MoWords</string>
+    <string name="pref_root_directory_title">Выбор главной директории</string>
+    <string name="pref_root_theme_title">Тема</string>
+    <string name="pref_side_current_side">Текущая сторона</string>
+    <string name="pref_side_error_mdc">Ошибка: неправильная строка MdC "%1$s"</string>
+    <string name="pref_side_font_size">Размер шрифта</string>
+    <string name="pref_side_font_size_default">24</string>
+    <string name="pref_side_mdc_title">MdC</string>
+    <string name="pref_side_preview_title">Предварительный просмотр</string>
+    <string name="pref_side_title">Настройки стороны %1$d</string>
+    <string name="pref_side_typeface_default">default</string>
+    <string name="pref_side_typeface_title">Шрифт</string>
+    <string name="title_activity_folder">Имеющиеся списки</string>
+    <string name="title_activity_game_log">Журнал сеансов</string>
+    <string name="title_activity_words">Режим изучения</string>
+    <string name="welcome_dialog_yes">Да</string>
+    <string name="welcome_folder_button">Изменить</string>
+    <string name="welcome_folder_label">Директория для файлов приложения:</string>
+    <string name="welcome_hello_text">Здравствуйте! Выберите, пожалуйста директорию для данных и шрифтов.</string>
+    <string name="welcome_ok_button">OK</string>
+    <string name="welcome_text"><b>MoWords</b> — приложение для изучения слов или картинок.</string>
+    <string name="welcome_title">Добро пожаловать в приложение MoWords</string>
+    <string name="welcome_title_activity">Добро пожаловать</string>
+    <string name="welcome_use_egyptian">Для египетских символов можно использовать упрощенный вариант <b>MdC</b>.</string>
+    <string name="welcome_use_files">Списки групируются по <b>папкам</b>. Каждая папка имеет свои настройки шрифта и размера букв.\n
+        Каждый список содержит <b>слова</b>. Файл, соответствующий списку должен иметь расширение \'.txt\' и кодировку UTF-8.</string>
+    <string name="welcome_use_fonts">Установка <b>шрифтов</b> для показа слов делается следующим образом.\n
+        Шрифты копируются в директорию \'mw_fonts\', затем в настройках есть возможность выбрать нужный шрифт.</string>
+    <string name="welcome_use_images">Можно использовать <b>картинки</b> вместо слов
+		в директорию \'images/[название списка слов без расширения]/\' или в \'images/\'.\n
+        В файле списка вместо слова используется \"[image:img.ext]\" где \'img.ext\' соответствует названию изображения.\n
+        Принимаются следующие форматы изображения: png, gif, bmp и jpg/jpeg.</string>
+    <string name="welcome_use_navigate">На экране сеанса: горизонтальные движения позволяют перейти на следующее слова, а вертикальные — на следующую карточку (слово).\n
+        Нажав на слово меняет состояние слово с правильного на неправильное и обратно. Долгое нажатие позволяет приостановить сеанс.</string>
+    <string name="welcome_use_tab">Каждая строка списка соответствует слову. каждое слово может иметь одну или несколько <b>сторон</b>.\n
+        Стороны разделяются табуляцией.\n
+        Пример файловой структуры будет создан в корневой директории приложения.</string>
+    <string name="welcome_use_title">Использование приложения</string>
+    <string name="words_ask_continue_game_message">Количество неверных слов: %1$d. Нажмите \'OK\' чтобы продолжить.</string>
+    <string name="words_ask_second_side_message">Готово.\n%1$s\nНажмите \'OK\' чтобы продолжить в обратном направлении.</string>
+    <string name="words_back_pressed_message">Прекратить сеанс?</string>
+    <string name="words_back_pressed_negative">Нет</string>
+    <string name="words_back_pressed_positive">Да</string>
+    <string name="words_display_stats_game_message">Часть сеанса %1$d (%2$d/%3$d=%4$.1f%5$s)</string>
+    <string name="words_display_stats_total_message">Всего: %1$s</string>
+    <string name="words_display_status_message">слово %1$d из %2$d</string>
+    <string name="words_error_mdc">Ошибка: неправильная строка MdC "%1$s"</string>
+    <string name="words_no_image">Ошибка: нет изображения "%1$s"</string>
+    <string name="words_ok_button">OK</string>
+    <string name="words_paused">Пауза</string>
+    <string name="words_time_view_default_text">00:00</string>
+</resources>

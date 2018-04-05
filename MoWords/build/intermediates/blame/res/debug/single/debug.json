@@ -1,0 +1,446 @@
+[
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_bback_sel.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/bback_sel.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_bback_dark.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/bback_dark.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_undo.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/undo.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_folder_toggle.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/folder_toggle.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable-mdpi_logo2.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable-mdpi/logo2.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_game_log_header_view1.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/game_log_header_view1.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/layout_find_folder_dialog.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/layout/find_folder_dialog.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_bwhstop.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/bwhstop.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_bwup.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/bwup.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_game_log_fc_second.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/game_log_fc_second.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_btn_invsel.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/btn_invsel.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_binvsel_dark_pressed.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/binvsel_dark_pressed.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_arrow_right.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/arrow_right.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/raw_unicode_mdc_mapping_v1.utf8.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/raw/unicode_mdc_mapping_v1.utf8"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable-xhdpi_logo2.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable-xhdpi/logo2.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_bonedir_dark_pressed.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/bonedir_dark_pressed.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable-ldpi_ic_launcher.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable-ldpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_bsall_dark.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/bsall_dark.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_draw_view.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/draw_view.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_folderlist_background_dark.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/folderlist_background_dark.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_launcher.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable-mdpi_ic_launcher.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_bonedir.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/bonedir.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_bkg1.jpg.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/bkg1.jpg"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/layout_activity_words.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/layout/activity_words.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_bsall_pressed_sel.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/bsall_pressed_sel.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_bsall_pressed.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/bsall_pressed.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_bback_pressed.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/bback_pressed.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable-hdpi_ic_launcher.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/layout_activity_game_log.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/layout/activity_game_log.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_binvsel_sel.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/binvsel_sel.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_bonedir_sel.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/bonedir_sel.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_bonedir_dark.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/bonedir_dark.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_bwdn.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/bwdn.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_wordview_background_dark.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/wordview_background_dark.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_ffolder_view.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/ffolder_view.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_btn_invsel_dark.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/btn_invsel_dark.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_words_word_border.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/words_word_border.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_game_log_simple.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/game_log_simple.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_wordview_background.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/wordview_background.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/xml_welcomepreference.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/xml/welcomepreference.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_folder_button_layer1.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/folder_button_layer1.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_erase.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/erase.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_folder_checkbox_dark.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/folder_checkbox_dark.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_btn_inverse.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/btn_inverse.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/layout_multichoice_dialog_preference.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/layout/multichoice_dialog_preference.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_arrow_right_e.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/arrow_right_e.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_game_log_fc_simple.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/game_log_fc_simple.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_arrow_left_e.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/arrow_left_e.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_bonedir_pressed.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/bonedir_pressed.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_bback_dark_pressed.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/bback_dark_pressed.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_redo.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/redo.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_game_log_second.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/game_log_second.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_bkg2.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/bkg2.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/layout_fragment_main.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/layout/fragment_main.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_folder_button_layer3.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/folder_button_layer3.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_folder_button.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/folder_button.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_btn_selectall.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/btn_selectall.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_bback_pressed_sel.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/bback_pressed_sel.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_bsall.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/bsall.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/xml_main_preferences.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/xml/main_preferences.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_game_log_fc_empty.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/game_log_fc_empty.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_bsall_dark_pressed.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/bsall_dark_pressed.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_bsall_sel.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/bsall_sel.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_folder_toggle_sel.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/folder_toggle_sel.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/layout_find_folder_dialog_preference.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/layout/find_folder_dialog_preference.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/menu_activity_folder_menu.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/menu/activity_folder_menu.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_folder_toggle_pressed_sel.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/folder_toggle_pressed_sel.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable-xhdpi_ic_launcher.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_btn_onedir_dark.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/btn_onedir_dark.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/menu_activity_words_menu.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/menu/activity_words_menu.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_bkg_transparent.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/bkg_transparent.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/layout_activity_folder.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/layout/activity_folder.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable-hdpi_logo2.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable-hdpi/logo2.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_folder_toggle_pressed.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/folder_toggle_pressed.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_bwlt.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/bwlt.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_binvsel_pressed.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/binvsel_pressed.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_bonedir_pressed_sel.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/bonedir_pressed_sel.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_icon_parentdir.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/icon_parentdir.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_folder_button_dark_layer1.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/folder_button_dark_layer1.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_bkg1dark.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/bkg1dark.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_bwvstop.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/bwvstop.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_folder_button_layer2.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/folder_button_layer2.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_btn_inverse_dark.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/btn_inverse_dark.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_draw_view_button.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/draw_view_button.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_bkg2dark.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/bkg2dark.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_bback.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/bback.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_btn_selectall_dark.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/btn_selectall_dark.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_binvsel_pressed_sel.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/binvsel_pressed_sel.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/layout_settings_message.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/layout/settings_message.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable-ldpi_logo2.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable-ldpi/logo2.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_folder_toggle_normal.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/folder_toggle_normal.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/menu_activity_main_menu.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/menu/activity_main_menu.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_binvsel.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/binvsel.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/layout_preview_preference_layout.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/layout/preview_preference_layout.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_icon_dir.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/icon_dir.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_addm.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/addm.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_mw_folders.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/mw_folders.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_arrow_left.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/arrow_left.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_bwrt.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/bwrt.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/layout_find_folder_dialog_item.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/layout/find_folder_dialog_item.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_folder_button_dark.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/folder_button_dark.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_btn_onedir.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/btn_onedir.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_mw_mdc.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/mw_mdc.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_folder_button_dark_layer2.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/folder_button_dark_layer2.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/layout_activity_welcome.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/layout/activity_welcome.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_removem.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/removem.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_game_log_header.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/game_log_header.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_folderlist_background.xml.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/folderlist_background.xml"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MoWords/build/intermediates/res/merged/debug/drawable_binvsel_dark.png.flat",
+        "source": "/home/andrei/gproj/mowords/MoWords/src/main/res/drawable/binvsel_dark.png"
+    }
+]

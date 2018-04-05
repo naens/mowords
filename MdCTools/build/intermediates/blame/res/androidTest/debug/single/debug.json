@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/home/andrei/gproj/mowords/MdCTools/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4_ic_launcher.png.flat",
+        "source": "/home/andrei/gproj/mowords/MdCTools/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/ic_launcher.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MdCTools/build/intermediates/res/merged/androidTest/debug/raw_unicode_mdc_mapping_v1.utf8.flat",
+        "source": "/home/andrei/gproj/mowords/MdCTools/build/intermediates/bundles/debug/res/raw/unicode_mdc_mapping_v1.utf8"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MdCTools/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4_ic_launcher.png.flat",
+        "source": "/home/andrei/gproj/mowords/MdCTools/build/intermediates/bundles/debug/res/drawable-mdpi-v4/ic_launcher.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MdCTools/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4_ic_launcher.png.flat",
+        "source": "/home/andrei/gproj/mowords/MdCTools/build/intermediates/bundles/debug/res/drawable-xxhdpi-v4/ic_launcher.png"
+    },
+    {
+        "merged": "/home/andrei/gproj/mowords/MdCTools/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4_ic_launcher.png.flat",
+        "source": "/home/andrei/gproj/mowords/MdCTools/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_launcher.png"
+    }
+]
